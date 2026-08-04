@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MicroCRM - Documentation</title>
+    <meta name="description" content="Full documentation of MicroCRM features including WhatsApp AI, Client Portal, and System Administration.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .docs-container {
+            display: flex;
+            max-width: 1200px;
+            margin: 100px auto 40px;
+            padding: 0 20px;
+            gap: 40px;
+        }
+        .docs-sidebar {
+            width: 250px;
+            flex-shrink: 0;
+            position: sticky;
+            top: 100px;
+            height: calc(100vh - 120px);
+            overflow-y: auto;
+        }
+        .docs-sidebar a {
+            display: block;
+            padding: 10px 15px;
+            color: var(--text-muted);
+            text-decoration: none;
+            border-radius: 8px;
+            margin-bottom: 5px;
+            transition: all 0.3s;
+        }
+        .docs-sidebar a:hover, .docs-sidebar a.active {
+            background-color: var(--card-bg);
+            color: var(--primary);
+        }
+        .docs-content {
+            flex-grow: 1;
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 24px;
+            padding: 40px;
+        }
+        .docs-content h1 {
+            font-family: 'Outfit', sans-serif;
+            margin-bottom: 20px;
+            color: var(--text);
+        }
+        .docs-content h2 {
+            font-family: 'Outfit', sans-serif;
+            margin-top: 40px;
+            margin-bottom: 15px;
+            color: var(--text);
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 10px;
+        }
+        .docs-content p {
+            color: var(--text-muted);
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+        .docs-content ul {
+            color: var(--text-muted);
+            margin-bottom: 20px;
+            padding-left: 20px;
+            line-height: 1.6;
+        }
+        .docs-content li {
+            margin-bottom: 8px;
+        }
+    </style>
+</head>
+<body>
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+    
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <span class="logo-icon"><img src="logo.png" alt="MicroCRM Logo" style="height: 32px; width: 32px; margin-right: 10px; border-radius: 8px;"></span>
+                <span class="logo-text">MicroCRM</span>
+            </div>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="#download" class="btn btn-primary">Download Free</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="docs-container">
+        <aside class="docs-sidebar">
+            <a href="#intro" class="active">Introduction</a>
+            <a href="#architecture">Zero Cloud Architecture</a>
+            <a href="#whatsapp-ai">WhatsApp AI Assistant</a>
+            <a href="#call-ai">Smart Call Assistant</a>
+            <a href="#client-portal">Free Client Portal</a>
+            <a href="#crm">Complete CRM & POS</a>
+            <a href="#export-import">Export & Import Backups</a>
+        </aside>
+        
+        <main class="docs-content">
+            <h1 id="intro">MicroCRM Documentation</h1>
+            <p>Welcome to the official documentation for MicroCRM. This guide covers all the core features of the platform and how they help you run your business entirely from your Windows computer without monthly cloud fees.</p>
+            
+            <h2 id="architecture">Zero Cloud Architecture</h2>
+            <p>MicroCRM takes a revolutionary approach to business software by eliminating cloud server fees. It installs completely on your own Windows computer and acts as its own server.</p>
+            <ul>
+                <li><strong>Local Database:</strong> All your customer records, inventory, and sales data are stored locally in an SQLite database on your machine. We do not have access to your data.</li>
+                <li><strong>Cloudflare Tunnels:</strong> To provide your customers with an online store and booking portal, MicroCRM automatically spins up a highly secure Cloudflare Tunnel. This gives you a public internet link (e.g., yourbusiness.microcrm.site) that routes securely directly to your laptop.</li>
+                <li><strong>No Monthly Hosting:</strong> Because your laptop is the server, you pay ₹0/month for hosting.</li>
+            </ul>
+
+            <h2 id="whatsapp-ai">Smart WhatsApp AI Assistant</h2>
+            <p>We've integrated a powerful AI agent directly into your business WhatsApp number using WhatsApp Web JS technology. It operates entirely in the background.</p>
+            <ul>
+                <li><strong>24/7 Customer Support:</strong> The AI reads incoming messages and intelligently answers questions about your business, operating hours, and product catalog.</li>
+                <li><strong>Automated PDF Billing:</strong> Whenever you generate a sale in the CRM, the WhatsApp AI automatically sends a beautifully formatted PDF receipt directly to the customer's WhatsApp.</li>
+                <li><strong>Appointment Reminders:</strong> The system schedules background workers that automatically send WhatsApp reminders to customers 24 hours before their scheduled appointment.</li>
+            </ul>
+
+            <h2 id="call-ai">Smart Call Assistant</h2>
+            <p>Never miss a customer inquiry when your shop is busy. The Smart Call Assistant acts as a digital receptionist.</p>
+            <ul>
+                <li><strong>Voice AI Integration:</strong> Integrates with voice providers to answer calls intelligently, speaking in natural language to your customers.</li>
+                <li><strong>Auto-Booking:</strong> The AI can take appointment requests over the phone and log them directly into your CRM calendar without human intervention.</li>
+            </ul>
+
+            <h2 id="client-portal">Free Client Web Portal</h2>
+            <p>Every MicroCRM installation automatically hosts a beautiful, responsive web portal for your customers.</p>
+            <ul>
+                <li><strong>Online Storefront:</strong> Customers can browse your synchronized inventory catalogue online.</li>
+                <li><strong>Self-Service Booking:</strong> Allow customers to select available time slots and book services directly from their smartphones.</li>
+                <li><strong>Secure Access:</strong> Customers log in using OTP authentication to view their past bills and active appointments.</li>
+            </ul>
+
+            <h2 id="crm">Complete CRM & POS</h2>
+            <p>The core of MicroCRM is a full-featured administration dashboard accessible via localhost on your machine.</p>
+            <ul>
+                <li><strong>Fast Billing & POS:</strong> A streamlined point-of-sale interface for quickly checking out customers in-store.</li>
+                <li><strong>Inventory Tracking:</strong> Keep track of stock levels, set low-stock alerts, and manage product variations.</li>
+                <li><strong>Staff & HR:</strong> Manage employee attendance, assign daily tasks, and track performance.</li>
+                <li><strong>Analytics Dashboard:</strong> View visual reports on your daily sales, popular products, and customer growth.</li>
+            </ul>
+
+            <h2 id="export-import">Export & Import Backups</h2>
+            <p>Because MicroCRM stores data locally, we've built a robust tool for data safety and migration directly into the MicroCRM Control Panel (launcher).</p>
+            <ul>
+                <li><strong>One-Click Export:</strong> Simply click "Export Backup" to generate a comprehensive `.zip` file containing your entire `app.db`, `.env` configuration, uploaded logos, generated PDF bills, and your WhatsApp session cache.</li>
+                <li><strong>Seamless Migration:</strong> If you buy a new laptop, simply install MicroCRM, click "Import Backup", select your `.zip` file, and pick up right where you left off. All your customer history, settings, and WhatsApp logins will be perfectly restored.</li>
+            </ul>
+        </main>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="logo">
+                        <span class="logo-icon"><img src="logo.png" alt="MicroCRM Logo" style="height: 24px; width: 24px; margin-right: 8px; border-radius: 6px;"></span>
+                        <span class="logo-text">MicroCRM</span>
+                    </div>
+                    <p>The AI-powered, zero-infrastructure toolkit for local businesses.</p>
+                </div>
+                <div class="footer-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Contact Support</a>
+                </div>
+            </div>
+            <div class="copyright">
+                &copy; 2026 MicroCRM. All rights reserved.
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
