@@ -166,32 +166,20 @@
                 </div>
             </div>
 
-            <div class="contact-card">
-                <h3 style="font-family: 'Outfit', sans-serif; font-size: 1.5rem; margin-bottom: 20px; color: var(--text-main);">Send Us a Message</h3>
-                <form id="contactForm">
-                    <div class="form-group">
-                        <label for="fullName">Full Name</label>
-                        <input type="text" id="fullName" class="form-control" placeholder="John Doe" required>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="emailAddr">Email Address</label>
-                        <input type="email" id="emailAddr" class="form-control" placeholder="john@example.com" required>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="bizName">Business / Shop Name</label>
-                        <input type="text" id="bizName" class="form-control" placeholder="e.g. Apex Real Estate / Royal Salon">
-                    </div>
-
-                    <div class="form-group">
-                        <label for="msgText">Your Message</label>
-                        <textarea id="msgText" class="form-control" placeholder="How can we assist you with MicroCRM?" required></textarea>
-                    </div>
-
-                    <button type="submit" class="btn btn-primary" style="width: 100%; padding: 14px; font-size: 1rem; cursor: pointer;">Submit Inquiry</button>
-                    <div class="success-message" id="successMsg">✅ Thank you! Your message has been received. Our team will contact you shortly.</div>
-                </form>
+            <div class="contact-card" style="display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; gap: 30px;">
+                <div style="font-size: 4rem; color: var(--whatsapp);"><i class="fa-brands fa-whatsapp"></i></div>
+                <h3 style="font-family: 'Outfit', sans-serif; font-size: 1.6rem; color: var(--text-main);">Chat Directly on WhatsApp</h3>
+                <p style="color: var(--text-muted); font-size: 1rem; max-width: 350px; line-height: 1.7;">Click the button below to send us a message directly on WhatsApp. We typically respond within minutes during business hours.</p>
+                <a href="https://wa.me/918770466442?text=Hi%2C%20I%20am%20interested%20in%20MicroCRM!%20I%20would%20like%20to%20know%20more%20about%20the%20features%20and%20pricing."
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   style="display: inline-flex; align-items: center; gap: 12px; background: #25D366; color: #fff; font-size: 1.15rem; font-weight: 700; padding: 18px 36px; border-radius: 50px; text-decoration: none; box-shadow: 0 8px 30px rgba(37, 211, 102, 0.35); transition: transform 0.2s, box-shadow 0.2s;"
+                   onmouseover="this.style.transform='scale(1.05)'; this.style.boxShadow='0 12px 40px rgba(37,211,102,0.5)'"
+                   onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 8px 30px rgba(37,211,102,0.35)'">
+                    <i class="fa-brands fa-whatsapp" style="font-size: 1.4rem;"></i>
+                    Chat on WhatsApp
+                </a>
+                <p style="color: var(--text-muted); font-size: 0.85rem;">+91 87704 66442</p>
             </div>
         </div>
     </div>
