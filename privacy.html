@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - MicroCRM</title>
+    <meta name="description" content="MicroCRM Privacy Policy - Zero cloud tracking, 100% local database storage on your own PC.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .page-container {
+            max-width: 900px;
+            margin: 120px auto 60px;
+            padding: 0 20px;
+        }
+        .policy-card {
+            background: var(--glass-bg);
+            border: 1px solid var(--border);
+            border-radius: 24px;
+            padding: 45px;
+            backdrop-filter: blur(12px);
+        }
+        .policy-card h1 {
+            font-family: 'Outfit', sans-serif;
+            font-size: 2.2rem;
+            margin-bottom: 10px;
+            color: var(--text-main);
+        }
+        .update-date {
+            color: var(--primary);
+            font-size: 0.9rem;
+            margin-bottom: 30px;
+            display: block;
+        }
+        .policy-card h2 {
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.4rem;
+            margin-top: 35px;
+            margin-bottom: 15px;
+            color: var(--text-main);
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 8px;
+        }
+        .policy-card p, .policy-card ul {
+            color: var(--text-muted);
+            line-height: 1.7;
+            margin-bottom: 15px;
+            font-size: 0.98rem;
+        }
+        .policy-card ul {
+            padding-left: 20px;
+        }
+        .policy-card li {
+            margin-bottom: 8px;
+        }
+    </style>
+</head>
+<body>
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <span class="logo-icon"><img src="logo.png" alt="MicroCRM Logo" style="height: 32px; width: 32px; margin-right: 10px; border-radius: 8px;"></span>
+                <a href="index.html" style="text-decoration: none; color: inherit;"><span class="logo-text">MicroCRM</span></a>
+            </div>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="docs.html">Documentation</a>
+                <a href="contact.html">Contact Support</a>
+                <a href="https://github.com/ayushmanparchoria16/microcrm/releases/download/v1.0/MicroCRM_Setup.exe" class="btn btn-primary btn-download">Download Free</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="page-container">
+        <div class="policy-card">
+            <h1>Privacy Policy</h1>
+            <span class="update-date">Last Updated: September 2026</span>
+
+            <p>At <strong>MicroCRM</strong>, we believe your business data belongs strictly to you. Our architecture is designed from the ground up around <strong>Zero-Cloud Local Storage</strong>, ensuring complete privacy, control, and data sovereignty.</p>
+
+            <h2>1. Zero-Cloud Data Principle</h2>
+            <p>MicroCRM runs locally on your Windows computer. All customer information, contact details, invoices, inventory stock, staff attendance, and chat histories are stored inside a local SQLite database (`app.db`) on your physical machine.</p>
+            <ul>
+                <li>We do not host or store your business transactions on central third-party cloud database servers.</li>
+                <li>Your financial data, customer lists, and business notes never leave your personal computer without your explicit direction.</li>
+            </ul>
+
+            <h2>2. WhatsApp Integration Privacy</h2>
+            <p>MicroCRM utilizes WhatsApp Web JS to connect your business WhatsApp account directly to your local instance:</p>
+            <ul>
+                <li>WhatsApp authentication sessions are saved locally inside your installation directory (`whatsapp-gateway\.wwebjs_auth`).</li>
+                <li>Messages processed by your local AI assistant are handled on-device to deliver auto-replies, generate PDF invoices, and send appointment reminders.</li>
+                <li>We do not sell, harvest, or transmit your customers' phone numbers or chat conversations to external telemetry servers.</li>
+            </ul>
+
+            <h2>3. Secure Tunneling & Client Portal</h2>
+            <p>When you enable the Client Web Portal for online bookings or digital store links (e.g., `yourbusiness.microcrm.site`), MicroCRM creates an encrypted Cloudflare Tunnel connection:</p>
+            <ul>
+                <li>The tunnel acts as a secure pass-through bridge directly from the internet to your local PC.</li>
+                <li>No customer data is stored on intermediary hosting servers. Request traffic flows directly to your local application engine.</li>
+            </ul>
+
+            <h2>4. Automated Backups & Data Ownership</h2>
+            <p>MicroCRM includes built-in automated 1-click rolling backups stored inside your local `backups/` folder. You retain 100% ownership of your backup `.db` files and can export, move, or delete them at any time.</p>
+
+            <h2>5. Contact Us</h2>
+            <p>If you have any questions regarding privacy or data handling, feel free to reach out to our team at <a href="contact.html" style="color: var(--primary);">Contact Support</a> or email us at <strong>support@microcrm.site</strong>.</p>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="logo">
+                        <span class="logo-icon"><img src="logo.png" alt="MicroCRM Logo" style="height: 24px; width: 24px; margin-right: 8px; border-radius: 6px;"></span>
+                        <span class="logo-text">MicroCRM</span>
+                    </div>
+                    <p>The AI-powered, zero-infrastructure toolkit for local businesses.</p>
+                </div>
+                <div class="footer-links">
+                    <a href="privacy.html">Privacy Policy</a>
+                    <a href="terms.html">Terms of Service</a>
+                    <a href="contact.html">Contact Support</a>
+                </div>
+            </div>
+            <div class="copyright">
+                &copy; 2026 MicroCRM. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

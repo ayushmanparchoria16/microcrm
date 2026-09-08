@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Client Web Portal Demo - MicroCRM</title>
+    <meta name="description" content="Explore the free client web portal included with MicroCRM - Online booking, digital store, and self-service portal.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .portal-hero {
+            text-align: center;
+            margin: 120px auto 40px;
+            max-width: 800px;
+            padding: 0 20px;
+        }
+        .portal-hero h1 {
+            font-family: 'Outfit', sans-serif;
+            font-size: 2.6rem;
+            margin-bottom: 15px;
+            color: var(--text-main);
+        }
+        .portal-hero p {
+            color: var(--text-muted);
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+        .demo-window {
+            max-width: 1000px;
+            margin: 0 auto 60px;
+            background: var(--bg-secondary);
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+        }
+        .demo-bar {
+            background: #11111b;
+            padding: 12px 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            border-bottom: 1px solid var(--border);
+        }
+        .demo-dots { display: flex; gap: 6px; }
+        .demo-dot { width: 12px; height: 12px; border-radius: 50%; }
+        .red { background: #f38ba8; }
+        .yellow { background: #f9e2af; }
+        .green { background: #a6e3a1; }
+        .demo-url {
+            flex-grow: 1;
+            background: #1e1e2e;
+            padding: 6px 15px;
+            border-radius: 8px;
+            color: var(--primary);
+            font-family: monospace;
+            font-size: 0.9rem;
+            text-align: center;
+        }
+        .portal-body {
+            padding: 30px;
+        }
+        .portal-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        @media(max-width: 768px) {
+            .portal-grid { grid-template-columns: 1fr; }
+        }
+        .portal-card {
+            background: #1e1e2e;
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 20px;
+            text-align: center;
+        }
+        .portal-card i {
+            font-size: 2rem;
+            color: var(--accent);
+            margin-bottom: 12px;
+        }
+        .portal-card h4 {
+            color: var(--text-main);
+            margin-bottom: 8px;
+        }
+        .portal-card p {
+            color: var(--text-muted);
+            font-size: 0.88rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <span class="logo-icon"><img src="logo.png" alt="MicroCRM Logo" style="height: 32px; width: 32px; margin-right: 10px; border-radius: 8px;"></span>
+                <a href="index.html" style="text-decoration: none; color: inherit;"><span class="logo-text">MicroCRM</span></a>
+            </div>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="portal-demo.html" class="active">Client Portal</a>
+                <a href="docs.html">Documentation</a>
+                <a href="contact.html">Contact Support</a>
+                <a href="https://github.com/ayushmanparchoria16/microcrm/releases/download/v1.0/MicroCRM_Setup.exe" class="btn btn-primary btn-download">Download Free</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="portal-hero">
+        <h1>Client Web Portal Showcase</h1>
+        <p>MicroCRM provides a free, mobile-friendly online web portal hosted directly from your Windows PC. Give your customers their own online link to browse products, schedule visits, and access their bills 24/7.</p>
+    </div>
+
+    <div class="container">
+        <div class="demo-window">
+            <div class="demo-bar">
+                <div class="demo-dots">
+                    <div class="demo-dot red"></div>
+                    <div class="demo-dot yellow"></div>
+                    <div class="demo-dot green"></div>
+                </div>
+                <div class="demo-url">https://yourbusiness.microcrm.site/book</div>
+            </div>
+
+            <div class="portal-body">
+                <div class="portal-grid">
+                    <div class="portal-card">
+                        <i class="fa-solid fa-store"></i>
+                        <h4>Digital Catalog & Store</h4>
+                        <p>Customers can view available products, plots, flats, or services with prices and descriptions.</p>
+                    </div>
+
+                    <div class="portal-card">
+                        <i class="fa-solid fa-calendar-check"></i>
+                        <h4>24/7 Self-Service Booking</h4>
+                        <p>Clients can choose open time slots and book tours or appointments directly from their phones.</p>
+                    </div>
+
+                    <div class="portal-card">
+                        <i class="fa-solid fa-file-invoice-dollar"></i>
+                        <h4>PDF Invoices & Receipts</h4>
+                        <p>Customers log in with OTP to view their booking status and download PDF tax invoices anytime.</p>
+                    </div>
+                </div>
+
+                <div style="text-align: center; padding: 20px; background: rgba(137, 180, 250, 0.08); border-radius: 16px; border: 1px solid var(--border);">
+                    <h3 style="color: var(--text-main); margin-bottom: 10px;">Ready to launch your own Client Web Portal?</h3>
+                    <p style="color: var(--text-muted); margin-bottom: 20px;">Download MicroCRM for Windows. Zero cloud monthly subscription fees.</p>
+                    <a href="https://github.com/ayushmanparchoria16/microcrm/releases/download/v1.0/MicroCRM_Setup.exe" class="btn btn-primary btn-download btn-large">Download for Windows</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="logo">
+                        <span class="logo-icon"><img src="logo.png" alt="MicroCRM Logo" style="height: 24px; width: 24px; margin-right: 8px; border-radius: 6px;"></span>
+                        <span class="logo-text">MicroCRM</span>
+                    </div>
+                    <p>The AI-powered, zero-infrastructure toolkit for local businesses.</p>
+                </div>
+                <div class="footer-links">
+                    <a href="privacy.html">Privacy Policy</a>
+                    <a href="terms.html">Terms of Service</a>
+                    <a href="contact.html">Contact Support</a>
+                </div>
+            </div>
+            <div class="copyright">
+                &copy; 2026 MicroCRM. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
