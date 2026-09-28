@@ -98,6 +98,7 @@
         <aside class="docs-sidebar">
             <a href="#intro" class="active">Introduction</a>
             <a href="#architecture">Zero Cloud Architecture</a>
+            <a href="#security">Security & DPDPA Compliance</a>
             <a href="#whatsapp-ai">WhatsApp AI Assistant</a>
             <a href="#call-ai">Smart Call Assistant</a>
             <a href="#client-portal">Free Client Portal</a>
@@ -116,6 +117,14 @@
                 <li><strong>Local Database:</strong> All your customer records, inventory, and sales data are stored locally in an SQLite database on your machine. We do not have access to your data.</li>
                 <li><strong>Cloudflare Tunnels:</strong> To provide your customers with an online store and booking portal, MicroCRM automatically spins up a highly secure Cloudflare Tunnel. This gives you a public internet link (e.g., yourbusiness.microcrm.site) that routes securely directly to your laptop.</li>
                 <li><strong>No Monthly Hosting:</strong> Because your laptop is the server, you pay ₹0/month for hosting.</li>
+            </ul>
+
+            <h2 id="security">Security, DPDPA 2023 & Anti-Theft Protection</h2>
+            <p>MicroCRM incorporates multi-layered enterprise security safeguards to protect customer data privacy and safeguard lead databases against theft.</p>
+            <ul>
+                <li><strong>🛡️ DPDPA 2023 Compliance:</strong> Built in accordance with India's Digital Personal Data Protection Act 2023. Restricts automated messaging to explicit consent and purpose limitation.</li>
+                <li><strong>🔐 100% Multi-Tenant Data Isolation:</strong> Every database query is strictly scoped by <code>WHERE business_id = %s</code>, ensuring competitor businesses or different franchises can never access or leak each other's leads.</li>
+                <li><strong>🙈 Anti-Theft Phone Number Masking:</strong> Non-admin sales reps view masked phone numbers (<code>+91 62641*****</code>) in lead drawers, reports, and WhatsApp Web inboxes to prevent staff database theft.</li>
             </ul>
 
             <h2 id="whatsapp-ai">Smart WhatsApp AI Assistant</h2>
@@ -176,7 +185,7 @@
                         <span class="logo-icon"><img src="logo.png" alt="MicroCRM Logo" style="height: 24px; width: 24px; margin-right: 8px; border-radius: 6px;"></span>
                         <span class="logo-text">MicroCRM</span>
                     </div>
-                    <p>The AI-powered, zero-infrastructure toolkit for local businesses.</p>
+                    <p>Parchhoria Technologies • The AI-powered sales & CRM platform for modern businesses.</p>
                 </div>
                 <div class="footer-links">
                     <a href="privacy.html">Privacy Policy</a>
@@ -185,7 +194,7 @@
                 </div>
             </div>
             <div class="copyright">
-                &copy; 2026 MicroCRM. All rights reserved.
+                &copy; 2026 Parchhoria Technologies. All rights reserved.
             </div>
         </div>
     </footer>

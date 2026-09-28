@@ -82,16 +82,37 @@
             <h1>Privacy Policy</h1>
             <span class="update-date">Last Updated: September 2026</span>
 
-            <p>At <strong>MicroCRM</strong>, we believe your business data belongs strictly to you. Our architecture is designed from the ground up around <strong>Zero-Cloud Local Storage</strong>, ensuring complete privacy, control, and data sovereignty.</p>
+            <p>At <strong>MicroCRM</strong> (developed by <strong>Parchhoria Technologies</strong>), we believe your business data belongs strictly to you. Our architecture is designed from the ground up around <strong>Zero-Cloud Local Storage</strong>, <strong>DPDPA 2023 Legal Compliance</strong>, and <strong>Anti-Theft Data Protection</strong>, ensuring complete privacy, control, and data sovereignty.</p>
 
-            <h2>1. Zero-Cloud Data Principle</h2>
+            <h2>1. DPDPA 2023 Compliance & Data Protection</h2>
+            <p>MicroCRM is designed in alignment with India’s <strong>Digital Personal Data Protection Act (DPDPA 2023)</strong>. We enforce strict data minimization, purpose limitation, and consent-based communication protocols across all automated features.</p>
+            <ul>
+                <li><strong>Data Principal Rights:</strong> Customer data collected via WhatsApp or web portals is processed solely for explicit business fulfillment (site visit booking, property inquiries, invoices).</li>
+                <li><strong>No Telemetry Tracking:</strong> MicroCRM does not track, mine, or share personal identifying information (PII) with third-party advertisers or data brokers.</li>
+            </ul>
+
+            <h2>2. 100% Multi-Tenant Data Isolation Guarantee</h2>
+            <p>For multi-branch or enterprise cloud deployments, MicroCRM guarantees strict 100% data isolation through multi-tenant database scoping (<code>WHERE business_id = %s</code>):</p>
+            <ul>
+                <li>Every query, lead report, and transaction is strictly isolated at the database level.</li>
+                <li>Competitor businesses or different franchises can <strong>never view, query, or leak each other's lead records or business metrics</strong>.</li>
+            </ul>
+
+            <h2>3. Anti-Theft Phone Number Masking for Sales Reps</h2>
+            <p>To protect your company's lead database from unauthorized staff theft, MicroCRM features role-based data masking:</p>
+            <ul>
+                <li>Non-admin employees and sales representatives only see masked customer contact numbers (e.g. <code>+91 62641*****</code>) in lead lists, dashboards, and WhatsApp Web inboxes.</li>
+                <li>Sales reps can communicate seamlessly via WhatsApp Web without having access to copy raw phone numbers.</li>
+            </ul>
+
+            <h2>4. Zero-Cloud Data Principle & Local Storage</h2>
             <p>MicroCRM runs locally on your Windows computer. All customer information, contact details, invoices, inventory stock, staff attendance, and chat histories are stored inside a local SQLite database (`app.db`) on your physical machine.</p>
             <ul>
                 <li>We do not host or store your business transactions on central third-party cloud database servers.</li>
                 <li>Your financial data, customer lists, and business notes never leave your personal computer without your explicit direction.</li>
             </ul>
 
-            <h2>2. WhatsApp Integration Privacy</h2>
+            <h2>5. WhatsApp Integration Privacy</h2>
             <p>MicroCRM utilizes WhatsApp Web JS to connect your business WhatsApp account directly to your local instance:</p>
             <ul>
                 <li>WhatsApp authentication sessions are saved locally inside your installation directory (`whatsapp-gateway\.wwebjs_auth`).</li>
@@ -99,18 +120,8 @@
                 <li>We do not sell, harvest, or transmit your customers' phone numbers or chat conversations to external telemetry servers.</li>
             </ul>
 
-            <h2>3. Secure Tunneling & Client Portal</h2>
-            <p>When you enable the Client Web Portal for online bookings or digital store links (e.g., `yourbusiness.microcrm.site`), MicroCRM creates an encrypted Cloudflare Tunnel connection:</p>
-            <ul>
-                <li>The tunnel acts as a secure pass-through bridge directly from the internet to your local PC.</li>
-                <li>No customer data is stored on intermediary hosting servers. Request traffic flows directly to your local application engine.</li>
-            </ul>
-
-            <h2>4. Automated Backups & Data Ownership</h2>
-            <p>MicroCRM includes built-in automated 1-click rolling backups stored inside your local `backups/` folder. You retain 100% ownership of your backup `.db` files and can export, move, or delete them at any time.</p>
-
-            <h2>5. Contact Us</h2>
-            <p>If you have any questions regarding privacy or data handling, feel free to reach out to our team at <a href="contact.html" style="color: var(--primary);">Contact Support</a> or email us at <strong>support@microcrm.site</strong>.</p>
+            <h2>6. Contact & Data Officer</h2>
+            <p>If you have any questions regarding privacy or data handling under DPDPA 2023, feel free to reach out to our team at <a href="contact.html" style="color: var(--primary);">Contact Support</a> or email us at <strong>support@microcrm.site</strong>.</p>
         </div>
     </div>
 
@@ -122,7 +133,7 @@
                         <span class="logo-icon"><img src="logo.png" alt="MicroCRM Logo" style="height: 24px; width: 24px; margin-right: 8px; border-radius: 6px;"></span>
                         <span class="logo-text">MicroCRM</span>
                     </div>
-                    <p>The AI-powered, zero-infrastructure toolkit for local businesses.</p>
+                    <p>Parchhoria Technologies • The AI-powered sales & CRM platform for modern businesses.</p>
                 </div>
                 <div class="footer-links">
                     <a href="privacy.html">Privacy Policy</a>
@@ -131,7 +142,7 @@
                 </div>
             </div>
             <div class="copyright">
-                &copy; 2026 MicroCRM. All rights reserved.
+                &copy; 2026 Parchhoria Technologies. All rights reserved.
             </div>
         </div>
     </footer>
