@@ -3,13 +3,117 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MicroCRM - The AI-Powered Business Platform</title>
-    <meta name="description" content="The ultimate CRM equipped with WhatsApp AI Chatbots, Voice AI, and a free Client Web Portal. Zero cloud fees.">
+    <title>MicroCRM - 24/7 AI WhatsApp Sales & Multi-Tenant CRM Platform</title>
+    <meta name="description" content="MicroCRM is the AI-powered business platform equipped with WhatsApp AI virtual receptionists, smart lead management, and live client web portals.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .demo-spotlight-banner {
+            background: linear-gradient(135deg, rgba(16, 185, 129, 0.15) 0%, rgba(99, 102, 241, 0.15) 100%);
+            border: 1px solid rgba(16, 185, 129, 0.3);
+            border-radius: 20px;
+            padding: 30px;
+            margin: 40px 0;
+            backdrop-filter: blur(12px);
+        }
+        .spotlight-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-bottom: 20px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .spotlight-title {
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--text-main);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .spotlight-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+        .spotlight-card {
+            background: rgba(30, 30, 46, 0.7);
+            border: 1px solid var(--border);
+            border-radius: 14px;
+            padding: 20px;
+        }
+        .spotlight-card h4 {
+            color: #a6e3a1;
+            font-size: 1rem;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .btn-wa {
+            background: linear-gradient(135deg, #10b981 0%, #059669 100%) !important;
+            color: #fff !important;
+            box-shadow: 0 4px 15px rgba(16, 185, 129, 0.3);
+        }
+        .btn-wa:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(16, 185, 129, 0.4);
+        }
+        .pricing-section {
+            padding: 60px 0;
+        }
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            margin-top: 40px;
+        }
+        .pricing-card {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            padding: 35px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            position: relative;
+        }
+        .pricing-card.popular {
+            border: 2px solid var(--primary);
+            box-shadow: 0 10px 30px rgba(137, 180, 250, 0.15);
+        }
+        .badge-popular {
+            position: absolute;
+            top: -14px;
+            right: 20px;
+            background: var(--primary);
+            color: #11111b;
+            font-size: 11px;
+            font-weight: 800;
+            padding: 4px 12px;
+            border-radius: 12px;
+            text-transform: uppercase;
+        }
+        .price-tag {
+            font-family: 'Outfit', sans-serif;
+            font-size: 2.8rem;
+            font-weight: 800;
+            color: var(--text-main);
+            margin: 15px 0;
+        }
+        .price-tag span {
+            font-size: 1rem;
+            color: var(--text-muted);
+            font-weight: 400;
+        }
+    </style>
 </head>
 <body>
     <div class="blob blob-1"></div>
@@ -24,68 +128,79 @@
             </div>
             <div class="nav-links">
                 <a href="#whatsapp">WhatsApp AI</a>
-                <a href="#crm">Complete CRM</a>
+                <a href="#demo">Live Client Demo</a>
+                <a href="#industries">Industries</a>
+                <a href="#pricing">Pricing</a>
                 <a href="portal-demo.html">Client Portal</a>
-                <a href="docs.html">Documentation</a>
-                <a href="contact.html">Contact Support</a>
-                <a href="https://github.com/ayushmanparchoria16/microcrm/releases/download/v1.0/MicroCRM_Setup.exe" class="btn btn-primary btn-download">Download Free</a>
+                <a href="docs.html">Docs</a>
+                <a href="https://wa.me/917222989666" target="_blank" class="btn btn-wa"><i class="fa-brands fa-whatsapp"></i> Test Live AI Agent</a>
             </div>
         </div>
     </nav>
 
     <header class="hero">
         <div class="container hero-content">
-            <div class="hero-badge">Smart AI Business Manager 🚀</div>
+            <div class="hero-badge">24/7 AI WhatsApp Sales & CRM Engine 🚀</div>
             <div class="hero-text-anim">
-                <h1 class="hero-title">Run your entire business with<br><span class="gradient-text">WhatsApp AI & Smart CRM.</span></h1>
+                <h1 class="hero-title">Turn WhatsApp Inquiries into<br><span class="gradient-text">Automated Sales & Site Visits.</span></h1>
             </div>
-            <p class="hero-subtitle">Manage billing, inventory, and staff directly from your laptop. Let our smart WhatsApp AI handle customer inquiries, send bills, and take bookings 24/7. No monthly software fees.</p>
-            <div class="hero-actions">
-                <a href="https://github.com/ayushmanparchoria16/microcrm/releases/download/v1.0/MicroCRM_Setup.exe" class="btn btn-primary btn-large btn-download">Download for Windows</a>
-                <a href="#bento" class="btn btn-secondary btn-large">See How It Works</a>
+            <p class="hero-subtitle">MicroCRM equips your business with an intelligent 24/7 AI Virtual Sales Receptionist. It automatically answers buyer queries, shares brochures & property walkthrough videos, extracts customer names, and schedules site visits directly inside WhatsApp.</p>
+            
+            <div class="hero-actions" style="gap: 15px;">
+                <a href="https://wa.me/917222989666" target="_blank" class="btn btn-wa btn-large">
+                    <i class="fa-brands fa-whatsapp" style="font-size: 20px;"></i> Test Live AI Agent (+91 7222989666)
+                </a>
+                <a href="https://app.microcrm.site/book/bbc" target="_blank" class="btn btn-primary btn-large">
+                    <i class="fa-solid fa-store"></i> View Live Client Portal (BBC Real Estate)
+                </a>
             </div>
             
-            <div class="dashboard-preview premium-mockup">
-                <div class="browser-bar">
-                    <div class="dot red"></div>
-                    <div class="dot yellow"></div>
-                    <div class="dot green"></div>
-                    <div class="url-bar">https://mybusiness.microcrm.site</div>
-                </div>
-                <div class="dashboard-layout">
-                    <!-- Sidebar -->
-                    <div class="mock-sidebar">
-                        <div class="mock-nav-item active"></div>
-                        <div class="mock-nav-item"></div>
-                        <div class="mock-nav-item"></div>
-                        <div class="mock-nav-item"></div>
-                        <div class="mock-nav-item mt-auto"></div>
+            <!-- Live Client Case Study Banner -->
+            <div id="demo" class="demo-spotlight-banner">
+                <div class="spotlight-header">
+                    <div class="spotlight-title">
+                        <i class="fa-solid fa-circle-check" style="color: #a6e3a1;"></i>
+                        Active Client Case Study & Live AI Agent Demo
                     </div>
-                    <!-- Main Content -->
-                    <div class="mock-main">
-                        <div class="mock-header">
-                            <div class="mock-title"></div>
-                            <div class="mock-actions"></div>
-                        </div>
-                        <div class="mock-grid top">
-                            <div class="mock-stat-card"></div>
-                            <div class="mock-stat-card"></div>
-                            <div class="mock-stat-card"></div>
-                            <div class="mock-stat-card"></div>
-                        </div>
-                        <div class="mock-grid bottom">
-                            <div class="mock-chart-card"></div>
-                            <div class="mock-list-card"></div>
-                        </div>
+                    <a href="https://app.microcrm.site/book/bbc" target="_blank" class="btn btn-primary" style="font-size: 13px;">
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i> Open Live Customer Portal
+                    </a>
+                </div>
+
+                <div class="spotlight-grid">
+                    <div class="spotlight-card">
+                        <h4><i class="fa-solid fa-building"></i> Client Business</h4>
+                        <p style="font-weight: 600; color: #fff; font-size: 15px;">BBC Real Estate</p>
+                        <p style="font-size: 13px; color: var(--text-muted); margin-top: 4px;">
+                            Project: <strong>Aahana Residency</strong> (Puwarda Junarda, Indore)<br>
+                            Base Price: ₹3,750 / sqft | Type: Residential Plots
+                        </p>
+                    </div>
+
+                    <div class="spotlight-card">
+                        <h4><i class="fa-brands fa-whatsapp"></i> WhatsApp AI Agent Number</h4>
+                        <p style="font-weight: 700; color: #a6e3a1; font-size: 17px;">+91 7222989666</p>
+                        <p style="font-size: 13px; color: var(--text-muted); margin-top: 4px;">
+                            Message <em>"Hi"</em> or <em>"Anjali this side"</em> to test auto lead creation, walkthrough videos, PDF brochure sending, and site visit booking!
+                        </p>
+                    </div>
+
+                    <div class="spotlight-card">
+                        <h4><i class="fa-solid fa-globe"></i> Customer Web Storefront</h4>
+                        <p style="font-size: 13px; color: var(--text-muted);">
+                            Every business gets a branded online portal link (<code style="color: var(--primary);">/book/bbc</code>) with interactive layout maps, plot availability, brochures, and tour booking.
+                        </p>
                     </div>
                 </div>
             </div>
+
         </div>
     </header>
 
+    <!-- Bento Grid / Features -->
     <section id="bento" class="bento-section">
         <div class="container">
-            <h2 class="section-title">Everything you need to <span class="gradient-text">Grow Your Business.</span></h2>
+            <h2 class="section-title">Everything you need to <span class="gradient-text">Scale & Automate Your Business.</span></h2>
             
             <div class="bento-grid">
                 
@@ -93,50 +208,52 @@
                 <div class="bento-card col-span-2 whatsapp-card" id="whatsapp">
                     <div class="bento-content">
                         <div class="feature-icon whatsapp-color"><i class="fa-brands fa-whatsapp"></i></div>
-                        <h3>Smart WhatsApp AI Assistant</h3>
-                        <p>Turn your WhatsApp into a 24/7 customer care executive. Our AI automatically answers customer questions, sends PDF bills instantly, reminds clients of their appointments, and helps grow your sales on autopilot.</p>
+                        <h3>Conversational 24/7 WhatsApp AI Virtual Receptionist</h3>
+                        <p>Say goodbye to rigid "Press 1 for Sales" menus. Our AI understands natural Indian phrasing, handles Indian English expressions (like <em>"Anjali this side"</em>), answers customer questions, dispatches PDF brochures & walkthrough videos, and logs leads directly into your CRM.</p>
                         <ul class="feature-list">
-                            <li><i class="fa-solid fa-check"></i> Instant smart replies to customers</li>
-                            <li><i class="fa-solid fa-check"></i> Automated PDF Bills & Receipts</li>
-                            <li><i class="fa-solid fa-check"></i> Auto appointment reminders</li>
+                            <li><i class="fa-solid fa-check"></i> <strong>Smart Name Extraction:</strong> Cleanly parses customer names from messages like "Anjali this side".</li>
+                            <li><i class="fa-solid fa-check"></i> <strong>Persistent Question Answering:</strong> Answers buyer questions first, then politely asks for contact details.</li>
+                            <li><i class="fa-solid fa-check"></i> <strong>Multilingual:</strong> Fluent in Hindi, Hinglish, and English.</li>
+                            <li><i class="fa-solid fa-check"></i> <strong>Zero Per-Message Fees:</strong> Direct gateway connection without expensive per-chat API markups.</li>
                         </ul>
                     </div>
                     <div class="bento-visual whatsapp-mockup">
-                        <div class="chat-bubble received">Hi! Do you have any running shoes in size 10?</div>
-                        <div class="chat-bubble sent">Hello! Yes, we have 4 models of running shoes in size 10 in stock right now! Would you like me to send you the catalog? 👟</div>
+                        <div class="chat-bubble received">Anjali this side. What is plot price in Aahana Residency?</div>
+                        <div class="chat-bubble sent">Hi Anjali! 😊 Plots in Aahana Residency start at ₹3,750/sqft in Puwarda Junarda, Indore. Would you like me to send you the PDF brochure or schedule a free site visit for you? 🏡</div>
                     </div>
                 </div>
 
-                <!-- Calling AI (Small) -->
+                <!-- Call Assistant -->
                 <div class="bento-card">
                     <div class="bento-content">
                         <div class="feature-icon ai-color"><i class="fa-solid fa-phone-volume"></i></div>
-                        <h3>Smart Call Assistant</h3>
-                        <p>Never miss a customer call. Our smart assistant can automatically answer phone calls, take bookings, and log them into your calendar while you are busy managing your shop.</p>
+                        <h3>AI Voice Telephony</h3>
+                        <p>Deepgram-powered speech recognition automatically handles voice calls, records client requirements, and logs callback requests.</p>
                     </div>
                 </div>
 
-                <!-- Client Web Portal (Small) -->
+                <!-- Client Web Portal -->
                 <div class="bento-card" id="portal">
                     <div class="bento-content">
                         <div class="feature-icon portal-color"><i class="fa-solid fa-globe"></i></div>
-                        <h3>Free Online Store & Booking</h3>
-                        <p>Give your customers their very own online website link. They can browse your products, book appointments, check their bills, and pay securely from their mobile phones.</p>
+                        <h3>Branded Client Web Portal</h3>
+                        <p>Give customers a branded URL link (<code style="color: var(--primary);">/book/{your-slug}</code>) to browse property maps, catalogs, amenities, and book appointments 24/7.</p>
                     </div>
                 </div>
 
-                <!-- Complete CRM (Large) -->
+                <!-- Complete Multi-Industry CRM (Large) -->
                 <div class="bento-card col-span-2 crm-card" id="crm">
                     <div class="bento-content">
                         <div class="feature-icon crm-color"><i class="fa-solid fa-chart-line"></i></div>
-                        <h3>Complete Business Management</h3>
-                        <p>A powerful software built for Indian businesses. Whether you run a retail shop, service clinic, or B2B consultancy, it manages everything from billing to staff attendance.</p>
+                        <h3>Multi-Industry Business Engine</h3>
+                        <p>MicroCRM dynamically switches AI persona behavior, CRM drawers, lead pipelines, and storefront portals based on your business type:</p>
                         <ul class="feature-list grid-list">
-                            <li><i class="fa-solid fa-cash-register"></i> Fast Billing & POS</li>
-                            <li><i class="fa-solid fa-boxes-stacked"></i> Stock & Inventory Tracking</li>
-                            <li><i class="fa-solid fa-users-gear"></i> Staff Attendance & HR</li>
-                            <li><i class="fa-solid fa-list-check"></i> Daily Task Management</li>
-                            <li><i class="fa-solid fa-cloud-arrow-down"></i> One-Click Export/Import Backups</li>
+                            <li><i class="fa-solid fa-building"></i> <strong>Real Estate:</strong> Plot maps, sqft prices, brochure links, walkthrough videos & site visits.</li>
+                            <li><i class="fa-solid fa-user-doctor"></i> <strong>Healthcare & Clinics:</strong> Doctor slots, clinic location pins & appointment reminders.</li>
+                            <li><i class="fa-solid fa-scissors"></i> <strong>Salons & Spas:</strong> Stylist schedules, service menu, walk-in billing & 5-star reviews.</li>
+                            <li><i class="fa-solid fa-briefcase"></i> <strong>Consulting:</strong> Service packages, retainer tracking & quotation generator.</li>
+                            <li><i class="fa-solid fa-cash-register"></i> <strong>Retail & E-Commerce:</strong> Inventory stock alerts, POS billing & QR checkout.</li>
+                            <li><i class="fa-solid fa-chart-line"></i> <strong>Pre-Sales Lead Engine:</strong> Meta (FB/IG) ad leads instant sync & round-robin assignment.</li>
                         </ul>
                     </div>
                 </div>
@@ -145,18 +262,61 @@
         </div>
     </section>
 
-    <section class="architecture-section">
+    <!-- Pricing Section -->
+    <section id="pricing" class="pricing-section">
         <div class="container">
-            <div class="arch-box glass-card">
-                <div class="arch-content">
-                    <h2>Works from your Laptop. No Monthly Server Fees.</h2>
-                    <p>Unlike other software that charges expensive monthly fees for cloud servers, MicroCRM installs directly on your own Windows computer. We provide a highly secure connection so your customers can still visit your online store link from anywhere in the world, while <strong>your data stays safe on your own PC.</strong></p>
-                    <a href="https://github.com/ayushmanparchoria16/microcrm/releases/download/v1.0/MicroCRM_Setup.exe" class="btn btn-primary btn-download">Start your Free System</a>
+            <h2 class="section-title">Transparent <span class="gradient-text">SaaS Pricing.</span></h2>
+            <p style="text-align: center; color: var(--text-muted); max-width: 600px; margin: 0 auto;">No hidden monthly fees. Zero per-message WhatsApp API markups.</p>
+            
+            <div class="pricing-grid">
+                <!-- Starter -->
+                <div class="pricing-card">
+                    <div>
+                        <h3>Starter Plan</h3>
+                        <p style="color: var(--text-muted); font-size: 0.9rem; margin-top: 5px;">Perfect for solo brokers & individual practitioners.</p>
+                        <div class="price-tag">₹1,999 <span>/ month</span></div>
+                        <ul class="feature-list" style="margin-top: 20px;">
+                            <li><i class="fa-solid fa-check"></i> 1 Business Profile</li>
+                            <li><i class="fa-solid fa-check"></i> 24/7 AI Virtual Receptionist</li>
+                            <li><i class="fa-solid fa-check"></i> Branded Client Web Portal Link</li>
+                            <li><i class="fa-solid fa-check"></i> Up to 500 Leads / Month</li>
+                        </ul>
+                    </div>
+                    <a href="https://wa.me/917222989666?text=Hi!%20I%20want%20to%20get%20started%20with%20the%20MicroCRM%20Starter%20Plan." target="_blank" class="btn btn-secondary" style="margin-top: 25px; text-align: center; justify-content: center;">Get Started</a>
                 </div>
-                <div class="arch-visual">
-                    <div class="server-node"><i class="fa-solid fa-laptop"></i><br>Your Computer<br><small style="color:var(--text-muted); font-size: 0.75rem;">(Safe & Fast)</small></div>
-                    <div class="connector"><i class="fa-solid fa-arrow-right-arrow-left"></i></div>
-                    <div class="server-node customer"><i class="fa-solid fa-mobile-screen"></i><br>Your Customers<br><small style="color:var(--text-muted); font-size: 0.75rem;">(Online Access)</small></div>
+
+                <!-- Pro Growth -->
+                <div class="pricing-card popular">
+                    <div class="badge-popular">Most Popular</div>
+                    <div>
+                        <h3>Pro Growth Plan</h3>
+                        <p style="color: var(--text-muted); font-size: 0.9rem; margin-top: 5px;">Ideal for real estate agencies, clinics & growing teams.</p>
+                        <div class="price-tag" style="color: var(--primary);">₹4,999 <span>/ month</span></div>
+                        <ul class="feature-list" style="margin-top: 20px;">
+                            <li><i class="fa-solid fa-check"></i> <strong>Everything in Starter, plus:</strong></li>
+                            <li><i class="fa-solid fa-check"></i> Multi-User Sales Rep Accounts</li>
+                            <li><i class="fa-solid fa-check"></i> Equal Round-Robin Lead Assignment</li>
+                            <li><i class="fa-solid fa-check"></i> Unlimited Leads & WhatsApp Chats</li>
+                            <li><i class="fa-solid fa-check"></i> PDF Brochure & Video Dispatch</li>
+                        </ul>
+                    </div>
+                    <a href="https://wa.me/917222989666?text=Hi!%20I%20want%20to%20subscribe%20to%20the%20MicroCRM%20Pro%20Growth%20Plan." target="_blank" class="btn btn-primary" style="margin-top: 25px; text-align: center; justify-content: center;">Start 14-Day Free Trial</a>
+                </div>
+
+                <!-- Enterprise -->
+                <div class="pricing-card">
+                    <div>
+                        <h3>Enterprise Plan</h3>
+                        <p style="color: var(--text-muted); font-size: 0.9rem; margin-top: 5px;">For large developers & multi-location franchises.</p>
+                        <div class="price-tag">₹9,999 <span>/ month</span></div>
+                        <ul class="feature-list" style="margin-top: 20px;">
+                            <li><i class="fa-solid fa-check"></i> Multi-Location & Multi-Project Catalog</li>
+                            <li><i class="fa-solid fa-check"></i> Meta (FB/IG) Lead Ads Custom Sync</li>
+                            <li><i class="fa-solid fa-check"></i> Custom AI Voice Telephony</li>
+                            <li><i class="fa-solid fa-check"></i> Dedicated Account Manager</li>
+                        </ul>
+                    </div>
+                    <a href="https://wa.me/917222989666?text=Hi!%20I%20want%20to%20discuss%20an%20Enterprise%20Plan%20for%20my%20company." target="_blank" class="btn btn-secondary" style="margin-top: 25px; text-align: center; justify-content: center;">Contact Sales</a>
                 </div>
             </div>
         </div>
@@ -170,7 +330,10 @@
                         <span class="logo-icon"><img src="logo.png" alt="MicroCRM Logo" style="height: 24px; width: 24px; margin-right: 8px; border-radius: 6px;"></span>
                         <span class="logo-text">MicroCRM</span>
                     </div>
-                    <p>The AI-powered, zero-infrastructure toolkit for local businesses.</p>
+                    <p>Parchoria Technologies • The AI-powered sales & CRM platform for modern businesses.</p>
+                    <p style="margin-top: 10px; font-size: 0.85rem; color: #a6e3a1;">
+                        <i class="fa-brands fa-whatsapp"></i> Sales & AI Demo: <strong>+91 7222989666</strong>
+                    </p>
                 </div>
                 <div class="footer-links">
                     <a href="privacy.html">Privacy Policy</a>
@@ -179,7 +342,7 @@
                 </div>
             </div>
             <div class="copyright">
-                &copy; 2026 MicroCRM. All rights reserved.
+                &copy; 2026 Parchoria Technologies. All rights reserved.
             </div>
         </div>
     </footer>
