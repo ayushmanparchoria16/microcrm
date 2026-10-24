@@ -201,18 +201,194 @@ body {
 .footer-links a:hover { color: var(--primary); }
 .copyright { text-align: center; color: var(--text-muted); font-size: 0.85rem; border-top: 1px solid var(--border); padding-top: 2rem; }
 
+/* Live Client Showcase */
+.showcase-section {
+    padding: 80px 0;
+    position: relative;
+}
+.showcase-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    margin-top: 40px;
+}
+.showcase-card {
+    background: var(--bg-secondary);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+.showcase-card:hover {
+    transform: translateY(-6px);
+    border-color: rgba(137, 180, 250, 0.4);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+}
+.showcase-badge-live {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: rgba(16, 185, 129, 0.15);
+    color: #a6e3a1;
+    border: 1px solid rgba(16, 185, 129, 0.35);
+    padding: 3px 10px;
+    border-radius: 20px;
+    font-size: 0.72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+.showcase-badge-live .pulse-dot {
+    width: 7px;
+    height: 7px;
+    background: #a6e3a1;
+    border-radius: 50%;
+    box-shadow: 0 0 8px #a6e3a1;
+    animation: pulseLive 1.5s infinite;
+}
+@keyframes pulseLive {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.4; transform: scale(1.2); }
+}
+.showcase-client-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+.showcase-avatar {
+    width: 48px;
+    height: 48px;
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    background: var(--bg-tertiary);
+    border: 1px solid var(--border);
+    flex-shrink: 0;
+}
+.showcase-title {
+    font-family: 'Outfit', sans-serif;
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--text-main);
+    margin-bottom: 4px;
+}
+.showcase-category {
+    font-size: 0.85rem;
+    color: var(--primary);
+    font-weight: 600;
+}
+.showcase-desc {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    line-height: 1.55;
+    margin: 15px 0;
+}
+.showcase-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-bottom: 20px;
+}
+.showcase-tag {
+    font-size: 0.75rem;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: var(--text-muted);
+    padding: 3px 9px;
+    border-radius: 6px;
+    font-weight: 500;
+}
+
+/* 4-Pillar Ecosystem Grid */
+.ecosystem-section {
+    padding: 80px 0;
+    background: linear-gradient(180deg, var(--bg-secondary) 0%, var(--bg-main) 100%);
+    border-top: 1px solid var(--border);
+}
+.ecosystem-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+    margin-top: 40px;
+}
+.ecosystem-card {
+    background: var(--glass-bg);
+    border: 1px solid var(--border);
+    backdrop-filter: blur(12px);
+    border-radius: 20px;
+    padding: 30px;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+.ecosystem-card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(137, 180, 250, 0.35);
+}
+.ecosystem-step {
+    font-size: 0.75rem;
+    font-weight: 800;
+    color: var(--accent);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+    display: block;
+}
+.ecosystem-card h3 {
+    font-family: 'Outfit', sans-serif;
+    font-size: 1.35rem;
+    margin-bottom: 12px;
+    color: var(--text-main);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.ecosystem-card p {
+    color: var(--text-muted);
+    font-size: 0.92rem;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+/* Consultation Growth CTA Section (Replacing Pricing) */
+.cta-growth-section {
+    padding: 90px 0;
+    background: linear-gradient(180deg, var(--bg-main) 0%, #151522 100%);
+    border-top: 1px solid var(--border);
+}
+.cta-growth-box {
+    background: linear-gradient(135deg, rgba(30, 30, 46, 0.95) 0%, rgba(24, 24, 37, 0.98) 100%);
+    border: 1.5px solid rgba(137, 180, 250, 0.35);
+    border-radius: 24px;
+    padding: 55px 40px;
+    text-align: center;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+    position: relative;
+    overflow: hidden;
+}
+
 @media (max-width: 1024px) {
     .bento-grid { grid-template-columns: 1fr 1fr; }
     .col-span-2 { grid-column: span 2; }
     .whatsapp-card { flex-direction: column; }
     .arch-box { flex-direction: column; padding: 2.5rem; }
+    .showcase-grid { grid-template-columns: 1fr; }
+    .ecosystem-grid { grid-template-columns: 1fr; }
 }
 
 @media (max-width: 768px) {
-    .hero-title { font-size: 3rem; }
+    .hero-title { font-size: 2.4rem; }
     .nav-links { display: none; }
     .hero-actions { flex-direction: column; }
     .bento-grid { grid-template-columns: 1fr; }
     .col-span-2 { grid-column: span 1; }
     .grid-list { grid-template-columns: 1fr; }
+    .cta-growth-box { padding: 35px 20px; }
 }
