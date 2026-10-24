@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Privacy Policy - MicroCRM</title>
-    <meta name="description" content="MicroCRM Privacy Policy - Multi-tenant data isolation, DPDPA 2023 legal compliance, and anti-theft protection.">
+    <meta name="description" content="MicroCRM Privacy Policy - Multi-tenant data isolation, DPDPA 2023 legal compliance, and anti-theft lead protection.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;600;700;800;900&display=swap" rel="stylesheet">
@@ -25,19 +25,20 @@
         }
         .policy-card h1 {
             font-family: 'Outfit', sans-serif;
-            font-size: 2.2rem;
+            font-size: 2.4rem;
             margin-bottom: 10px;
             color: var(--text-main);
         }
         .update-date {
             color: var(--primary);
-            font-size: 0.9rem;
-            margin-bottom: 30px;
+            font-size: 0.95rem;
+            margin-bottom: 25px;
             display: block;
+            font-weight: 500;
         }
         .policy-card h2 {
             font-family: 'Outfit', sans-serif;
-            font-size: 1.4rem;
+            font-size: 1.45rem;
             margin-top: 35px;
             margin-bottom: 15px;
             color: var(--text-main);
@@ -46,7 +47,7 @@
         }
         .policy-card p, .policy-card ul {
             color: var(--text-muted);
-            line-height: 1.7;
+            line-height: 1.75;
             margin-bottom: 15px;
             font-size: 0.98rem;
         }
@@ -54,7 +55,36 @@
             padding-left: 20px;
         }
         .policy-card li {
+            margin-bottom: 10px;
+        }
+        .policy-card code {
+            background: rgba(137, 180, 250, 0.12);
+            color: var(--primary);
+            padding: 2px 8px;
+            border-radius: 6px;
+            font-family: monospace;
+            font-size: 0.9em;
+        }
+        .policy-highlight {
+            background: rgba(166, 227, 161, 0.08);
+            border: 1px solid rgba(166, 227, 161, 0.25);
+            border-radius: 16px;
+            padding: 20px 24px;
+            margin: 24px 0 30px;
+        }
+        .policy-highlight h4 {
+            color: #a6e3a1;
             margin-bottom: 8px;
+            font-size: 1.1rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .policy-highlight p {
+            margin-bottom: 0;
+            font-size: 0.95rem;
+            color: var(--text-muted);
+            line-height: 1.65;
         }
     </style>
 </head>
@@ -70,9 +100,11 @@
             </div>
             <div class="nav-links">
                 <a href="index.html">Home</a>
+                <a href="portal-demo.html">Client Portals</a>
                 <a href="docs.html">Documentation</a>
                 <a href="contact.html">Contact Support</a>
-                <a href="https://github.com/ayushmanparchoria16/microcrm/releases/download/v1.0/MicroCRM_Setup.exe" class="btn btn-primary btn-download">Download Free</a>
+                <a href="https://app.microcrm.site/login" class="btn btn-primary" style="padding: 8px 18px; font-size: 13px;"><i class="fa-solid fa-arrow-right-to-bracket"></i> Cloud Login</a>
+                <a href="https://wa.me/918770466442" target="_blank" class="btn btn-wa" style="padding: 8px 16px; font-size: 13px;"><i class="fa-brands fa-whatsapp"></i> Chat Sales</a>
             </div>
         </div>
     </nav>
@@ -80,49 +112,79 @@
     <div class="page-container">
         <div class="policy-card">
             <h1>Privacy Policy</h1>
-            <span class="update-date">Last Updated: September 2026</span>
+            <span class="update-date"><i class="fa-regular fa-calendar-check"></i> Last Updated: October 2026 &bull; Effective Date: October 2026</span>
 
-            <p>At <strong>MicroCRM</strong> (developed by <strong>Parchhoria Technologies</strong>), we believe your business data belongs strictly to you. Our architecture is designed from the ground up around <strong>Strict Multi-Tenant Data Isolation</strong>, <strong>DPDPA 2023 Legal Compliance</strong>, and <strong>Anti-Theft Lead Protection</strong>, ensuring complete privacy, control, and data sovereignty.</p>
+            <div class="policy-highlight">
+                <h4><i class="fa-solid fa-shield-halved"></i> Data Sovereignty & Isolation Promise</h4>
+                <p>At MicroCRM (developed by <strong>Parchhoria Technologies</strong>), we operate on a core foundation: <strong>Your business data belongs exclusively to you</strong>. We enforce strict multi-tenant database isolation (<code>WHERE business_id = %s</code>), full compliance with India's <strong>Digital Personal Data Protection Act (DPDPA 2023)</strong>, and staff anti-theft phone masking. We never sell, monetize, or harvest your customer records.</p>
+            </div>
 
-            <h2>1. DPDPA 2023 Compliance & Data Protection</h2>
-            <p>MicroCRM is designed in alignment with India’s <strong>Digital Personal Data Protection Act (DPDPA 2023)</strong>. We enforce strict data minimization, purpose limitation, and consent-based communication protocols across all automated features.</p>
+            <h2>1. Scope & Service Applications</h2>
+            <p>This Privacy Policy applies to all personal data and business information processed through:</p>
             <ul>
-                <li><strong>Data Principal Rights:</strong> Customer data collected via WhatsApp or web portals is processed solely for explicit business fulfillment (site visit booking, property inquiries, invoices).</li>
-                <li><strong>No Telemetry Tracking:</strong> MicroCRM does not track, mine, or share personal identifying information (PII) with third-party advertisers or data brokers.</li>
+                <li>The MicroCRM Multi-Tenant Cloud Platform (<code>https://app.microcrm.site</code>)</li>
+                <li>Merchant digital storefronts and self-service booking portals (<code>https://app.microcrm.site/book/[slug]</code> and <code>microcrm.site</code>)</li>
+                <li>Automated 24/7 WhatsApp AI sales assistants, billing dispatchers, and appointment reminder engines</li>
+                <li>Associated point-of-sale (POS) billing, inventory tracking, and client management software modules</li>
             </ul>
 
-            <h2>2. 100% Multi-Tenant Data Isolation Guarantee</h2>
-            <p>For multi-branch or enterprise cloud deployments, MicroCRM guarantees strict 100% data isolation through multi-tenant database scoping (<code>WHERE business_id = %s</code>):</p>
+            <h2>2. DPDPA 2023 Compliance & Lawful Basis of Processing</h2>
+            <p>In adherence to India's <strong>Digital Personal Data Protection Act (DPDPA 2023)</strong> and applicable global data privacy standards, MicroCRM processes customer information strictly under recognized lawful bases:</p>
             <ul>
-                <li>Every query, lead report, and transaction is strictly isolated at the database level.</li>
-                <li>Competitor businesses or different franchises can <strong>never view, query, or leak each other's lead records or business metrics</strong>.</li>
+                <li><strong>Purpose Limitation & Consent:</strong> Customer information (such as customer name, WhatsApp contact number, vehicle/device details for repairs, bridal booking dates, or real estate plot inquiries) is collected solely for explicit fulfillment of the merchant's business services.</li>
+                <li><strong>No Telemetry Tracking or Ad Mining:</strong> We do not track users across the web, inject tracking cookies from third-party advertising networks, or monetize customer purchasing habits.</li>
+                <li><strong>Notice at Collection:</strong> When a consumer uses a public storefront (such as <em>Rashmi R Makeup</em> or <em>Shri Ranawat Infotech</em>) to book an appointment or place an order via WhatsApp, they voluntarily initiate contact and are presented with transparent booking details.</li>
             </ul>
 
-            <h2>3. Anti-Theft Phone Number Masking for Sales Reps</h2>
-            <p>To protect your company's lead database from unauthorized staff theft, MicroCRM features role-based data masking:</p>
+            <h2>3. 100% Multi-Tenant Data Isolation Guarantee</h2>
+            <p>MicroCRM powers thousands of business transactions across diverse verticals—including beauty salons, computer repair centers, real estate developers, and retail stores. To safeguard operational integrity:</p>
             <ul>
-                <li>Non-admin employees and sales representatives only see masked customer contact numbers (e.g. <code>+91 62641*****</code>) in lead lists, dashboards, and WhatsApp Web inboxes.</li>
-                <li>Sales reps can communicate seamlessly via WhatsApp Web without having access to copy raw phone numbers.</li>
+                <li><strong>Strict Parameter-Scoped Tenancy:</strong> Every single database read, write, and analytical aggregation is strictly scoped by <code>WHERE business_id = %s</code> at the query execution level.</li>
+                <li><strong>Zero Cross-Tenant Leakage:</strong> A merchant or franchise owner can <strong>never view, query, access, or export</strong> another business tenant's catalog, customer numbers, revenue totals, or sales leads.</li>
+                <li><strong>Logical & Cryptographic Separation:</strong> Session tokens and authentication cookies are cryptographically signed with tenant-specific claims.</li>
             </ul>
 
-            <h2>4. Enterprise Cloud & Hybrid Security Architecture</h2>
-            <p>MicroCRM is architected as an <strong>Enterprise SaaS & Multi-Tenant Cloud Platform</strong> with optional hybrid desktop support. Whether accessed via <code>app.microcrm.site</code> or deployed across multi-branch locations, your data is protected with industry-standard encryption and strict tenant segregation:</p>
+            <h2>4. Anti-Theft Phone Number Masking for Sales Reps</h2>
+            <p>Customer phone numbers are one of the most valuable assets of any business. To eliminate internal data theft or unauthorized employee poaching:</p>
             <ul>
-                <li><strong>Encrypted Transport:</strong> All data transmitted between your browser, WhatsApp gateway, and our backend is encrypted using TLS 1.3 SSL protocols.</li>
-                <li><strong>Isolated Tenant Storage:</strong> Business databases run on enterprise PostgreSQL/SQLite engines with strict parameter-scoped multi-tenancy.</li>
-                <li><strong>Data Sovereignty & Backups:</strong> Business owners retain 100% control to export, audit, or delete their business database logs and customer lead histories at any time.</li>
+                <li><strong>Role-Based Masking:</strong> Non-admin employees, sales staff, and support agents only see partially masked contact numbers (e.g. <code>+91 62641*****</code>) across the CRM lead drawers, customer lists, and report views.</li>
+                <li><strong>Direct In-App WhatsApp Web Action:</strong> Employees can initiate WhatsApp conversations with leads directly through authorized action buttons without exposing the raw mobile number for copy-pasting or offline export.</li>
+                <li><strong>Admin Visibility Control:</strong> Full unmasked numbers and raw data exports are strictly restricted to verified business owner / administrator roles.</li>
             </ul>
 
-            <h2>5. WhatsApp Integration Privacy</h2>
-            <p>MicroCRM utilizes WhatsApp Web JS to connect your business WhatsApp account directly to your local instance:</p>
+            <h2>5. WhatsApp Business & AI Assistant Privacy</h2>
+            <p>MicroCRM integrates an intelligent conversational AI agent directly with your business WhatsApp number using secure WhatsApp Web session protocols:</p>
             <ul>
-                <li>WhatsApp authentication sessions are saved locally inside your installation directory (`whatsapp-gateway\.wwebjs_auth`).</li>
-                <li>Messages processed by your local AI assistant are handled on-device to deliver auto-replies, generate PDF invoices, and send appointment reminders.</li>
-                <li>We do not sell, harvest, or transmit your customers' phone numbers or chat conversations to external telemetry servers.</li>
+                <li><strong>On-Device / Private Gateway Sessions:</strong> WhatsApp session credentials (<code>.wwebjs_auth</code>) are encrypted and isolated within your dedicated tenant container.</li>
+                <li><strong>Operational Automation:</strong> The AI processes messages solely to provide instant business answers (operating hours, service menu, catalog pricing), send automated PDF tax invoices, and schedule calendar appointments.</li>
+                <li><strong>Zero External Data Sharing:</strong> Your customers' personal phone numbers and private chats are never transmitted to third parties, data aggregators, or marketing networks.</li>
             </ul>
 
-            <h2>6. Contact & Data Officer</h2>
-            <p>If you have any questions regarding privacy or data handling under DPDPA 2023, feel free to reach out to our team at <a href="contact.html" style="color: var(--primary);">Contact Support</a> or email us at <strong>support@microcrm.site</strong>.</p>
+            <h2>6. Data Security, Transport & Cloud Infrastructure</h2>
+            <p>Our cloud infrastructure is hardened with industry-standard cybersecurity defenses:</p>
+            <ul>
+                <li><strong>TLS 1.3 Transport Encryption:</strong> All communications between web browsers, public mobile storefronts, and our backend servers are encrypted using high-grade TLS 1.3 SSL protocols.</li>
+                <li><strong>Automated Cloud Backups:</strong> Cloud databases undergo daily automated snapshots to prevent data loss against hardware or infrastructure disruptions.</li>
+                <li><strong>Data Portability & Zero Vendor Lock-In:</strong> Business owners can export clean CSV backups of their customers, leads, sales invoices, and catalog at any time with a single click.</li>
+            </ul>
+
+            <h2>7. Data Principal Rights (Access, Correction & Deletion)</h2>
+            <p>Under the DPDPA 2023, data principals (both merchants and end-customers) have enforceable rights:</p>
+            <ul>
+                <li><strong>Right of Access & Summary:</strong> You may request an itemized copy of the personal data held within your tenant account.</li>
+                <li><strong>Right to Correction & Erasure:</strong> Customers can request the correction of inaccurate contact details or the complete erasure of their customer record by contacting the merchant or our Data Officer.</li>
+                <li><strong>Right of Grievance Redressal:</strong> We maintain a designated grievance redressal mechanism to respond to data inquiries within the statutory timelines.</li>
+            </ul>
+
+            <h2>8. Grievance Officer & Contact Information</h2>
+            <p>For any inquiries, requests under DPDPA 2023, or data privacy concerns, please contact our designated Grievance Officer:</p>
+            <div style="background: var(--bg-secondary); border: 1px solid var(--border); border-radius: 14px; padding: 22px; margin-top: 15px;">
+                <p style="margin-bottom: 8px; color: var(--text-main); font-weight: 700; font-size: 1.05rem;"><i class="fa-solid fa-user-shield" style="color: var(--primary); margin-right: 8px;"></i> Ayushman Parchhoria — Grievance & Data Protection Officer</p>
+                <p style="margin-bottom: 6px;"><strong>Organization:</strong> Parchhoria Technologies (MicroCRM)</p>
+                <p style="margin-bottom: 6px;"><strong>Email:</strong> <a href="mailto:support@microcrm.site" style="color: var(--primary);">support@microcrm.site</a> &bull; <a href="mailto:ayushman@microcrm.site" style="color: var(--primary);">ayushman@microcrm.site</a></p>
+                <p style="margin-bottom: 6px;"><strong>WhatsApp Support:</strong> <a href="https://wa.me/918770466442" target="_blank" style="color: #a6e3a1; font-weight: 600;">+91 87704 66442</a></p>
+                <p style="margin-bottom: 0;"><strong>Official Website:</strong> <a href="https://microcrm.site" target="_blank" style="color: var(--primary);">https://microcrm.site</a></p>
+            </div>
         </div>
     </div>
 
@@ -139,6 +201,7 @@
                 <div class="footer-links">
                     <a href="privacy.html">Privacy Policy</a>
                     <a href="terms.html">Terms of Service</a>
+                    <a href="docs.html">Documentation</a>
                     <a href="contact.html">Contact Support</a>
                 </div>
             </div>

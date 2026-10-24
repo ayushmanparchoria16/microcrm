@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Terms of Service - MicroCRM</title>
-    <meta name="description" content="MicroCRM Terms of Service - Software license, zero monthly cloud fees, and user guidelines.">
+    <meta name="description" content="MicroCRM Terms of Service - Software license, multi-tenant cloud SaaS agreement, DPDPA 2023 compliance, and user guidelines.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;600;700;800;900&display=swap" rel="stylesheet">
@@ -25,19 +25,20 @@
         }
         .policy-card h1 {
             font-family: 'Outfit', sans-serif;
-            font-size: 2.2rem;
+            font-size: 2.4rem;
             margin-bottom: 10px;
             color: var(--text-main);
         }
         .update-date {
             color: var(--primary);
-            font-size: 0.9rem;
-            margin-bottom: 30px;
+            font-size: 0.95rem;
+            margin-bottom: 25px;
             display: block;
+            font-weight: 500;
         }
         .policy-card h2 {
             font-family: 'Outfit', sans-serif;
-            font-size: 1.4rem;
+            font-size: 1.45rem;
             margin-top: 35px;
             margin-bottom: 15px;
             color: var(--text-main);
@@ -46,7 +47,7 @@
         }
         .policy-card p, .policy-card ul {
             color: var(--text-muted);
-            line-height: 1.7;
+            line-height: 1.75;
             margin-bottom: 15px;
             font-size: 0.98rem;
         }
@@ -54,7 +55,36 @@
             padding-left: 20px;
         }
         .policy-card li {
+            margin-bottom: 10px;
+        }
+        .policy-card code {
+            background: rgba(137, 180, 250, 0.12);
+            color: var(--primary);
+            padding: 2px 8px;
+            border-radius: 6px;
+            font-family: monospace;
+            font-size: 0.9em;
+        }
+        .policy-highlight {
+            background: rgba(137, 180, 250, 0.08);
+            border: 1px solid rgba(137, 180, 250, 0.25);
+            border-radius: 16px;
+            padding: 20px 24px;
+            margin: 24px 0 30px;
+        }
+        .policy-highlight h4 {
+            color: var(--primary);
             margin-bottom: 8px;
+            font-size: 1.1rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .policy-highlight p {
+            margin-bottom: 0;
+            font-size: 0.95rem;
+            color: var(--text-muted);
+            line-height: 1.65;
         }
     </style>
 </head>
@@ -70,9 +100,11 @@
             </div>
             <div class="nav-links">
                 <a href="index.html">Home</a>
+                <a href="portal-demo.html">Client Portals</a>
                 <a href="docs.html">Documentation</a>
                 <a href="contact.html">Contact Support</a>
-                <a href="https://github.com/ayushmanparchoria16/microcrm/releases/download/v1.0/MicroCRM_Setup.exe" class="btn btn-primary btn-download">Download Free</a>
+                <a href="https://app.microcrm.site/login" class="btn btn-primary" style="padding: 8px 18px; font-size: 13px;"><i class="fa-solid fa-arrow-right-to-bracket"></i> Cloud Login</a>
+                <a href="https://wa.me/918770466442" target="_blank" class="btn btn-wa" style="padding: 8px 16px; font-size: 13px;"><i class="fa-brands fa-whatsapp"></i> Chat Sales</a>
             </div>
         </div>
     </nav>
@@ -80,43 +112,75 @@
     <div class="page-container">
         <div class="policy-card">
             <h1>Terms of Service</h1>
-            <span class="update-date">Last Updated: September 2026</span>
+            <span class="update-date"><i class="fa-regular fa-calendar-check"></i> Last Updated: October 2026 &bull; Effective Date: October 2026</span>
 
-            <p>Welcome to <strong>MicroCRM</strong> (provided by <strong>Parchhoria Technologies</strong>). By installing, downloading, or using the MicroCRM software application, website, or associated services, you agree to be bound by the following terms and conditions.</p>
+            <div class="policy-highlight">
+                <h4><i class="fa-solid fa-file-contract"></i> Master Services Agreement</h4>
+                <p>Welcome to <strong>MicroCRM</strong> (operated by <strong>Parchhoria Technologies</strong>). These Terms of Service govern your access to and use of our Cloud CRM software suite (<code>app.microcrm.site</code>), public digital storefronts, WhatsApp AI integrations, and mobile client portals. By creating an account or using our services, you agree to these terms in full.</p>
+            </div>
 
-            <h2>1. Software License & Data Ownership</h2>
-            <p>MicroCRM grants you a non-exclusive, non-transferable license to install and run the MicroCRM software package on your desktop or web instance for managing your business operations, lead pipelines, customer communication, and sales billing.</p>
+            <h2>1. Cloud SaaS License & Multi-Tenant Access</h2>
+            <p>Parchhoria Technologies grants your business a non-exclusive, non-transferable, revocable license to access and utilize the MicroCRM SaaS suite for managing your sales leads, customer bookings, WhatsApp AI conversations, inventory catalog, and POS billing operations.</p>
             <ul>
-                <li>You retain 100% ownership of your business data, database records, and customer logs.</li>
-                <li>MicroCRM guarantees strict multi-tenant data isolation (<code>WHERE business_id = %s</code>) across all cloud-hosted modules.</li>
+                <li><strong>Tenant Isolation:</strong> Your access is restricted strictly to your provisioned business tenant container (<code>WHERE business_id = %s</code>). You agree not to attempt to access, probe, or reverse engineer any other tenant's partition.</li>
+                <li><strong>Multi-Device Access:</strong> You may access the cloud administration dashboard from multiple smartphones, tablets, or desktop web browsers simultaneously.</li>
             </ul>
 
-            <h2>2. DPDPA 2023 Compliance & Anti-Theft Protection</h2>
-            <p>Users must comply with applicable data protection laws, including India’s Digital Personal Data Protection Act (DPDPA 2023):</p>
+            <h2>2. 100% Customer Data Sovereignty</h2>
+            <p>You retain 100% complete, unencumbered ownership of your business data:</p>
             <ul>
-                <li>MicroCRM incorporates role-based phone number masking (<code>+91 62641*****</code>) for non-admin employees to protect company databases against staff data theft.</li>
-                <li>Users are responsible for maintaining valid consent for customer messaging under DPDPA guidelines.</li>
+                <li>All customer lead records, appointment calendars, product catalogs, service pricing, and sales transaction histories remain your exclusive intellectual property.</li>
+                <li>MicroCRM will never claim ownership, commercialize, or sell your customer lists to third parties.</li>
+                <li><strong>Zero Vendor Lock-In:</strong> Business owners maintain the right to export clean CSV datasets of their entire lead database, inventory, and invoices at any time via 1-click export tools.</li>
             </ul>
 
-            <h2>3. Enterprise Cloud & Hybrid Service Availability</h2>
-            <p>MicroCRM provides 24/7 high-availability cloud SaaS services via <code>app.microcrm.site</code> with optional hybrid desktop support:</p>
+            <h2>3. DPDPA 2023 Compliance & Merchant Responsibilities</h2>
+            <p>As a merchant utilizing MicroCRM, you act as the primary <em>Data Fiduciary</em> with respect to your end-customers under India’s <strong>Digital Personal Data Protection Act (DPDPA 2023)</strong>:</p>
             <ul>
-                <li>Cloud SaaS accounts benefit from 99.9% uptime, automated SSL certificates, and managed daily database backups.</li>
-                <li>For hybrid/desktop installations, users maintain control over local device uptime and database export management.</li>
+                <li>You agree to collect customer information lawfully and obtain voluntary consent prior to sending non-transactional marketing communications.</li>
+                <li>MicroCRM acts as your secure <em>Data Processor</em>, providing built-in tools including role-based phone number masking (<code>+91 62641*****</code>) to safeguard your customer records from internal staff data leakage.</li>
             </ul>
 
-            <h2>4. Acceptable Use of WhatsApp AI</h2>
-            <p>MicroCRM provides automated messaging integration with WhatsApp Web. Users agree to utilize WhatsApp messaging responsibly and adhere to WhatsApp's Terms of Service:</p>
+            <h2>4. Anti-Theft Phone Number Masking</h2>
+            <p>MicroCRM incorporates technical safeguards designed to protect company lead databases from unauthorized data scraping or employee theft:</p>
             <ul>
-                <li>Spamming, unsolicited cold broadcasts, or distributing illegal material via the automated WhatsApp engine is strictly prohibited.</li>
-                <li>MicroCRM is not affiliated with Meta Platforms, Inc. or WhatsApp LLC.</li>
+                <li>Non-admin staff and sales representatives agree not to bypass, inspect network traffic, or circumvent UI phone number masking.</li>
+                <li>Full unmasked customer contact records and CSV export privileges remain restricted solely to authorized administrator roles.</li>
             </ul>
 
-            <h2>5. Disclaimer of Warranties</h2>
-            <p>The software is provided "as is", without warranty of any kind, express or implied. In no event shall Parchhoria Technologies or its developers be liable for any claims, damages, or data loss arising from local hardware failures or improper device maintenance.</p>
+            <h2>5. WhatsApp AI & Automated Messaging Acceptable Use</h2>
+            <p>MicroCRM provides an integrated 24/7 WhatsApp AI receptionist and automated messaging engine. In using this feature, you agree to comply with WhatsApp's Business Messaging Policies:</p>
+            <ul>
+                <li><strong>No Unsolicited Spam:</strong> You may not use the automated messaging engine for cold mass broadcasts, unsolicited advertising, fraudulent scams, or harassment.</li>
+                <li><strong>Operational Use:</strong> Permitted uses include automated responses to customer inquiries, appointment booking confirmations, pre-sales plot brochure deliveries, and PDF invoice receipts.</li>
+                <li><strong>Meta Disclaimer:</strong> MicroCRM is an independent software application developed by Parchhoria Technologies and is not affiliated with, sponsored, or endorsed by Meta Platforms, Inc. or WhatsApp LLC.</li>
+            </ul>
 
-            <h2>6. Contact & Support</h2>
-            <p>For technical support or licensing inquiries, please visit <a href="contact.html" style="color: var(--primary);">Contact Support</a> or chat with Sales on WhatsApp (+91 87704 66442).</p>
+            <h2>6. Service Availability & Managed Cloud Backups</h2>
+            <p>Parchhoria Technologies strives for industry-leading reliability across all cloud infrastructure:</p>
+            <ul>
+                <li><strong>99.9% Cloud Uptime:</strong> We monitor server performance 24/7 with automated failover and managed TLS 1.3 SSL certificate renewals.</li>
+                <li><strong>Automated Backups:</strong> Cloud PostgreSQL databases undergo automated daily snapshots to prevent catastrophic data loss.</li>
+                <li><strong>Scheduled Maintenance:</strong> Essential security updates or server maintenance will be announced in advance whenever possible.</li>
+            </ul>
+
+            <h2>7. Account Security & User Credentials</h2>
+            <p>Business administrators are responsible for safeguarding login credentials, enforcing strong passwords, and managing employee role assignments within their tenant organization. Parchhoria Technologies cannot be held liable for unauthorized access resulting from compromised employee credentials.</p>
+
+            <h2>8. Disclaimer of Warranties & Limitation of Liability</h2>
+            <p>The MicroCRM service is provided on an "as is" and "as available" basis. While we maintain rigorous enterprise uptime standards, Parchhoria Technologies shall not be liable for indirect, incidental, or consequential damages resulting from third-party telecommunications outages, local internet provider downtime, or WhatsApp network protocol changes beyond our direct operational control.</p>
+
+            <h2>9. Governing Law & Dispute Resolution</h2>
+            <p>These Terms of Service are governed by and construed in accordance with the laws of the Republic of India, specifically under the Information Technology Act 2000 and DPDPA 2023. Any disputes arising under these terms shall be subject to the exclusive jurisdiction of the competent courts located in <strong>Indore, Madhya Pradesh, India</strong>.</p>
+
+            <h2>10. Contact & Support Information</h2>
+            <p>If you have any questions or require formal enterprise agreements regarding these Terms of Service, please contact our legal and customer success team:</p>
+            <div style="background: var(--bg-secondary); border: 1px solid var(--border); border-radius: 14px; padding: 22px; margin-top: 15px;">
+                <p style="margin-bottom: 8px; color: var(--text-main); font-weight: 700; font-size: 1.05rem;"><i class="fa-solid fa-building" style="color: var(--primary); margin-right: 8px;"></i> Parchhoria Technologies — Legal & Customer Operations</p>
+                <p style="margin-bottom: 6px;"><strong>Email:</strong> <a href="mailto:support@microcrm.site" style="color: var(--primary);">support@microcrm.site</a> &bull; <a href="mailto:legal@microcrm.site" style="color: var(--primary);">legal@microcrm.site</a></p>
+                <p style="margin-bottom: 6px;"><strong>WhatsApp Support:</strong> <a href="https://wa.me/918770466442" target="_blank" style="color: #a6e3a1; font-weight: 600;">+91 87704 66442</a></p>
+                <p style="margin-bottom: 0;"><strong>Official Portal:</strong> <a href="https://microcrm.site" target="_blank" style="color: var(--primary);">https://microcrm.site</a></p>
+            </div>
         </div>
     </div>
 
@@ -133,6 +197,7 @@
                 <div class="footer-links">
                     <a href="privacy.html">Privacy Policy</a>
                     <a href="terms.html">Terms of Service</a>
+                    <a href="docs.html">Documentation</a>
                     <a href="contact.html">Contact Support</a>
                 </div>
             </div>

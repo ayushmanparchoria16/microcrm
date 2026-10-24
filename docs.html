@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MicroCRM - Documentation</title>
-    <meta name="description" content="Full documentation of MicroCRM features including WhatsApp AI, Client Portal, and System Administration.">
+    <title>MicroCRM - Platform Documentation & Guides</title>
+    <meta name="description" content="Official documentation for MicroCRM - Multi-tenant cloud SaaS, WhatsApp AI receptionist, digital storefronts, POS billing, and DPDPA compliance.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;600;700;800;900&display=swap" rel="stylesheet">
@@ -13,167 +13,296 @@
     <style>
         .docs-container {
             display: flex;
-            max-width: 1200px;
-            margin: 100px auto 40px;
-            padding: 0 20px;
+            max-width: 1240px;
+            margin: 120px auto 60px;
+            padding: 0 24px;
             gap: 40px;
+            align-items: flex-start;
+        }
+        @media(max-width: 900px) {
+            .docs-container { flex-direction: column; }
+            .docs-sidebar { width: 100% !important; position: static !important; height: auto !important; margin-bottom: 25px; }
         }
         .docs-sidebar {
-            width: 250px;
+            width: 270px;
             flex-shrink: 0;
             position: sticky;
             top: 100px;
-            height: calc(100vh - 120px);
+            max-height: calc(100vh - 120px);
             overflow-y: auto;
+            background: var(--glass-bg);
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            padding: 20px 14px;
+            backdrop-filter: blur(12px);
         }
+        .docs-sidebar h4 {
+            font-family: 'Outfit', sans-serif;
+            font-size: 0.82rem;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: var(--primary);
+            padding: 8px 12px 6px;
+            margin-top: 12px;
+            margin-bottom: 4px;
+        }
+        .docs-sidebar h4:first-child { margin-top: 0; }
         .docs-sidebar a {
-            display: block;
-            padding: 10px 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 9px 12px;
             color: var(--text-muted);
             text-decoration: none;
-            border-radius: 8px;
-            margin-bottom: 5px;
-            transition: all 0.3s;
+            border-radius: 10px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: all 0.2s ease;
+        }
+        .docs-sidebar a i {
+            width: 18px;
+            font-size: 0.95rem;
+            color: var(--primary);
+            opacity: 0.8;
         }
         .docs-sidebar a:hover, .docs-sidebar a.active {
-            background-color: var(--card-bg);
+            background-color: rgba(137, 180, 250, 0.12);
             color: var(--primary);
         }
         .docs-content {
             flex-grow: 1;
-            background: var(--card-bg);
-            border: 1px solid var(--border-color);
+            background: var(--glass-bg);
+            border: 1px solid var(--border);
             border-radius: 24px;
-            padding: 40px;
+            padding: 45px;
+            backdrop-filter: blur(12px);
+            max-width: 890px;
         }
         .docs-content h1 {
             font-family: 'Outfit', sans-serif;
-            margin-bottom: 20px;
-            color: var(--text);
+            font-size: 2.5rem;
+            margin-bottom: 12px;
+            color: var(--text-main);
         }
         .docs-content h2 {
             font-family: 'Outfit', sans-serif;
-            margin-top: 40px;
+            font-size: 1.55rem;
+            margin-top: 45px;
             margin-bottom: 15px;
-            color: var(--text);
-            border-bottom: 1px solid var(--border-color);
+            color: var(--text-main);
+            border-bottom: 1px solid var(--border);
             padding-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        .docs-content h3 {
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.2rem;
+            margin-top: 25px;
+            margin-bottom: 10px;
+            color: var(--text-main);
         }
         .docs-content p {
             color: var(--text-muted);
-            line-height: 1.6;
-            margin-bottom: 20px;
+            line-height: 1.75;
+            margin-bottom: 18px;
+            font-size: 0.98rem;
         }
-        .docs-content ul {
+        .docs-content ul, .docs-content ol {
             color: var(--text-muted);
-            margin-bottom: 20px;
-            padding-left: 20px;
-            line-height: 1.6;
+            margin-bottom: 22px;
+            padding-left: 22px;
+            line-height: 1.75;
         }
         .docs-content li {
             margin-bottom: 8px;
+        }
+        .docs-content code {
+            background: rgba(137, 180, 250, 0.12);
+            color: var(--primary);
+            padding: 2px 7px;
+            border-radius: 6px;
+            font-family: monospace;
+            font-size: 0.9em;
+        }
+        .feature-box {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 22px;
+            margin: 20px 0 25px;
+        }
+        .feature-box h4 {
+            color: var(--primary);
+            font-size: 1.05rem;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .feature-box p {
+            margin-bottom: 0;
+            font-size: 0.93rem;
+            line-height: 1.65;
+        }
+        .client-pill-row {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin: 15px 0 20px;
+        }
+        .client-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(137, 180, 250, 0.08);
+            border: 1px solid var(--border);
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            color: var(--text-main);
+            text-decoration: none;
+            transition: all 0.2s;
+        }
+        .client-pill:hover {
+            border-color: var(--primary);
+            color: var(--primary);
+            transform: translateY(-2px);
         }
     </style>
 </head>
 <body>
     <div class="blob blob-1"></div>
     <div class="blob blob-2"></div>
+    <div class="blob blob-3"></div>
     
     <nav class="navbar">
         <div class="nav-container">
             <div class="logo">
                 <span class="logo-icon"><img src="logo.png" alt="MicroCRM Logo" style="height: 32px; width: 32px; margin-right: 10px; border-radius: 8px;"></span>
-                <span class="logo-text">MicroCRM</span>
+                <a href="index.html" style="text-decoration: none; color: inherit;"><span class="logo-text">MicroCRM</span></a>
             </div>
             <div class="nav-links">
                 <a href="index.html">Home</a>
-                <a href="portal-demo.html">Client Portal</a>
+                <a href="portal-demo.html">Client Portals</a>
+                <a href="docs.html" class="active">Documentation</a>
                 <a href="contact.html">Contact Support</a>
-                <a href="https://github.com/ayushmanparchoria16/microcrm/releases/download/v1.0/MicroCRM_Setup.exe" class="btn btn-primary btn-download">Download Free</a>
+                <a href="https://app.microcrm.site/login" class="btn btn-primary" style="padding: 8px 18px; font-size: 13px;"><i class="fa-solid fa-arrow-right-to-bracket"></i> Cloud Login</a>
+                <a href="https://wa.me/918770466442" target="_blank" class="btn btn-wa" style="padding: 8px 16px; font-size: 13px;"><i class="fa-brands fa-whatsapp"></i> Chat Sales</a>
             </div>
         </div>
     </nav>
 
     <div class="docs-container">
         <aside class="docs-sidebar">
-            <a href="#intro" class="active">Introduction</a>
-            <a href="#architecture">Enterprise Cloud Architecture</a>
-            <a href="#security">Security & DPDPA Compliance</a>
-            <a href="#whatsapp-ai">WhatsApp AI Assistant</a>
-            <a href="#call-ai">Smart Call Assistant</a>
-            <a href="#client-portal">Free Client Portal</a>
-            <a href="#real-estate">Real Estate & Pre-Sales CRM</a>
-            <a href="#crm">Complete CRM & POS</a>
-            <a href="#export-import">Data Export & Cloud Backups</a>
+            <h4>Architecture</h4>
+            <a href="#intro"><i class="fa-solid fa-compass"></i> Overview</a>
+            <a href="#cloud-architecture"><i class="fa-solid fa-cloud"></i> Cloud Multi-Tenancy</a>
+            <a href="#security-dpdpa"><i class="fa-solid fa-shield-halved"></i> DPDPA & Anti-Theft</a>
+
+            <h4>Ecosystem Features</h4>
+            <a href="#mobile-storefront"><i class="fa-solid fa-mobile-screen"></i> Mobile Storefront</a>
+            <a href="#whatsapp-ai"><i class="fa-brands fa-whatsapp"></i> WhatsApp AI Agent</a>
+            <a href="#presales-crm"><i class="fa-solid fa-funnel-dollar"></i> Pre-Sales & Real Estate</a>
+            <a href="#pos-billing"><i class="fa-solid fa-receipt"></i> Smart POS & Khata</a>
+            <a href="#call-ai"><i class="fa-solid fa-phone-volume"></i> Voice Call Assistant</a>
+
+            <h4>Data & Onboarding</h4>
+            <a href="#data-sovereignty"><i class="fa-solid fa-database"></i> Backups & CSV Export</a>
+            <a href="#onboarding"><i class="fa-solid fa-rocket"></i> Express Setup</a>
         </aside>
         
         <main class="docs-content">
-            <h1 id="intro">MicroCRM Documentation</h1>
-            <p>Welcome to the official documentation for MicroCRM. This guide covers all the core features of the platform and how it empowers modern businesses with 24/7 automated WhatsApp AI sales agents, pre-sales pipelines, and multi-tenant security.</p>
-            
-            <h2 id="architecture">Enterprise Cloud & Hybrid Architecture</h2>
-            <p>MicroCRM provides an enterprise-grade cloud SaaS platform (<code>app.microcrm.site</code>) equipped with high-availability 24/7 cloud infrastructure alongside optional local desktop deployment:</p>
+            <h1 id="intro">MicroCRM Platform Documentation</h1>
+            <p>Welcome to the official documentation for <strong>MicroCRM</strong>. MicroCRM is a comprehensive 360° business growth platform built specifically for modern local commerce: salons, bridal studios, computer repair centers, real estate developers, healthcare clinics, and retail stores.</p>
+
+            <div class="client-pill-row">
+                <span style="color: var(--text-muted); font-size: 0.85rem; display: flex; align-items: center;">Live Client Showcases:</span>
+                <a href="https://app.microcrm.site/book/rashmi-r-makeup" target="_blank" class="client-pill">💄 Rashmi R Makeup</a>
+                <a href="https://app.microcrm.site/book/shri-ranawat-infotech" target="_blank" class="client-pill">💻 Shri Ranawat Infotech</a>
+                <a href="https://app.microcrm.site/book/bbc" target="_blank" class="client-pill">🏘️ BBC Real Estate</a>
+            </div>
+
+            <h2 id="cloud-architecture"><i class="fa-solid fa-cloud"></i> Enterprise Cloud Multi-Tenancy</h2>
+            <p>MicroCRM operates on high-availability cloud infrastructure hosted at <code>https://app.microcrm.site</code> with zero client app install required. Everything is engineered around strict parameter-scoped multi-tenancy:</p>
             <ul>
-                <li><strong>24/7 Cloud SaaS Availability:</strong> Access your CRM dashboard, live WhatsApp Web inbox, and lead drawers anytime from any web browser or smartphone.</li>
-                <li><strong>Multi-Tenant PostgreSQL Backend:</strong> Engineered for speed, stability, and scale with parameter-scoped multi-tenant database isolation (<code>WHERE business_id = %s</code>).</li>
-                <li><strong>Hybrid Desktop & Local Mode:</strong> Supports local PC desktop deployment with SQLite for standalone businesses needing on-premise operation.</li>
+                <li><strong>Strict Tenant Scoping:</strong> Every query executed in the PostgreSQL database enforces <code>WHERE business_id = %s</code>, guaranteeing that competitors and other businesses can never view or leak each other's data.</li>
+                <li><strong>Dedicated Slug Routing:</strong> Each merchant receives an instant custom link (e.g. <code>app.microcrm.site/book/your-business</code>) which immediately maps to their business profile, staff members, catalog services, and inventory items.</li>
+                <li><strong>24/7 Cloud Availability:</strong> Managed SSL encryption, automated HTTP/2 transport, and 99.9% uptime SLA ensure customers can book services or place orders at any hour of the day.</li>
             </ul>
 
-            <h2 id="security">Security, DPDPA 2023 & Anti-Theft Protection</h2>
-            <p>MicroCRM incorporates multi-layered enterprise security safeguards to protect customer data privacy and safeguard lead databases against theft.</p>
+            <h2 id="security-dpdpa"><i class="fa-solid fa-shield-halved"></i> DPDPA 2023 & Anti-Theft Protection</h2>
+            <p>Data security is baked into the foundation of MicroCRM to comply with national privacy regulations and protect merchant business assets:</p>
+            <div class="feature-box">
+                <h4><i class="fa-solid fa-user-lock"></i> Anti-Theft Phone Number Masking</h4>
+                <p>Staff data theft is a major risk for sales agencies and salons. MicroCRM automatically masks customer contact numbers (e.g., <code>+91 62641*****</code>) for sales reps and non-admin employees. Employees can chat with leads on WhatsApp Web directly without gaining access to download or copy raw customer lists.</p>
+            </div>
             <ul>
-                <li><strong>🛡️ DPDPA 2023 Compliance:</strong> Built in accordance with India's Digital Personal Data Protection Act 2023. Restricts automated messaging to explicit consent and purpose limitation.</li>
-                <li><strong>🔐 100% Multi-Tenant Data Isolation:</strong> Every database query is strictly scoped by <code>WHERE business_id = %s</code>, ensuring competitor businesses or different franchises can never access or leak each other's leads.</li>
-                <li><strong>🙈 Anti-Theft Phone Number Masking:</strong> Non-admin sales reps view masked phone numbers (<code>+91 62641*****</code>) in lead drawers, reports, and WhatsApp Web inboxes to prevent staff database theft.</li>
+                <li><strong>Digital Personal Data Protection Act (DPDPA 2023):</strong> Strict purpose limitation ensures customer data collected via booking forms or WhatsApp is used only for service fulfillment.</li>
+                <li><strong>Role-Based Access Control (RBAC):</strong> Granular permissions separate Business Owners/Admins, Store Managers, and Sales Representatives. Full raw exports and billing reports are restricted to administrators.</li>
             </ul>
 
-            <h2 id="whatsapp-ai">Smart WhatsApp AI Assistant</h2>
-            <p>We've integrated a powerful AI agent directly into your business WhatsApp number using WhatsApp Web JS technology. It operates entirely in the background.</p>
+            <h2 id="mobile-storefront"><i class="fa-solid fa-mobile-screen"></i> Mobile-First Digital Storefront & Catalog</h2>
+            <p>Turn search queries from Google Maps and Instagram directly into booked sales. Every MicroCRM merchant gets a lightning-fast, progressive web storefront accessible on any smartphone:</p>
             <ul>
-                <li><strong>24/7 Customer Support:</strong> The AI reads incoming messages and intelligently answers questions about your business, operating hours, and product catalog.</li>
-                <li><strong>Automated PDF Billing:</strong> Whenever you generate a sale in the CRM, the WhatsApp AI automatically sends a beautifully formatted PDF receipt directly to the customer's WhatsApp.</li>
-                <li><strong>Appointment Reminders:</strong> The system schedules background workers that automatically send WhatsApp reminders to customers 24 hours before their scheduled appointment.</li>
+                <li><strong>Zero App Install:</strong> Customers tap your link and immediately browse products, services, diagnostic repair tiers, or plot plans without needing to install anything from an app store.</li>
+                <li><strong>Instagram Reel Video Proof:</strong> Embed your top Instagram styling transformations or repair demonstrations directly into service cards. Customers tap once to watch authentic work proofs.</li>
+                <li><strong>1-Click WhatsApp Booking:</strong> Selected services and cart items are formatted into a structured WhatsApp message, automatically notifying your staff and populating the CRM lead drawer.</li>
+                <li><strong>Interactive Layout Maps:</strong> For real estate builders, buyers can inspect interactive master plans (e.g. <em>Aahana Residency</em>), tap specific plots to see square footage, facing, and status.</li>
             </ul>
 
-            <h2 id="call-ai">Smart Call Assistant</h2>
-            <p>Never miss a customer inquiry when your shop is busy. The Smart Call Assistant acts as a digital receptionist.</p>
+            <h2 id="whatsapp-ai"><i class="fa-brands fa-whatsapp"></i> 24/7 WhatsApp AI Sales Receptionist</h2>
+            <p>Our background AI sales agent connects directly to your business WhatsApp number using WhatsApp Web JS technology. It operates around the clock without extra personnel:</p>
             <ul>
-                <li><strong>Voice AI Integration:</strong> Integrates with voice providers to answer calls intelligently, speaking in natural language to your customers.</li>
-                <li><strong>Auto-Booking:</strong> The AI can take appointment requests over the phone and log them directly into your CRM calendar without human intervention.</li>
+                <li><strong>Instant Automated Replies:</strong> The AI answers customer inquiries instantly regarding business hours, service prices, address/Google Maps directions, and appointment availability.</li>
+                <li><strong>Smart PDF Invoice Delivery:</strong> When your counter staff creates a bill in the CRM, the WhatsApp AI automatically sends a branded PDF tax receipt directly to the customer's phone.</li>
+                <li><strong>Automated Reminder Dispatch:</strong> Scheduled background workers automatically send appointment reminders to customers 24 hours prior to their booking, slashing no-shows by up to 70%.</li>
             </ul>
 
-            <h2 id="client-portal">Free Client Web Portal</h2>
-            <p>Every MicroCRM installation automatically hosts a beautiful, responsive web portal for your customers.</p>
+            <h2 id="presales-crm"><i class="fa-solid fa-funnel-dollar"></i> Pre-Sales Pipeline & Real Estate CRM</h2>
+            <p>Manage customer leads from first touch to closed deal with our visual Kanban pipeline:</p>
             <ul>
-                <li><strong>Online Storefront:</strong> Customers can browse your synchronized inventory catalogue online.</li>
-                <li><strong>Self-Service Booking:</strong> Allow customers to select available time slots and book services directly from their smartphones.</li>
-                <li><strong>Secure Access:</strong> Customers log in using OTP authentication to view their past bills and active appointments.</li>
+                <li><strong>Automated Lead Ingestion:</strong> Inbound chats and website booking submissions automatically generate a lead record with source attribution (Google, WhatsApp, Instagram).</li>
+                <li><strong>Dedicated Rep Assignment:</strong> Automatically route inquiries to specific sales reps based on staff phone numbers or round-robin schedules.</li>
+                <li><strong>Follow-Up Scheduler:</strong> Schedule callback dates, log visit notes, and record customer budget preferences directly from desktop or mobile.</li>
             </ul>
 
-            <h2 id="real-estate">Real Estate & Pre-Sales CRM</h2>
-            <p>Built specifically for real estate developers, agencies, and sales teams to manage property listings, buyer leads, and site visit tours automatically.</p>
+            <h2 id="pos-billing"><i class="fa-solid fa-receipt"></i> Smart POS Billing & Khata Ledger</h2>
+            <p>A fast point-of-sale interface built for retail counters, repair desks, and salons:</p>
             <ul>
-                <li><strong>Automated Lead Capture:</strong> Incoming WhatsApp messages automatically create new lead records in the Pre-Sales pipeline with status tracking (New Lead, Contacted, Visit Scheduled, Interested, Converted).</li>
-                <li><strong>WhatsApp AI Property Selling Agent:</strong> The AI shares project details, available plots/flats/villas, base prices, downloadable PDF brochure links, and website portal links directly in customer chat.</li>
-                <li><strong>Dedicated Rep Lead Attribution:</strong> Incoming leads received on an employee or admin's linked WhatsApp number are automatically assigned directly to that specific sales representative.</li>
-                <li><strong>Follow-Up Date Tracking:</strong> Staff members can update lead notes, change lead status, or schedule next follow-up dates directly via WhatsApp.</li>
+                <li><strong>Barcode & SKU Scanner:</strong> Fast product lookup with barcode scanner support, real-time stock deductions, and low-inventory warnings.</li>
+                <li><strong>GST & Non-GST Invoicing:</strong> Generate compliant invoices with customizable tax breakdowns, discounts, and payment mode tracking (UPI, Cash, Card, Khata).</li>
+                <li><strong>Customer Khata (Credit Ledger):</strong> Keep track of outstanding balances, send payment reminder links on WhatsApp, and reconcile payments seamlessly.</li>
             </ul>
 
-            <h2 id="crm">Complete CRM & POS</h2>
-            <p>The core of MicroCRM is a full-featured administration dashboard accessible via localhost on your machine.</p>
+            <h2 id="call-ai"><i class="fa-solid fa-phone-volume"></i> Voice Call Assistant Integration</h2>
+            <p>Ensure no customer call goes unanswered during peak rush hours:</p>
             <ul>
-                <li><strong>Fast Billing & POS:</strong> A streamlined point-of-sale interface for quickly checking out customers in-store.</li>
-                <li><strong>Inventory Tracking:</strong> Keep track of stock levels, set low-stock alerts, and manage product variations.</li>
-                <li><strong>Staff & HR:</strong> Manage employee attendance, assign daily tasks, and track performance.</li>
-                <li><strong>Analytics Dashboard:</strong> View visual reports on your daily sales, popular products, and customer growth.</li>
+                <li><strong>Voice AI Receptionist:</strong> Connects to cloud telephony to answer incoming phone calls with natural conversational language.</li>
+                <li><strong>Auto-Booking via Phone:</strong> The AI speaks with callers, takes note of their requested service and time slot, and logs it directly into your CRM booking calendar.</li>
             </ul>
 
-            <h2 id="export-import">Data Export & Cloud Backups</h2>
-            <p>MicroCRM provides 1-click Data Export capabilities built directly into every module alongside automated cloud database backups.</p>
+            <h2 id="data-sovereignty"><i class="fa-solid fa-database"></i> Data Sovereignty & 1-Click Backups</h2>
+            <p>We believe merchants should never feel locked in to any vendor platform:</p>
             <ul>
-                <li><strong>1-Click Module CSV Exports:</strong> Business owners can export their company's leads, properties, and analytics reports to clean CSV files directly from the Pre-Sales Leads, Properties, and Reports tabs.</li>
-                <li><strong>Automated Cloud Backups:</strong> System database snapshots and infrastructure backups are automatically managed 24/7 on the cloud server backend to ensure zero data loss.</li>
+                <li><strong>1-Click CSV Exports:</strong> Business owners can download clean, formatted CSV spreadsheets of their customer leads, transaction histories, and inventory at any time.</li>
+                <li><strong>Automated Cloud Backups:</strong> Cloud databases undergo automated daily snapshots to ensure 100% data durability and disaster recovery.</li>
             </ul>
+
+            <h2 id="onboarding"><i class="fa-solid fa-rocket"></i> Express 24-Hour Merchant Onboarding</h2>
+            <p>Getting your business live on MicroCRM takes less than 24 hours. Our technical team handles the complete setup:</p>
+            <ol>
+                <li><strong>Google Business Profile & SEO Audit:</strong> Optimize your business listing for local search dominance in your city.</li>
+                <li><strong>Custom Storefront Launch:</strong> We configure your service catalog, pricing, photos, and Instagram Reel demonstrations.</li>
+                <li><strong>WhatsApp AI Linking:</strong> Scan a QR code to link your business WhatsApp number with the automated receptionist.</li>
+                <li><strong>Staff Walkthrough:</strong> 15-minute quick orientation for your sales and billing staff.</li>
+            </ol>
+            <div style="margin-top: 25px;">
+                <a href="https://wa.me/918770466442?text=Hi%2C%20I%20would%20like%20to%20onboard%20my%20business%20on%20MicroCRM." target="_blank" class="btn btn-wa" style="padding: 12px 24px; font-size: 15px;">
+                    <i class="fa-brands fa-whatsapp"></i> Chat with Onboarding Team (+91 87704 66442)
+                </a>
+            </div>
         </main>
     </div>
 
@@ -190,6 +319,7 @@
                 <div class="footer-links">
                     <a href="privacy.html">Privacy Policy</a>
                     <a href="terms.html">Terms of Service</a>
+                    <a href="docs.html">Documentation</a>
                     <a href="contact.html">Contact Support</a>
                 </div>
             </div>
@@ -198,6 +328,7 @@
             </div>
         </div>
     </footer>
+
     <script src="script.js"></script>
 </body>
 </html>

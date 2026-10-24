@@ -17,10 +17,9 @@ document.addEventListener("DOMContentLoaded", () => {
     const urlBar = document.querySelector(".url-bar");
     if (urlBar) {
         const urls = [
-            "https://shoes-shop.microcrm.site",
-            "https://miami-pizza.microcrm.site",
-            "https://dr-smith.microcrm.site",
-            "https://local-gym.microcrm.site"
+            "https://app.microcrm.site/book/rashmi-r-makeup",
+            "https://app.microcrm.site/book/shri-ranawat-infotech",
+            "https://app.microcrm.site/book/bbc"
         ];
         let urlIndex = 0;
         
