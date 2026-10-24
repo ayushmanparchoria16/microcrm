@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MicroCRM - Executive Pitch Deck</title>
+    <meta name="description" content="MicroCRM Executive Presentation Deck - From Google Search to WhatsApp & Automated Bookings.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            background-color: #0b0f19;
+            color: #e2e8f0;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+            font-family: 'Inter', sans-serif;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        .deck-topbar {
+            background: rgba(15, 23, 42, 0.9);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid #1e293b;
+            padding: 12px 24px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        .deck-title {
+            font-family: 'Outfit', sans-serif;
+            font-weight: 700;
+            font-size: 1.1rem;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .deck-controls {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        .ctrl-btn {
+            background: #1e293b;
+            border: 1px solid #334155;
+            color: #cbd5e1;
+            padding: 8px 14px;
+            border-radius: 8px;
+            font-size: 0.88rem;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.2s;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+        .ctrl-btn:hover {
+            background: #334155;
+            color: #fff;
+        }
+        .slide-counter {
+            font-family: monospace;
+            font-size: 0.9rem;
+            color: #94a3b8;
+            padding: 0 8px;
+        }
+        .deck-viewport {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 30px 20px;
+        }
+        .slide-frame {
+            width: 100%;
+            max-width: 1100px;
+            aspect-ratio: 16 / 9;
+            background: #0f172a;
+            border: 1px solid #1e293b;
+            border-radius: 20px;
+            box-shadow: 0 25px 60px rgba(0,0,0,0.6);
+            padding: 45px 50px;
+            box-sizing: border-box;
+            display: none;
+            flex-direction: column;
+            justify-content: space-between;
+            animation: fadeIn 0.3s ease;
+            position: relative;
+        }
+        .slide-frame.active {
+            display: flex;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(8px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .slide-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: #1e293b;
+            border: 1px solid #60a5fa;
+            color: #60a5fa;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 700;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            width: fit-content;
+            margin-bottom: 12px;
+        }
+        .slide-h1 {
+            font-family: 'Outfit', sans-serif;
+            font-size: 2.1rem;
+            font-weight: 800;
+            color: #fff;
+            margin: 0 0 8px 0;
+            line-height: 1.2;
+        }
+        .slide-sub {
+            color: #94a3b8;
+            font-size: 0.98rem;
+            margin: 0 0 20px 0;
+        }
+        .slide-content-area {
+            flex: 1;
+            display: flex;
+            gap: 20px;
+            align-items: stretch;
+        }
+        .card-4col {
+            flex: 1;
+            background: #1e293b;
+            border: 1px solid #334155;
+            border-radius: 14px;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+        }
+        .card-3col {
+            flex: 1;
+            background: #1e293b;
+            border: 1px solid #334155;
+            border-radius: 16px;
+            padding: 24px;
+            display: flex;
+            flex-direction: column;
+        }
+        .slide-footer {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-top: 1px solid #1e293b;
+            padding-top: 15px;
+            margin-top: 15px;
+            font-size: 0.82rem;
+            color: #64748b;
+        }
+        @media(max-width: 900px) {
+            .slide-frame {
+                aspect-ratio: auto;
+                min-height: 600px;
+                padding: 25px 20px;
+            }
+            .slide-content-area {
+                flex-direction: column;
+            }
+            .slide-h1 {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="deck-topbar">
+        <div class="deck-title">
+            <img src="logo.png" alt="MicroCRM" style="height: 28px; width: 28px; border-radius: 6px;">
+            <span>MicroCRM Pitch Deck</span>
+        </div>
+        <div class="deck-controls">
+            <button class="ctrl-btn" onclick="prevSlide()"><i class="fa-solid fa-arrow-left"></i> Prev</button>
+            <span class="slide-counter" id="slideCount">1 / 8</span>
+            <button class="ctrl-btn" onclick="nextSlide()">Next <i class="fa-solid fa-arrow-right"></i></button>
+            <a href="MicroCRM_Pitch_Deck.pptx" download class="ctrl-btn" style="background: #10b981; color: #fff; border-color: #10b981;">
+                <i class="fa-solid fa-file-powerpoint"></i> Download .PPTX
+            </a>
+        </div>
+    </header>
+
+    <main class="deck-viewport">
+
+        <!-- SLIDE 1: COVER -->
+        <div class="slide-frame active" id="slide-1" style="justify-content: center; align-items: center; text-align: center;">
+            <div class="slide-badge" style="border-color: #60a5fa; color: #60a5fa; margin-bottom: 20px;">
+                ⚡ THE 360° LOCAL BUSINESS GROWTH ENGINE
+            </div>
+            <h1 style="font-family: 'Outfit', sans-serif; font-size: 3.5rem; font-weight: 900; color: #fff; margin: 0 0 10px 0;">
+                MicroCRM
+            </h1>
+            <p style="font-size: 1.35rem; color: #10b981; font-weight: 600; margin: 0 0 25px 0;">
+                From Google Search to WhatsApp & Automated Bookings
+            </p>
+            <div style="background: #1e293b; border: 1px solid #334155; padding: 14px 28px; border-radius: 30px; font-weight: 600; color: #cbd5e1; font-size: 0.95rem; max-width: 750px; margin-bottom: 30px;">
+                🌐 Google Business SEO &nbsp;•&nbsp; 📱 Mobile Storefront &nbsp;•&nbsp; 💬 24/7 WhatsApp AI &nbsp;•&nbsp; 💳 Smart POS & Khata
+            </div>
+            <p style="color: #64748b; font-size: 0.9rem; margin: 0;">
+                Parchhoria Technologies &bull; https://microcrm.site &bull; Press Left/Right Arrow or click Next to navigate
+            </p>
+        </div>
+
+        <!-- SLIDE 2: THE PROBLEM -->
+        <div class="slide-frame" id="slide-2">
+            <div>
+                <div class="slide-badge" style="border-color: #fbbf24; color: #fbbf24;">THE PROBLEM</div>
+                <h2 class="slide-h1">Where Are Local Businesses Losing Sales Every Day?</h2>
+                <p class="slide-sub">Traditional software, static paper menus, and delayed responses are silently killing conversion rates.</p>
+            </div>
+            <div class="slide-content-area">
+                <div class="card-4col" style="border-top: 3px solid #fbbf24;">
+                    <div style="font-size: 1.5rem; color: #fbbf24; margin-bottom: 8px;">⏳</div>
+                    <h4 style="color: #fff; margin: 0 0 8px 0; font-size: 1.05rem;">Slow Speed-To-Lead</h4>
+                    <p style="color: #94a3b8; font-size: 0.85rem; line-height: 1.5; margin: 0;">70% of online Meta/Google leads go cold because staff takes hours or days to call back. By then, the buyer has booked a competitor.</p>
+                </div>
+                <div class="card-4col" style="border-top: 3px solid #f472b6;">
+                    <div style="font-size: 1.5rem; color: #f472b6; margin-bottom: 8px;">🌙</div>
+                    <h4 style="color: #fff; margin: 0 0 8px 0; font-size: 1.05rem;">After-Hours Silence</h4>
+                    <p style="color: #94a3b8; font-size: 0.85rem; line-height: 1.5; margin: 0;">Customers browse late at night or on weekends. Without automated AI chat, inquiries vanish into unanswered WhatsApp chats.</p>
+                </div>
+                <div class="card-4col" style="border-top: 3px solid #60a5fa;">
+                    <div style="font-size: 1.5rem; color: #60a5fa; margin-bottom: 8px;">🚫</div>
+                    <h4 style="color: #fff; margin: 0 0 8px 0; font-size: 1.05rem;">App Download Friction</h4>
+                    <p style="color: #94a3b8; font-size: 0.85rem; line-height: 1.5; margin: 0;">Consumers refuse to install 50MB mobile apps just to view a service menu, check repair status, or book an appointment.</p>
+                </div>
+                <div class="card-4col" style="border-top: 3px solid #c084fc;">
+                    <div style="font-size: 1.5rem; color: #c084fc; margin-bottom: 8px;">🔓</div>
+                    <h4 style="color: #fff; margin: 0 0 8px 0; font-size: 1.05rem;">Staff Lead Theft</h4>
+                    <p style="color: #94a3b8; font-size: 0.85rem; line-height: 1.5; margin: 0;">Unmasked customer contact lists are easily stolen by departing sales reps, risking your entire private customer database.</p>
+                </div>
+            </div>
+            <div class="slide-footer">
+                <span>MicroCRM Executive Deck</span>
+                <span>Slide 2 of 8</span>
+            </div>
+        </div>
+
+        <!-- SLIDE 3: THE 4-IN-1 ENGINE -->
+        <div class="slide-frame" id="slide-3">
+            <div>
+                <div class="slide-badge" style="border-color: #10b981; color: #10b981;">THE SOLUTION</div>
+                <h2 class="slide-h1">The 4-in-1 Complete Growth Engine</h2>
+                <p class="slide-sub">Connecting your entire customer journey from first search discovery to repeat loyal purchases.</p>
+            </div>
+            <div class="slide-content-area">
+                <div class="card-4col" style="border-top: 3px solid #60a5fa;">
+                    <div style="font-size: 1.3rem; margin-bottom: 6px;">🌐</div>
+                    <h4 style="color: #60a5fa; margin: 0 0 6px 0; font-size: 0.95rem;">1. Google Search & SEO</h4>
+                    <p style="color: #94a3b8; font-size: 0.8rem; line-height: 1.4; margin-bottom: 10px;">Dominate local maps and search. Direct customers straight to your branded storefront link.</p>
+                    <ul style="color: #cbd5e1; font-size: 0.78rem; padding-left: 15px; margin: 0; line-height: 1.5;">
+                        <li>Top Maps visibility</li>
+                        <li>Direct booking action</li>
+                        <li>Automated reviews</li>
+                    </ul>
+                </div>
+                <div class="card-4col" style="border-top: 3px solid #10b981;">
+                    <div style="font-size: 1.3rem; margin-bottom: 6px;">📱</div>
+                    <h4 style="color: #10b981; margin: 0 0 6px 0; font-size: 0.95rem;">2. Mobile Storefront</h4>
+                    <p style="color: #94a3b8; font-size: 0.8rem; line-height: 1.4; margin-bottom: 10px;">Fast responsive web catalog at app.microcrm.site/book/{slug}. Zero app downloads needed.</p>
+                    <ul style="color: #cbd5e1; font-size: 0.78rem; padding-left: 15px; margin: 0; line-height: 1.5;">
+                        <li>Instagram Reel video proof</li>
+                        <li>24/7 Slot reservations</li>
+                        <li>1-Click WhatsApp cart</li>
+                    </ul>
+                </div>
+                <div class="card-4col" style="border-top: 3px solid #c084fc;">
+                    <div style="font-size: 1.3rem; margin-bottom: 6px;">💬</div>
+                    <h4 style="color: #c084fc; margin: 0 0 6px 0; font-size: 0.95rem;">3. WhatsApp AI Agent</h4>
+                    <p style="color: #94a3b8; font-size: 0.8rem; line-height: 1.4; margin-bottom: 10px;">Intelligently answers customer questions in Hindi/English, dispatches PDF brochures & bills.</p>
+                    <ul style="color: #cbd5e1; font-size: 0.78rem; padding-left: 15px; margin: 0; line-height: 1.5;">
+                        <li>Natural Indian phrasing</li>
+                        <li>Automated PDF invoices</li>
+                        <li>70% fewer no-shows</li>
+                    </ul>
+                </div>
+                <div class="card-4col" style="border-top: 3px solid #f472b6;">
+                    <div style="font-size: 1.3rem; margin-bottom: 6px;">💳</div>
+                    <h4 style="color: #f472b6; margin: 0 0 6px 0; font-size: 0.95rem;">4. POS & Khata CRM</h4>
+                    <p style="color: #94a3b8; font-size: 0.8rem; line-height: 1.4; margin-bottom: 10px;">Full cloud administration dashboard with barcode scanner, tax receipts, and staff masking.</p>
+                    <ul style="color: #cbd5e1; font-size: 0.78rem; padding-left: 15px; margin: 0; line-height: 1.5;">
+                        <li>Fast counter POS</li>
+                        <li>Customer credit Khata</li>
+                        <li>Anti-theft masking</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="slide-footer">
+                <span>MicroCRM Executive Deck</span>
+                <span>Slide 3 of 8</span>
+            </div>
+        </div>
+
+        <!-- SLIDE 4: CASE STUDIES -->
+        <div class="slide-frame" id="slide-4">
+            <div>
+                <div class="slide-badge" style="border-color: #60a5fa; color: #60a5fa;">PROVEN IN PRODUCTION</div>
+                <h2 class="slide-h1">Real Case Studies from Live Deployments</h2>
+                <p class="slide-sub">Tested and proven across active salon, computer repair, and real estate operations.</p>
+            </div>
+            <div class="slide-content-area">
+                <div class="card-3col" style="border-top: 3px solid #f472b6;">
+                    <div style="font-size: 1.5rem; color: #f472b6; margin-bottom: 6px;">💄</div>
+                    <h4 style="color: #fff; margin: 0 0 4px 0; font-size: 1.1rem;">Rashmi R Makeup</h4>
+                    <div style="color: #f472b6; font-size: 0.8rem; margin-bottom: 12px; font-weight: 600;">Salon, Bridal Studio & Academy</div>
+                    <p style="color: #94a3b8; font-size: 0.82rem; line-height: 1.5; margin-bottom: 8px;"><strong>Problem:</strong> Phone calls interrupted bridal styling; frequent last-minute cancellations.</p>
+                    <p style="color: #e2e8f0; font-size: 0.82rem; line-height: 1.5; margin: 0;"><strong>Solution:</strong> Storefront with embedded Instagram transformation Reels + 24/7 slot booking + automated 24h WhatsApp reminders.</p>
+                </div>
+                <div class="card-3col" style="border-top: 3px solid #60a5fa;">
+                    <div style="font-size: 1.5rem; color: #60a5fa; margin-bottom: 6px;">💻</div>
+                    <h4 style="color: #fff; margin: 0 0 4px 0; font-size: 1.1rem;">Shri Ranawat Infotech</h4>
+                    <div style="color: #60a5fa; font-size: 0.8rem; margin-bottom: 12px; font-weight: 600;">Computer Store & Repair Center</div>
+                    <p style="color: #94a3b8; font-size: 0.82rem; line-height: 1.5; margin-bottom: 8px;"><strong>Problem:</strong> Endless customer calls asking "Is my laptop fixed?"; lost tracking of spare parts.</p>
+                    <p style="color: #e2e8f0; font-size: 0.82rem; line-height: 1.5; margin: 0;"><strong>Solution:</strong> Job-card diagnostic tiers + real-time stock deduction + automated WhatsApp "Ready for Pickup" alerts with GST receipt.</p>
+                </div>
+                <div class="card-3col" style="border-top: 3px solid #10b981;">
+                    <div style="font-size: 1.5rem; color: #10b981; margin-bottom: 6px;">🏘️</div>
+                    <h4 style="color: #fff; margin: 0 0 4px 0; font-size: 1.1rem;">BBC Real Estate</h4>
+                    <div style="color: #10b981; font-size: 0.8rem; margin-bottom: 12px; font-weight: 600;">Aahana Residency Township</div>
+                    <p style="color: #94a3b8; font-size: 0.82rem; line-height: 1.5; margin-bottom: 8px;"><strong>Problem:</strong> Static PDF maps confused buyers; Meta ad leads took hours to contact and went cold.</p>
+                    <p style="color: #e2e8f0; font-size: 0.82rem; line-height: 1.5; margin: 0;"><strong>Solution:</strong> Interactive canvas plot maps (Available vs Sold) + WhatsApp AI bot delivering PDF brochures in 2 minutes.</p>
+                </div>
+            </div>
+            <div class="slide-footer">
+                <span>MicroCRM Executive Deck</span>
+                <span>Slide 4 of 8</span>
+            </div>
+        </div>
+
+        <!-- SLIDE 5: WHATSAPP AI AGENT -->
+        <div class="slide-frame" id="slide-5">
+            <div>
+                <div class="slide-badge" style="border-color: #10b981; color: #10b981;">AUTOMATION</div>
+                <h2 class="slide-h1">24/7 WhatsApp AI Sales Receptionist</h2>
+                <p class="slide-sub">Zero per-message fees. Speaks natural Indian phrasing and operates around the clock.</p>
+            </div>
+            <div class="slide-content-area" style="gap: 25px;">
+                <div style="flex: 1.2; background: #1e293b; border: 1px solid #10b981; border-radius: 16px; padding: 25px; display: flex; flex-direction: column; justify-content: space-between;">
+                    <h4 style="color: #10b981; margin: 0 0 14px 0; font-size: 1.15rem;">Key Automation Powers:</h4>
+                    <ul style="color: #e2e8f0; font-size: 0.88rem; line-height: 1.7; padding-left: 18px; margin: 0;">
+                        <li><strong>Understands Indian English:</strong> Parses phrases like <em>"Anjali this side, plot rate kya hai?"</em> naturally.</li>
+                        <li><strong>Dispatches PDF Invoices:</strong> Sends branded tax bills to WhatsApp upon checkout.</li>
+                        <li><strong>Shares Brochures & Videos:</strong> Instantly sends project brochures and Instagram transformation Reels.</li>
+                        <li><strong>Lead Attribution:</strong> Automatically routes chats to specific sales rep dashboards.</li>
+                        <li><strong>Direct Connection:</strong> Connects via WhatsApp Web—zero expensive 50p/message API markups.</li>
+                    </ul>
+                </div>
+                <div style="flex: 1; background: #111827; border: 1px solid #374151; border-radius: 16px; padding: 20px; font-family: monospace; font-size: 0.82rem; display: flex; flex-direction: column; justify-content: center; gap: 10px;">
+                    <div style="color: #9ca3af; font-weight: bold; border-bottom: 1px solid #374151; padding-bottom: 6px;">Live WhatsApp Simulator</div>
+                    <div style="color: #f3f4f6;">[Customer]: Anjali this side. Looking for 1000 sqft plot in Aahana Residency. Price?</div>
+                    <div style="color: #10b981;">[MicroCRM AI]: Namaste Anjali ji! 😊 Plots start at ₹3,750/sqft in Puwarda Junarda. Layout map: app.microcrm.site/book/bbc</div>
+                    <div style="color: #f3f4f6;">[Customer]: Can we visit Saturday 4 PM?</div>
+                    <div style="color: #10b981;">[MicroCRM AI]: Confirmed! 🎉 Site visit booked for Sat 4:00 PM. Our project manager will welcome you at the gate. Location pin sent!</div>
+                </div>
+            </div>
+            <div class="slide-footer">
+                <span>MicroCRM Executive Deck</span>
+                <span>Slide 5 of 8</span>
+            </div>
+        </div>
+
+        <!-- SLIDE 6: SECURITY & DPDPA 2023 -->
+        <div class="slide-frame" id="slide-6">
+            <div>
+                <div class="slide-badge" style="border-color: #c084fc; color: #c084fc;">SECURITY & COMPLIANCE</div>
+                <h2 class="slide-h1">Bank-Grade Privacy & Anti-Theft Protection</h2>
+                <p class="slide-sub">Built to protect your most valuable business asset: your customer database.</p>
+            </div>
+            <div class="slide-content-area">
+                <div class="card-4col" style="border-top: 3px solid #60a5fa;">
+                    <div style="font-size: 1.5rem; margin-bottom: 6px;">🛡️</div>
+                    <h4 style="color: #60a5fa; margin: 0 0 6px 0; font-size: 0.95rem;">DPDPA 2023</h4>
+                    <p style="color: #cbd5e1; font-size: 0.8rem; line-height: 1.5;">Compliant with India's Digital Personal Data Protection Act. Full consent handling & Grievance Officer redressal.</p>
+                </div>
+                <div class="card-4col" style="border-top: 3px solid #10b981;">
+                    <div style="font-size: 1.5rem; margin-bottom: 6px;">🔐</div>
+                    <h4 style="color: #10b981; margin: 0 0 6px 0; font-size: 0.95rem;">100% Data Isolation</h4>
+                    <p style="color: #cbd5e1; font-size: 0.8rem; line-height: 1.5;">Every SQL query enforces WHERE business_id = %s. Competitors or other branches can never access your records.</p>
+                </div>
+                <div class="card-4col" style="border-top: 3px solid #f472b6;">
+                    <div style="font-size: 1.5rem; margin-bottom: 6px;">🙈</div>
+                    <h4 style="color: #f472b6; margin: 0 0 6px 0; font-size: 0.95rem;">Anti-Theft Masking</h4>
+                    <p style="color: #cbd5e1; font-size: 0.8rem; line-height: 1.5;">Sales reps see masked numbers (+91 62641*****). They can message leads via WhatsApp but cannot copy your contact list.</p>
+                </div>
+                <div class="card-4col" style="border-top: 3px solid #c084fc;">
+                    <div style="font-size: 1.5rem; margin-bottom: 6px;">💾</div>
+                    <h4 style="color: #c084fc; margin: 0 0 6px 0; font-size: 0.95rem;">Zero Lock-In</h4>
+                    <p style="color: #cbd5e1; font-size: 0.8rem; line-height: 1.5;">Your data belongs 100% to you. 1-click CSV exports for customer contacts, leads, and sales invoices at any time.</p>
+                </div>
+            </div>
+            <div class="slide-footer">
+                <span>MicroCRM Executive Deck</span>
+                <span>Slide 6 of 8</span>
+            </div>
+        </div>
+
+        <!-- SLIDE 7: ALL INDUSTRIES SUPPORTED -->
+        <div class="slide-frame" id="slide-7">
+            <div>
+                <div class="slide-badge" style="border-color: #10b981; color: #10b981;">MULTI-INDUSTRY ENGINE</div>
+                <h2 class="slide-h1">Tailored for Every Local Industry & Sub-Category</h2>
+                <p class="slide-sub">MicroCRM adapts its catalog schema, booking logic, and AI behavior for your exact niche.</p>
+            </div>
+            <div class="slide-content-area" style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px;">
+                <div style="background: #1e293b; border: 1px solid #334155; padding: 10px 14px; border-radius: 10px;">
+                    <div style="color: #f472b6; font-weight: bold; font-size: 0.88rem;">💄 Beauty & Salons</div>
+                    <div style="color: #94a3b8; font-size: 0.78rem;">Hair Salons, Bridal Studios, Nail Bars, Luxury Spas, Tattoo Parlors</div>
+                </div>
+                <div style="background: #1e293b; border: 1px solid #334155; padding: 10px 14px; border-radius: 10px;">
+                    <div style="color: #60a5fa; font-weight: bold; font-size: 0.88rem;">💻 Tech & Computer Repair</div>
+                    <div style="color: #94a3b8; font-size: 0.78rem;">Laptop/PC Repair, Mobile Diagnostics, CCTV, Hardware Sales, Refurbished</div>
+                </div>
+                <div style="background: #1e293b; border: 1px solid #334155; padding: 10px 14px; border-radius: 10px;">
+                    <div style="color: #10b981; font-weight: bold; font-size: 0.88rem;">🏘️ Real Estate & Builders</div>
+                    <div style="color: #94a3b8; font-size: 0.78rem;">Builders, Township Planners, Property Brokers, Commercial Leasing, Plot Schemes</div>
+                </div>
+                <div style="background: #1e293b; border: 1px solid #334155; padding: 10px 14px; border-radius: 10px;">
+                    <div style="color: #fbbf24; font-weight: bold; font-size: 0.88rem;">🩺 Healthcare & Clinics</div>
+                    <div style="color: #94a3b8; font-size: 0.78rem;">Dental Clinics, General Doctors, Physiotherapy, Pathology Labs, Eye Clinics</div>
+                </div>
+                <div style="background: #1e293b; border: 1px solid #334155; padding: 10px 14px; border-radius: 10px;">
+                    <div style="color: #c084fc; font-weight: bold; font-size: 0.88rem;">🛍️ Retail Stores & Markets</div>
+                    <div style="color: #94a3b8; font-size: 0.78rem;">Clothing Boutiques, Shoe Stores, Optical, Jewelry, Kirana & Supermarkets</div>
+                </div>
+                <div style="background: #1e293b; border: 1px solid #334155; padding: 10px 14px; border-radius: 10px;">
+                    <div style="color: #f87171; font-weight: bold; font-size: 0.88rem;">🚗 Automobile & Garages</div>
+                    <div style="color: #94a3b8; font-size: 0.78rem;">Multi-Brand Garages, Two-Wheeler Centers, Car Detailing & PPF, Battery Shops</div>
+                </div>
+                <div style="background: #1e293b; border: 1px solid #334155; padding: 10px 14px; border-radius: 10px;">
+                    <div style="color: #fb923c; font-weight: bold; font-size: 0.88rem;">🏋️ Fitness & Gyms</div>
+                    <div style="color: #94a3b8; font-size: 0.78rem;">Fitness Gyms, Yoga & Pilates, CrossFit Boxes, Dance Academies, Martial Arts</div>
+                </div>
+                <div style="background: #1e293b; border: 1px solid #334155; padding: 10px 14px; border-radius: 10px;">
+                    <div style="color: #38bdf8; font-weight: bold; font-size: 0.88rem;">📚 Education & Coaching</div>
+                    <div style="color: #94a3b8; font-size: 0.78rem;">Test Prep Coaching, Home Tutors, Computer Centers, Music & Art Institutes</div>
+                </div>
+            </div>
+            <div class="slide-footer">
+                <span>MicroCRM Executive Deck</span>
+                <span>Slide 7 of 8</span>
+            </div>
+        </div>
+
+        <!-- SLIDE 8: 24-HOUR EXPRESS ONBOARDING -->
+        <div class="slide-frame" id="slide-8">
+            <div>
+                <div class="slide-badge" style="border-color: #10b981; color: #10b981;">GET STARTED</div>
+                <h2 class="slide-h1">Go Live in Less Than 24 Hours</h2>
+                <p class="slide-sub">Our technical team handles complete catalog ingestion, WhatsApp QR linking, and staff orientation.</p>
+            </div>
+            <div class="slide-content-area" style="gap: 15px;">
+                <div class="card-4col" style="border-top: 3px solid #60a5fa;">
+                    <div style="font-size: 1.3rem; color: #60a5fa; margin-bottom: 4px;">1️⃣</div>
+                    <h4 style="color: #fff; margin: 0 0 6px 0; font-size: 0.95rem;">Audit & Intake</h4>
+                    <p style="color: #94a3b8; font-size: 0.8rem; margin: 0; line-height: 1.4;">15-minute consultation to capture your service menu, pricing, Google Maps profile, and staff roles.</p>
+                </div>
+                <div class="card-4col" style="border-top: 3px solid #10b981;">
+                    <div style="font-size: 1.3rem; color: #10b981; margin-bottom: 4px;">2️⃣</div>
+                    <h4 style="color: #fff; margin: 0 0 6px 0; font-size: 0.95rem;">Platform Setup</h4>
+                    <p style="color: #94a3b8; font-size: 0.8rem; margin: 0; line-height: 1.4;">We deploy your custom portal (/book/{slug}), configure your WhatsApp AI receptionist, and upload catalog photos.</p>
+                </div>
+                <div class="card-4col" style="border-top: 3px solid #c084fc;">
+                    <div style="font-size: 1.3rem; color: #c084fc; margin-bottom: 4px;">3️⃣</div>
+                    <h4 style="color: #fff; margin: 0 0 6px 0; font-size: 0.95rem;">WhatsApp QR Link</h4>
+                    <p style="color: #94a3b8; font-size: 0.8rem; margin: 0; line-height: 1.4;">Scan a simple WhatsApp Web QR code to connect your business phone with the 24/7 AI response engine.</p>
+                </div>
+                <div class="card-4col" style="border-top: 3px solid #f472b6;">
+                    <div style="font-size: 1.3rem; color: #f472b6; margin-bottom: 4px;">4️⃣</div>
+                    <h4 style="color: #fff; margin: 0 0 6px 0; font-size: 0.95rem;">Staff Go-Live</h4>
+                    <p style="color: #94a3b8; font-size: 0.8rem; margin: 0; line-height: 1.4;">15-minute staff walkthrough. Start accepting automated bookings, orders, and leads immediately.</p>
+                </div>
+            </div>
+            <div style="background: #111827; border: 1px solid #10b981; border-radius: 14px; padding: 18px 24px; display: flex; align-items: center; justify-content: space-between; margin-top: 15px;">
+                <div>
+                    <h4 style="color: #fff; margin: 0 0 4px 0; font-size: 1.05rem;">Ready to Automate Your Business?</h4>
+                    <p style="color: #94a3b8; font-size: 0.85rem; margin: 0;">Sales Helpline: <strong>+91 87704 66442</strong> &bull; AI Bot Demo: <strong>+91 72229 89666</strong> &bull; support@microcrm.site</p>
+                </div>
+                <a href="https://wa.me/918770466442?text=Hi%2C%20I%20saw%20the%20MicroCRM%20pitch%20deck%20and%20want%20to%20onboard%20my%20business." target="_blank" class="btn btn-wa" style="padding: 10px 22px; font-size: 0.9rem; text-decoration: none; border-radius: 25px;">
+                    <i class="fa-brands fa-whatsapp"></i> Chat Onboarding Team
+                </a>
+            </div>
+            <div class="slide-footer">
+                <span>MicroCRM Executive Deck</span>
+                <span>Slide 8 of 8</span>
+            </div>
+        </div>
+
+    </main>
+
+    <script>
+        let currentSlide = 1;
+        const totalSlides = 8;
+
+        function updateSlide() {
+            document.querySelectorAll('.slide-frame').forEach((el, index) => {
+                if (index + 1 === currentSlide) {
+                    el.classList.add('active');
+                } else {
+                    el.classList.remove('active');
+                }
+            });
+            document.getElementById('slideCount').innerText = `${currentSlide} / ${totalSlides}`;
+        }
+
+        function nextSlide() {
+            if (currentSlide < totalSlides) {
+                currentSlide++;
+                updateSlide();
+            }
+        }
+
+        function prevSlide() {
+            if (currentSlide > 1) {
+                currentSlide--;
+                updateSlide();
+            }
+        }
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowRight' || e.key === 'Space') {
+                nextSlide();
+            } else if (e.key === 'ArrowLeft') {
+                prevSlide();
+            }
+        });
+    </script>
+</body>
+</html>
