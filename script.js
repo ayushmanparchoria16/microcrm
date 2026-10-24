@@ -80,3 +80,58 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 });
+
+// Interactive Google Map Mockup Shop Switcher
+const mapShopData = {
+    salon: {
+        title: "Rashmi R Makeup & Bridal Studio",
+        meta: "⭐ 4.9 (320 Google Reviews) • Vijay Nagar, Indore • <strong style='color: #a6e3a1;'>0% Aggregator Commission</strong>",
+        icon: "💄",
+        color: "#f472b6",
+        url: "https://app.microcrm.site/book/rashmi-r-makeup",
+        btnText: "Book Salon Direct"
+    },
+    tech: {
+        title: "Shri Ranawat Infotech - Laptop & PC Repair",
+        meta: "⭐ 4.8 (185 Google Reviews) • Bhawarkua, Indore • <strong style='color: #a6e3a1;'>0% Aggregator Commission</strong>",
+        icon: "💻",
+        color: "#60a5fa",
+        url: "https://app.microcrm.site/book/shri-ranawat-infotech",
+        btnText: "Book Diagnostic Direct"
+    },
+    realestate: {
+        title: "BBC Real Estate - Aahana Residency",
+        meta: "⭐ 5.0 (94 Google Reviews) • Puwarda Junarda, Indore • <strong style='color: #a6e3a1;'>0% Broker Commission</strong>",
+        icon: "🏘️",
+        color: "#a6e3a1",
+        url: "https://app.microcrm.site/book/bbc",
+        btnText: "Explore Plot Map Direct"
+    }
+};
+
+window.selectMapShop = function(key) {
+    document.querySelectorAll('.map-pin').forEach(el => el.classList.remove('active'));
+    const pin = document.getElementById('pin-' + key);
+    if (pin) pin.classList.add('active');
+
+    const data = mapShopData[key];
+    if (!data) return;
+
+    const title = document.getElementById('drawerTitle');
+    const meta = document.getElementById('drawerMeta');
+    const icon = document.getElementById('drawerIcon');
+    const btn = document.getElementById('drawerBtn');
+
+    if (title) title.innerText = data.title;
+    if (meta) meta.innerHTML = data.meta;
+    if (icon) {
+        icon.innerText = data.icon;
+        icon.style.color = data.color;
+    }
+    if (btn) {
+        btn.href = data.url;
+        const span = btn.querySelector('span');
+        if (span) span.innerText = data.btnText;
+    }
+};
+
