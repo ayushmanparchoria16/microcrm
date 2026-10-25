@@ -79,6 +79,24 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         });
     });
+
+    // Mobile Navigation Drawer Toggle
+    const mobileNavToggle = document.getElementById("mobileNavToggle");
+    const navLinks = document.getElementById("navLinks");
+    if (mobileNavToggle && navLinks) {
+        mobileNavToggle.addEventListener("click", () => {
+            const isOpen = navLinks.classList.toggle("mobile-active");
+            mobileNavToggle.classList.toggle("is-active", isOpen);
+        });
+
+        // Auto-close drawer when any link is clicked
+        navLinks.querySelectorAll("a").forEach(link => {
+            link.addEventListener("click", () => {
+                navLinks.classList.remove("mobile-active");
+                mobileNavToggle.classList.remove("is-active");
+            });
+        });
+    }
 });
 
 // Interactive Google Map Mockup Shop Switcher

@@ -18,19 +18,32 @@
     
     <nav class="navbar">
         <div class="nav-container">
-            <div class="logo">
-                <span class="logo-icon"><img src="logo.png" alt="MicroCRM Logo" style="height: 32px; width: 32px; margin-right: 10px; border-radius: 8px;"></span>
+            <a href="index.html" class="logo">
+                <img src="logo.png" alt="MicroCRM Logo" class="logo-img">
                 <span class="logo-text">MicroCRM</span>
+            </a>
+            
+            <div class="nav-links" id="navLinks">
+                <a href="#showcase" class="nav-item">Live Clients</a>
+                <a href="#ecosystem" class="nav-item">4-in-1 Engine</a>
+                <a href="#local-defense" class="nav-item">Local Defense</a>
+                <a href="#industries" class="nav-item">Industries</a>
+                <a href="#whatsapp" class="nav-item">WhatsApp AI</a>
+                <a href="pitch-deck.html" class="nav-item nav-deck-badge"><i class="fa-solid fa-file-powerpoint"></i> Pitch Deck</a>
+                <a href="portal-demo.html" class="nav-item">Client Portals</a>
+                <a href="#get-started" class="btn btn-primary nav-btn" style="padding: 7px 16px; font-size: 13px;">Get Started</a>
+                <a href="https://wa.me/918770466442" target="_blank" class="btn btn-wa nav-btn" style="padding: 7px 16px; font-size: 13px;"><i class="fa-brands fa-whatsapp"></i> Chat on WhatsApp</a>
             </div>
-            <div class="nav-links">
-                <a href="#showcase">Live Clients</a>
-                <a href="#ecosystem">The 4-in-1 Engine</a>
-                <a href="#local-defense">Local Defense</a>
-                <a href="#industries">Industries</a>
-                <a href="#whatsapp">WhatsApp AI</a>
-                <a href="portal-demo.html">Client Portals</a>
-                <a href="#get-started" class="btn btn-primary" style="padding: 8px 18px; font-size: 13px;">Get Started</a>
-                <a href="https://wa.me/918770466442" target="_blank" class="btn btn-wa"><i class="fa-brands fa-whatsapp"></i> Chat on WhatsApp</a>
+
+            <div class="nav-mobile-actions">
+                <a href="https://wa.me/918770466442" target="_blank" class="btn btn-wa btn-mobile-wa">
+                    <i class="fa-brands fa-whatsapp"></i> Chat
+                </a>
+                <button class="mobile-toggle" id="mobileNavToggle" aria-label="Toggle navigation">
+                    <span class="hamburger-bar"></span>
+                    <span class="hamburger-bar"></span>
+                    <span class="hamburger-bar"></span>
+                </button>
             </div>
         </div>
     </nav>
