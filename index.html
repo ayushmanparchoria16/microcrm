@@ -3,1057 +3,476 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MicroCRM - Google Profile, Web Storefront, WhatsApp AI & Business CRM</title>
-    <meta name="description" content="MicroCRM is the complete 360° growth engine for local businesses: Google Business Profile SEO, instant mobile storefront, 24/7 WhatsApp AI receptionist, and POS billing CRM.">
+    <title>MicroCRM • Growth Engine for Real Estate, Services & B2B</title>
+    <meta name="description" content="MicroCRM is the all-in-one growth suite for Real Estate developers, service studios, and B2B agencies: Interactive plot maps, 24/7 WhatsApp AI receptionist, and instant client booking portals.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Outfit:wght@500;600;700;800;900&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <div class="blob blob-1"></div>
-    <div class="blob blob-2"></div>
-    <div class="blob blob-3"></div>
-    
+
+    <!-- Ambient Aura Glows -->
+    <div class="aura-glow aura-1"></div>
+    <div class="aura-glow aura-2"></div>
+    <div class="aura-glow aura-3"></div>
+
+    <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-container">
             <a href="index.html" class="logo">
-                <img src="logo.png" alt="MicroCRM Logo" class="logo-img">
-                <span class="logo-text">MicroCRM</span>
+                <img src="logo.png" alt="MicroCRM">
+                <span>MicroCRM</span>
             </a>
             
             <div class="nav-links" id="navLinks">
                 <a href="#showcase" class="nav-item">Live Clients</a>
-                <a href="#ecosystem" class="nav-item">4-in-1 Engine</a>
-                <a href="#local-defense" class="nav-item">Local Defense</a>
-                <a href="#industries" class="nav-item">Industries</a>
-                <a href="#whatsapp" class="nav-item">WhatsApp AI</a>
-                <a href="pitch-deck.html" class="nav-item nav-deck-badge"><i class="fa-solid fa-file-powerpoint"></i> Pitch Deck</a>
-                <a href="portal-demo.html" class="nav-item">Client Portals</a>
-                <a href="#get-started" class="btn btn-primary nav-btn" style="padding: 7px 16px; font-size: 13px;">Get Started</a>
-                <a href="https://wa.me/918770466442" target="_blank" class="btn btn-wa nav-btn" style="padding: 7px 16px; font-size: 13px;"><i class="fa-brands fa-whatsapp"></i> Chat on WhatsApp</a>
+                <a href="#industries" class="nav-item">Solutions</a>
+                <a href="#defense" class="nav-item">Why Direct?</a>
+                <a href="#whatsapp-ai" class="nav-item">WhatsApp AI</a>
+                <a href="pitch-deck.html" class="nav-item"><i class="fa-solid fa-file-powerpoint" style="color: #a855f7;"></i> Pitch Deck</a>
+                <a href="portal-demo.html" class="nav-item">Demo Portals</a>
+                <a href="https://wa.me/918770466442" target="_blank" class="btn btn-wa" style="padding: 7px 16px; font-size: 13px;">
+                    <i class="fa-brands fa-whatsapp"></i> Chat on WhatsApp
+                </a>
             </div>
 
-            <div class="nav-mobile-actions">
-                <a href="https://wa.me/918770466442" target="_blank" class="btn btn-wa btn-mobile-wa">
-                    <i class="fa-brands fa-whatsapp"></i> Chat
-                </a>
-                <button class="mobile-toggle" id="mobileNavToggle" aria-label="Toggle navigation">
-                    <span class="hamburger-bar"></span>
-                    <span class="hamburger-bar"></span>
-                    <span class="hamburger-bar"></span>
-                </button>
-            </div>
+            <button class="mobile-toggle" id="mobileNavToggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </div>
     </nav>
 
-    <header class="hero">
-        <div class="container hero-content">
-            <div class="hero-badge">360° Growth Suite for Local Businesses 🚀</div>
-            <div class="hero-text-anim">
-                <h1 class="hero-title">From Google Search to<br><span class="gradient-text">WhatsApp & Automated Bookings.</span></h1>
+    <!-- Hero Section -->
+    <header class="hero-section">
+        <div class="container">
+            <div class="pill-badge">
+                <span class="pulse"></span>
+                <span>The Operating System for High-Ticket Businesses</span>
             </div>
-            <p class="hero-subtitle">MicroCRM powers local salons, tech repair shops, retail stores, clinics, and builders with a complete growth stack: <strong>Google Business Profile SEO</strong>, an <strong>instant mobile-first storefront</strong>, <strong>24/7 WhatsApp AI receptionist</strong>, and <strong>smart POS billing & inventory CRM</strong>. Zero app downloads required for your customers.</p>
-            
-            <div class="hero-actions" style="gap: 15px;">
-                <a href="https://wa.me/918770466442?text=Hi%20MicroCRM%20team%2C%20I%20want%20to%20set%20up%20Google%20Business%2C%20an%20online%20storefront%2C%20and%20WhatsApp%20CRM%20for%20my%20business." target="_blank" class="btn btn-wa btn-large">
-                    <i class="fa-brands fa-whatsapp" style="font-size: 20px;"></i> Chat on WhatsApp (+91 8770466442)
+
+            <h1 class="hero-title">
+                From Google & Meta Ads to<br>
+                <span class="gradient-text">Automated Deals & Bookings.</span>
+            </h1>
+
+            <p class="hero-subtitle">
+                MicroCRM powers <strong>Real Estate Builders</strong>, <strong>Service Studios</strong>, and <strong>B2B Agencies</strong> with an integrated growth stack: 24/7 conversational WhatsApp AI, interactive plot maps, 1-tap web storefronts, and lead pipelines. Zero customer app downloads.
+            </p>
+
+            <div class="hero-actions">
+                <a href="https://wa.me/918770466442?text=Hi%20MicroCRM%2C%20I%20want%20to%20set%20up%20MicroCRM%20for%20my%20business." target="_blank" class="btn btn-wa" style="padding: 12px 24px; font-size: 1rem;">
+                    <i class="fa-brands fa-whatsapp" style="font-size: 1.25rem;"></i> Setup Onboarding (+91 8770466442)
                 </a>
-                <a href="#showcase" class="btn btn-primary btn-large">
-                    <i class="fa-solid fa-users"></i> See 3 Live Client Demos
+                <a href="#showcase" class="btn btn-secondary" style="padding: 12px 24px; font-size: 1rem;">
+                    <i class="fa-solid fa-arrow-down"></i> See 3 Live Client Demos
                 </a>
+            </div>
+
+            <div class="hero-trust-chips">
+                <span><i class="fa-solid fa-shield-halved" style="color: #10b981;"></i> 0% Aggregator Commission</span>
+                <span><i class="fa-solid fa-bolt" style="color: #6366f1;"></i> 2-Min Speed-to-Lead</span>
+                <span><i class="fa-solid fa-mobile-screen" style="color: #a855f7;"></i> Zero App Installs Required</span>
+            </div>
+
+            <!-- HERO INTERACTIVE PRODUCT STAGE -->
+            <div class="product-stage">
+                <div class="browser-mockup">
+                    <div class="browser-bar">
+                        <div class="browser-dots">
+                            <span class="browser-dot dot-red"></span>
+                            <span class="browser-dot dot-yellow"></span>
+                            <span class="browser-dot dot-green"></span>
+                        </div>
+                        <div class="browser-url">
+                            <i class="fa-solid fa-lock" style="font-size: 10px; color: #10b981;"></i>
+                            <span>https://app.microcrm.site/book/bbc</span>
+                        </div>
+                    </div>
+
+                    <div class="stage-content">
+                        <!-- Left: Interactive Canvas Map -->
+                        <div class="canvas-preview">
+                            <div>
+                                <div style="display: flex; justify-content: space-between; align-items: center;">
+                                    <div>
+                                        <h3 style="font-size: 1.15rem; color: #fff;">Aahana Residency Master Plan</h3>
+                                        <p style="font-size: 0.78rem; color: #94a3b8;">Interactive Layout • Tap any plot to inspect size & pricing</p>
+                                    </div>
+                                    <span style="background: rgba(16,185,129,0.15); color: #6ee7b7; padding: 4px 10px; border-radius: 20px; font-size: 0.75rem; font-weight: 700;">● Live Canvas</span>
+                                </div>
+
+                                <div class="plot-grid">
+                                    <div class="plot-box plot-available" data-num="101" data-sqft="1,000" data-price="37,50,000">
+                                        <div style="font-size: 0.8rem; font-weight: 700; color: #6ee7b7;">Plot 101</div>
+                                        <div style="font-size: 0.7rem; color: #94a3b8;">1,000 sqft</div>
+                                    </div>
+                                    <div class="plot-box plot-sold">
+                                        <div style="font-size: 0.8rem; font-weight: 700; color: #fca5a5;">Plot 102</div>
+                                        <div style="font-size: 0.7rem; color: #fca5a5;">SOLD</div>
+                                    </div>
+                                    <div class="plot-box plot-available" data-num="103" data-sqft="1,200" data-price="45,00,000">
+                                        <div style="font-size: 0.8rem; font-weight: 700; color: #6ee7b7;">Plot 103</div>
+                                        <div style="font-size: 0.7rem; color: #94a3b8;">1,200 sqft</div>
+                                    </div>
+                                    <div class="plot-box plot-booked">
+                                        <div style="font-size: 0.8rem; font-weight: 700; color: #fcd34d;">Plot 104</div>
+                                        <div style="font-size: 0.7rem; color: #fcd34d;">HOLD</div>
+                                    </div>
+                                    <div class="plot-box plot-available" data-num="105" data-sqft="1,500" data-price="56,25,000">
+                                        <div style="font-size: 0.8rem; font-weight: 700; color: #6ee7b7;">Plot 105</div>
+                                        <div style="font-size: 0.7rem; color: #94a3b8;">1,500 sqft</div>
+                                    </div>
+                                    <div class="plot-box plot-available" data-num="106" data-sqft="800" data-price="30,00,000">
+                                        <div style="font-size: 0.8rem; font-weight: 700; color: #6ee7b7;">Plot 106</div>
+                                        <div style="font-size: 0.7rem; color: #94a3b8;">800 sqft</div>
+                                    </div>
+                                    <div class="plot-box plot-sold">
+                                        <div style="font-size: 0.8rem; font-weight: 700; color: #fca5a5;">Plot 107</div>
+                                        <div style="font-size: 0.7rem; color: #fca5a5;">SOLD</div>
+                                    </div>
+                                    <div class="plot-box plot-available" data-num="108" data-sqft="1,150" data-price="43,12,500">
+                                        <div style="font-size: 0.8rem; font-weight: 700; color: #6ee7b7;">Plot 108</div>
+                                        <div style="font-size: 0.7rem; color: #94a3b8;">1,150 sqft</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div id="heroPlotSelectedInfo" style="margin-top: 15px; font-size: 0.85rem; color: #cbd5e1; background: rgba(255,255,255,0.03); padding: 8px 14px; border-radius: 8px; border: 1px solid var(--border);">
+                                Selected: <strong>Plot #103</strong> (1,200 sqft) • <span style="color: #6ee7b7; font-weight: 700;">₹45,00,000</span> &nbsp;<a href="https://app.microcrm.site/book/bbc" target="_blank" style="color: #818cf8; text-decoration: underline; font-size: 0.78rem;">Book Site Visit ↗</a>
+                            </div>
+                        </div>
+
+                        <!-- Right: WhatsApp AI Assistant Simulation -->
+                        <div class="phone-mockup">
+                            <div class="phone-header">
+                                <div class="wa-status-dot"></div>
+                                <div>
+                                    <div>BBC Real Estate AI</div>
+                                    <div style="font-size: 0.7rem; color: #94a3b8; font-weight: 400;">24/7 Virtual Receptionist</div>
+                                </div>
+                            </div>
+                            <div class="phone-chat">
+                                <div class="chat-bubble incoming">
+                                    Anjali this side. What is plot price in Aahana Residency?
+                                </div>
+                                <div class="chat-bubble outgoing">
+                                    Hi Anjali! 😊 Plots start at ₹3,750/sqft in Puwarda Junarda, Indore. Here is the PDF brochure 📄.
+                                </div>
+                                <div class="chat-bubble outgoing">
+                                    Would you like to schedule a free site visit for this weekend? 🏡
+                                </div>
+                                <div class="typing-dots">
+                                    <span class="typing-dot"></span>
+                                    <span class="typing-dot"></span>
+                                    <span class="typing-dot"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </header>
 
-    <!-- Live Client Showcase (3 Production Clients) -->
-    <section id="showcase" class="showcase-section">
+    <!-- 3 Targeted Pillars (Interactive Switcher) -->
+    <section id="industries" class="industry-switcher-section">
         <div class="container">
-            <div style="text-align: center; max-width: 800px; margin: 0 auto;">
-                <div class="showcase-badge-live">
-                    <span class="pulse-dot"></span>
-                    Verified Live Deployments
+            <div class="section-header">
+                <div class="pill-badge" style="background: rgba(168, 85, 247, 0.1); border-color: rgba(168, 85, 247, 0.3); color: #d8b4fe;">
+                    🎯 Tailored for High-Ticket Industries
                 </div>
-                <h2 class="section-title" style="margin-top: 15px; margin-bottom: 12px;">
-                    Trusted by Real Businesses. <span class="gradient-text">Live in Production.</span>
-                </h2>
-                <p style="color: var(--text-muted); font-size: 1.05rem;">
-                    Don't settle for static slide decks. Tap on any of our onboarded merchants below to test their live customer experience directly on your device:
-                </p>
+                <h2>Built for Your Specific Vertical.</h2>
+                <p>No generic templates. The CRM dynamically morphs its modules, maps, and workflows based on how you do business.</p>
             </div>
 
-            <div class="showcase-grid">
-                <!-- Client 1: Rashmi R Makeup -->
-                <div class="showcase-card">
-                    <div>
-                        <div class="showcase-client-header">
-                            <div class="showcase-avatar" style="color: #f38ba8; background: rgba(243, 139, 168, 0.1);">
-                                💄
-                            </div>
-                            <span class="showcase-badge-live"><span class="pulse-dot"></span> Active Client</span>
-                        </div>
-                        <h3 class="showcase-title">Rashmi R Makeup</h3>
-                        <div class="showcase-category">Beauty Salon, Makeup Artist & Bridal Studio</div>
-                        <p class="showcase-desc">
-                            Full digital booking portal with real-time slot scheduling, bridal transformation packages, and Instagram Reel video proof demo embedded directly inside service cards.
-                        </p>
-                        <div class="showcase-tags">
-                            <span class="showcase-tag">✨ Service Bookings</span>
-                            <span class="showcase-tag">🎥 Instagram Reel Proof</span>
-                            <span class="showcase-tag">💬 1-Tap WhatsApp Chat</span>
-                            <span class="showcase-tag">📱 Mobile-First Drawer</span>
-                        </div>
+            <div class="switcher-tabs">
+                <button class="tab-pill active" id="tab-realestate" onclick="switchIndustry('realestate')">
+                    🏢 Real Estate & Builders
+                </button>
+                <button class="tab-pill" id="tab-service" onclick="switchIndustry('service')">
+                    🛠️ Service & Tech Studios
+                </button>
+                <button class="tab-pill" id="tab-consulting" onclick="switchIndustry('consulting')">
+                    💼 Consulting & IT Agencies
+                </button>
+            </div>
+
+            <!-- Dynamic Showcase Stage -->
+            <div class="showcase-stage-card">
+                <div class="stage-left">
+                    <div class="live-client-tag" id="switcherBadge">
+                        Live Deployment: BBC Real Estate (Aahana Residency)
                     </div>
-                    <a href="https://app.microcrm.site/book/rashmi-r-makeup" target="_blank" class="btn btn-primary" style="justify-content: center; gap: 8px;">
-                        <span>Open Live Booking Store</span>
-                        <i class="fa-solid fa-arrow-up-right-from-square" style="font-size: 12px;"></i>
+                    <h3 id="switcherTitle">Real Estate Developers & Township Planners</h3>
+                    <p id="switcherDesc">
+                        Turn online Meta (FB/IG) ad clicks into confirmed site visits. Replace static brochures with live interactive canvas plot maps.
+                    </p>
+                    <ul class="feature-bullets" id="switcherBullets">
+                        <li><i class="fa-solid fa-circle-check"></i> <div><strong>Interactive Canvas Maps:</strong> Buyers inspect live layouts, tap plots for sqft size, facing & status (Available/Sold).</div></li>
+                        <li><i class="fa-solid fa-circle-check"></i> <div><strong>2-Minute Speed to Lead:</strong> Meta leads receive instant WhatsApp brochures before competitors even notice.</div></li>
+                        <li><i class="fa-solid fa-circle-check"></i> <div><strong>Site Visit Scheduler:</strong> Automated rep assignments & follow-up tracking with zero lead leakage.</div></li>
+                    </ul>
+                    <a href="https://app.microcrm.site/book/bbc" target="_blank" class="btn btn-primary" id="switcherBtn">
+                        Explore Real Estate Portal ↗
                     </a>
                 </div>
 
-                <!-- Client 2: Shri Ranawat Infotech -->
-                <div class="showcase-card">
-                    <div>
-                        <div class="showcase-client-header">
-                            <div class="showcase-avatar" style="color: #89b4fa; background: rgba(137, 180, 250, 0.1);">
-                                💻
+                <div class="stage-right" id="switcherVisual">
+                    <!-- Default: Real Estate Visual -->
+                    <div style="background: rgba(0,0,0,0.5); border: 1px solid rgba(255,255,255,0.08); border-radius: 16px; padding: 20px;">
+                        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px;">
+                            <div>
+                                <div style="font-weight: 700; color: #fff;">Aahana Residency Master Plan</div>
+                                <div style="font-size: 0.75rem; color: #94a3b8;">Puwarda Junarda, Indore • Phase 1</div>
                             </div>
-                            <span class="showcase-badge-live"><span class="pulse-dot"></span> Active Client</span>
+                            <span style="background: rgba(16,185,129,0.15); color: #6ee7b7; padding: 3px 8px; border-radius: 6px; font-size: 0.75rem; font-weight: 700;">Live Canvas</span>
                         </div>
-                        <h3 class="showcase-title">Shri Ranawat Infotech</h3>
-                        <div class="showcase-category">Computers, Hardware & Laptop Repair Services</div>
-                        <p class="showcase-desc">
-                            Hybrid storefront offering live inventory of computer components, laptop diagnostics, hardware repair slot booking, and instant quotation requests.
-                        </p>
-                        <div class="showcase-tags">
-                            <span class="showcase-tag">🛍️ Live Spare Parts Stock</span>
-                            <span class="showcase-tag">🔧 Repair Diagnostics</span>
-                            <span class="showcase-tag">🏪 Counter Pickup</span>
-                            <span class="showcase-tag">🏷️ Custom Quotations</span>
+                        <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px;">
+                            <div style="background: rgba(16,185,129,0.1); border: 1px solid rgba(16,185,129,0.3); border-radius: 8px; padding: 12px; text-align: center;">
+                                <div style="font-size: 0.8rem; font-weight: 700; color: #6ee7b7;">Plot 101</div>
+                                <div style="font-size: 0.7rem; color: #94a3b8;">1,000 sqft</div>
+                                <div style="font-size: 0.75rem; color: #fff; font-weight: 600; margin-top: 4px;">Available</div>
+                            </div>
+                            <div style="background: rgba(239,68,68,0.1); border: 1px solid rgba(239,68,68,0.3); border-radius: 8px; padding: 12px; text-align: center;">
+                                <div style="font-size: 0.8rem; font-weight: 700; color: #fca5a5;">Plot 102</div>
+                                <div style="font-size: 0.7rem; color: #94a3b8;">1,200 sqft</div>
+                                <div style="font-size: 0.75rem; color: #fca5a5; font-weight: 600; margin-top: 4px;">SOLD</div>
+                            </div>
+                            <div style="background: rgba(16,185,129,0.1); border: 1px solid rgba(16,185,129,0.3); border-radius: 8px; padding: 12px; text-align: center;">
+                                <div style="font-size: 0.8rem; font-weight: 700; color: #6ee7b7;">Plot 103</div>
+                                <div style="font-size: 0.7rem; color: #94a3b8;">1,500 sqft</div>
+                                <div style="font-size: 0.75rem; color: #fff; font-weight: 600; margin-top: 4px;">Available</div>
+                            </div>
+                        </div>
+                        <div style="margin-top: 15px; padding: 10px; background: rgba(99,102,241,0.1); border: 1px solid rgba(99,102,241,0.25); border-radius: 8px; font-size: 0.8rem; color: #c7d2fe; display: flex; justify-content: space-between; align-items: center;">
+                            <span>WhatsApp AI brochure delivery active</span>
+                            <span style="color: #6ee7b7; font-weight: 700;">● Online</span>
                         </div>
                     </div>
-                    <a href="https://app.microcrm.site/book/shri-ranawat-infotech" target="_blank" class="btn btn-primary" style="justify-content: center; gap: 8px;">
-                        <span>Open Live Store & Repairs</span>
-                        <i class="fa-solid fa-arrow-up-right-from-square" style="font-size: 12px;"></i>
-                    </a>
-                </div>
-
-                <!-- Client 3: BBC Real Estate -->
-                <div class="showcase-card">
-                    <div>
-                        <div class="showcase-client-header">
-                            <div class="showcase-avatar" style="color: #a6e3a1; background: rgba(166, 227, 161, 0.1);">
-                                🏢
-                            </div>
-                            <span class="showcase-badge-live"><span class="pulse-dot"></span> Active Client</span>
-                        </div>
-                        <h3 class="showcase-title">BBC Real Estate</h3>
-                        <div class="showcase-category">Aahana Residency, Indore (Plots & Real Estate)</div>
-                        <p class="showcase-desc">
-                            Interactive master layout canvas maps with live plot status, per-sqft price calculators, PDF brochure distribution, and 24/7 AI-driven site visit scheduling on WhatsApp.
-                        </p>
-                        <div class="showcase-tags">
-                            <span class="showcase-tag">🗺️ Interactive Canvas Map</span>
-                            <span class="showcase-tag">📄 Automated PDF Brochures</span>
-                            <span class="showcase-tag">🤖 WhatsApp AI Bot</span>
-                            <span class="showcase-tag">📅 Site Visit Booking</span>
-                        </div>
-                    </div>
-                    <a href="https://app.microcrm.site/book/bbc" target="_blank" class="btn btn-primary" style="justify-content: center; gap: 8px;">
-                        <span>Open Live Real Estate Portal</span>
-                        <i class="fa-solid fa-arrow-up-right-from-square" style="font-size: 12px;"></i>
-                    </a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- 4-in-1 Ecosystem Section -->
-    <section id="ecosystem" class="ecosystem-section">
+    <!-- Anti-Aggregator Battle Section -->
+    <section id="defense" class="defense-section">
         <div class="container">
-            <div style="text-align: center; max-width: 800px; margin: 0 auto;">
-                <div class="hero-badge" style="background: rgba(203, 166, 247, 0.15); color: var(--accent); border: 1px solid rgba(203, 166, 247, 0.3);">
-                    ⚡ Complete 360° Tech Stack
-                </div>
-                <h2 class="section-title" style="margin-top: 15px; margin-bottom: 12px;">
-                    From Discovery to Checkout. <span class="gradient-text">Everything Included.</span>
-                </h2>
-                <p style="color: var(--text-muted); font-size: 1.05rem;">
-                    Instead of paying 4 different vendors for websites, SEO, billing, and WhatsApp tools, MicroCRM gives you one integrated operating system:
-                </p>
-            </div>
-
-            <div class="ecosystem-grid">
-                <!-- Pillar 1 -->
-                <div class="ecosystem-card">
-                    <span class="ecosystem-step">Pillar 01 • Get Discovered</span>
-                    <h3><i class="fa-brands fa-google" style="color: #4285F4;"></i> Google Profile & Local SEO</h3>
-                    <p>Be the #1 choice when nearby customers search on Google Maps. We optimize your Google Business Profile, configure LocalBusiness schema, sync customer reviews, and embed a direct "Book / Order Online" button on your Google card.</p>
-                    <ul class="feature-list">
-                        <li><i class="fa-solid fa-check"></i> Google Maps listing ranking & category optimization</li>
-                        <li><i class="fa-solid fa-check"></i> Structured JSON-LD LocalBusiness search tags</li>
-                        <li><i class="fa-solid fa-check"></i> Instant direct booking link in Google Profile</li>
-                    </ul>
-                </div>
-
-                <!-- Pillar 2 -->
-                <div class="ecosystem-card">
-                    <span class="ecosystem-step">Pillar 02 • Look World-Class</span>
-                    <h3><i class="fa-solid fa-store" style="color: #89b4fa;"></i> Mobile Web Storefront & Booking</h3>
-                    <p>Give your brand an ultra-fast web portal at <code>app.microcrm.site/book/{your-shop}</code>. Zero app downloads required. Includes sticky category filters, mobile cart drawers, and Instagram Reel video proof embedded inside cards.</p>
-                    <ul class="feature-list">
-                        <li><i class="fa-solid fa-check"></i> Native mobile feel with 1-tap checkout drawer</li>
-                        <li><i class="fa-solid fa-check"></i> Watch Instagram Reels & video proof on cards</li>
-                        <li><i class="fa-solid fa-check"></i> Real-time inventory status & duration-based slots</li>
-                    </ul>
-                </div>
-
-                <!-- Pillar 3 -->
-                <div class="ecosystem-card">
-                    <span class="ecosystem-step">Pillar 03 • Convert & Retain</span>
-                    <h3><i class="fa-brands fa-whatsapp" style="color: #25D366;"></i> 24/7 AI WhatsApp Receptionist</h3>
-                    <p>Never lose a customer to slow replies. Our WhatsApp AI responds in under 2 minutes, understands natural conversational queries, sends PDF brochures, logs leads into your CRM, and dispatches automated booking & reminder alerts.</p>
-                    <ul class="feature-list">
-                        <li><i class="fa-solid fa-check"></i> Instant 24/7 automated replies in Hindi, English & Hinglish</li>
-                        <li><i class="fa-solid fa-check"></i> Automated booking receipts & appointment reminders</li>
-                        <li><i class="fa-solid fa-check"></i> Zero per-message API markups or hidden fees</li>
-                    </ul>
-                </div>
-
-                <!-- Pillar 4 -->
-                <div class="ecosystem-card">
-                    <span class="ecosystem-step">Pillar 04 • Run Seamlessly</span>
-                    <h3><i class="fa-solid fa-receipt" style="color: #a6e3a1;"></i> Smart POS Billing & Khata CRM</h3>
-                    <p>Replace paper diaries and confusing Excel sheets. Generate thermal printer receipts, track customer credit (Khata) with payment reminders, monitor real-time stock levels, and assign role-based permissions to your staff.</p>
-                    <ul class="feature-list">
-                        <li><i class="fa-solid fa-check"></i> Thermal printer invoice generation & UPI QR codes</li>
-                        <li><i class="fa-solid fa-check"></i> Customer ledger (Khata) & supplier credit tracking</li>
-                        <li><i class="fa-solid fa-check"></i> Multi-tenant data security & sales staff phone number masking</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Local Market Defense & Google Maps Discovery Mockup -->
-    <section id="local-defense" class="local-defense-section">
-        <div class="container">
-            <div style="text-align: center; max-width: 820px; margin: 0 auto;">
-                <div class="hero-badge" style="background: rgba(16, 185, 129, 0.15); color: #a6e3a1; border: 1px solid rgba(16, 185, 129, 0.3);">
+            <div class="section-header">
+                <div class="pill-badge" style="background: rgba(239, 68, 68, 0.1); border-color: rgba(239, 68, 68, 0.3); color: #fca5a5;">
                     🛡️ The Anti-Aggregator Defense
                 </div>
-                <h2 class="section-title" style="margin-top: 15px; margin-bottom: 12px;">
-                    Empower Local Merchants. <span class="gradient-text">Don't Let Big Tech Snatch Your Customers.</span>
-                </h2>
-                <p style="color: var(--text-muted); font-size: 1.05rem;">
-                    Aggregators (Urban Company, JustDial, Swiggy) snatch your clients, charge 25% commissions, and advertise your competitors on your profile. MicroCRM gives you direct Google Maps discovery with 0% commissions and 100% customer ownership:
-                </p>
+                <h2>Stop Paying 25% Toll Fees to Middlemen.</h2>
+                <p>Aggregators hijack your clients, charge 25% commissions, and advertise cheaper rivals on your listing. MicroCRM gives you 100% direct customer ownership.</p>
             </div>
 
-            <div class="defense-grid">
-                <!-- Interactive Google Map Mockup -->
-                <div class="map-mockup-frame">
-                    <div class="map-header-bar">
-                        <i class="fa-brands fa-google" style="color: #4285F4; font-size: 1.2rem;"></i>
-                        <div class="map-search-input">
-                            <i class="fa-solid fa-magnifying-glass" style="color: #60a5fa;"></i>
-                            <span id="mapTypedSearch">"best laptop repair & bridal salon near me" - Indore</span>
-                        </div>
-                        <span style="font-size: 0.75rem; color: #a6e3a1; background: rgba(16,185,129,0.15); padding: 4px 8px; border-radius: 6px; font-weight: 600;">Live Discovery</span>
-                    </div>
-
-                    <div class="map-canvas-area" id="mapCanvas">
-                        <!-- Stylized Roads -->
-                        <div class="map-road road-h1"></div>
-                        <div class="map-road road-h2"></div>
-                        <div class="map-road road-v1"></div>
-                        <div class="map-road road-v2"></div>
-
-                        <!-- Pin 1: Rashmi R Makeup -->
-                        <div class="map-pin active" id="pin-salon" style="top: 25%; left: 16%;" onclick="selectMapShop('salon')">
-                            <div class="pin-bubble" style="background: #e11d48;">
-                                💄 <span>Rashmi R Makeup</span> &bull; 4.9 ★
-                            </div>
-                            <div class="pin-pulse" style="color: #e11d48;"></div>
-                        </div>
-
-                        <!-- Pin 2: Shri Ranawat Infotech -->
-                        <div class="map-pin" id="pin-tech" style="top: 48%; left: 52%;" onclick="selectMapShop('tech')">
-                            <div class="pin-bubble" style="background: #2563eb;">
-                                💻 <span>Shri Ranawat Tech</span> &bull; 4.8 ★
-                            </div>
-                            <div class="pin-pulse" style="color: #2563eb;"></div>
-                        </div>
-
-                        <!-- Pin 3: BBC Real Estate -->
-                        <div class="map-pin" id="pin-realestate" style="top: 68%; left: 24%;" onclick="selectMapShop('realestate')">
-                            <div class="pin-bubble" style="background: #059669;">
-                                🏘️ <span>BBC Aahana Residency</span> &bull; 5.0 ★
-                            </div>
-                            <div class="pin-pulse" style="color: #059669;"></div>
+            <div class="battle-grid">
+                <!-- Aggregators -->
+                <div class="battle-card battle-bad">
+                    <div class="battle-header">
+                        <div class="battle-icon">❌</div>
+                        <div>
+                            <h3 style="color: #fca5a5;">Big Aggregators</h3>
+                            <div style="font-size: 0.8rem; color: var(--text-muted);">99acres, Urban Company, Justdial</div>
                         </div>
                     </div>
+                    <ul class="battle-list">
+                        <li><i class="fa-solid fa-xmark"></i> <div><strong>25% to 30% Commission:</strong> Heavy fee taken on every booking, consultation or unit inquiry.</div></li>
+                        <li><i class="fa-solid fa-xmark"></i> <div><strong>Masked Contacts:</strong> They hide buyer numbers so you never own your customer relationships.</div></li>
+                        <li><i class="fa-solid fa-xmark"></i> <div><strong>Competitor Ads:</strong> Cheaper competitors are advertised directly under your shop profile.</div></li>
+                        <li><i class="fa-solid fa-xmark"></i> <div><strong>Forced App Installs:</strong> Clients must download an external app to view your prices or plots.</div></li>
+                    </ul>
+                </div>
 
-                    <!-- Selected Shop Preview Drawer -->
-                    <div class="map-popup-drawer" id="mapDrawer">
-                        <div style="display: flex; align-items: center; gap: 14px;">
-                            <div id="drawerIcon" style="width: 44px; height: 44px; border-radius: 10px; background: rgba(243, 139, 168, 0.15); color: #f472b6; display: flex; align-items: center; justify-content: center; font-size: 1.3rem;">
-                                💄
-                            </div>
-                            <div>
-                                <h4 id="drawerTitle" style="color: #fff; font-size: 1.05rem; margin: 0 0 3px 0;">Rashmi R Makeup & Bridal Studio</h4>
-                                <p id="drawerMeta" style="color: #94a3b8; font-size: 0.8rem; margin: 0;">
-                                    ⭐ 4.9 (320 Google Reviews) &bull; Vijay Nagar, Indore &bull; <strong style="color: #a6e3a1;">0% Aggregator Commission</strong>
-                                </p>
-                            </div>
+                <!-- MicroCRM Direct -->
+                <div class="battle-card battle-good">
+                    <div class="battle-header">
+                        <div class="battle-icon">✅</div>
+                        <div>
+                            <h3 style="color: #6ee7b7;">MicroCRM Direct Link</h3>
+                            <div style="font-size: 0.8rem; color: var(--text-muted);">app.microcrm.site/book/{your-brand}</div>
                         </div>
-                        <a id="drawerBtn" href="https://app.microcrm.site/book/rashmi-r-makeup" target="_blank" class="btn btn-primary" style="padding: 9px 18px; font-size: 0.85rem; white-space: nowrap; gap: 8px;">
-                            <span>Book Direct on MicroCRM</span>
-                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
-                        </a>
+                    </div>
+                    <ul class="battle-list">
+                        <li><i class="fa-solid fa-check"></i> <div><strong>0% Commission Forever:</strong> You keep 100% of your earnings. Direct UPI to your bank.</div></li>
+                        <li><i class="fa-solid fa-check"></i> <div><strong>100% Customer Ownership:</strong> All client names, phone numbers, and histories belong solely to you.</div></li>
+                        <li><i class="fa-solid fa-check"></i> <div><strong>Pure Brand Isolation:</strong> Your portal shows your brand only. Zero competitor ads.</div></li>
+                        <li><i class="fa-solid fa-check"></i> <div><strong>Zero App Installs:</strong> Clients open your link instantly in their mobile browser from Instagram or WhatsApp.</div></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive WhatsApp AI Simulator -->
+    <section id="whatsapp-ai" class="simulator-section">
+        <div class="container">
+            <div class="section-header">
+                <div class="pill-badge">
+                    🤖 Test Drive the AI Right Now
+                </div>
+                <h2>24/7 WhatsApp AI Virtual Receptionist</h2>
+                <p>Tap any prompt chip below to see how our AI handles conversational inquiries in under 2 seconds:</p>
+            </div>
+
+            <div class="simulator-box">
+                <div class="sim-header">
+                    <div class="sim-user">
+                        <div class="sim-avatar">AI</div>
+                        <div>
+                            <div style="font-weight: 700; font-size: 0.9rem; color: #fff;">MicroCRM Virtual Receptionist</div>
+                            <div style="font-size: 0.72rem; color: #25D366;">● Active & Replying in Seconds</div>
+                        </div>
+                    </div>
+                    <i class="fa-brands fa-whatsapp" style="color: #25D366; font-size: 1.5rem;"></i>
+                </div>
+
+                <div class="sim-chat-area" id="simChatArea">
+                    <div class="chat-bubble outgoing">
+                        Namaste! 🙏 Welcome to MicroCRM AI Receptionist. How can I assist you with your business requirements today?
                     </div>
                 </div>
 
-                <!-- Comparison Card -->
-                <div class="defense-comparison-card">
+                <div class="sim-chips">
+                    <button class="sim-chip" onclick="triggerSimMsg('plot')">🏡 Ask Plot Price (Real Estate)</button>
+                    <button class="sim-chip" onclick="triggerSimMsg('salon')">💄 Show Bridal Makeup Packages</button>
+                    <button class="sim-chip" onclick="triggerSimMsg('quote')">💻 Request B2B Software Quote</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Verified Live Deployments (Social Proof) -->
+    <section id="showcase" style="padding: 80px 0;">
+        <div class="container">
+            <div class="section-header">
+                <div class="pill-badge" style="background: rgba(16, 185, 129, 0.1); border-color: rgba(16, 185, 129, 0.3); color: #6ee7b7;">
+                    ⚡ Production Proof
+                </div>
+                <h2>Trusted by Real Businesses. Live Right Now.</h2>
+                <p>Click on any of our verified merchant portals below to test the live customer experience on your phone:</p>
+            </div>
+
+            <div class="showcase-grid-3">
+                <!-- 1. BBC Real Estate -->
+                <div class="client-tile">
                     <div>
-                        <div class="hero-badge" style="background: rgba(239, 68, 68, 0.15); color: #f87171; border: 1px solid rgba(239, 68, 68, 0.3); font-size: 0.78rem;">
-                            ⚔️ Stop Paying 25% Toll Fees
+                        <div class="client-tile-header">
+                            <div class="client-avatar" style="background: rgba(16, 185, 129, 0.15); color: #6ee7b7;">🏘️</div>
+                            <span class="pill-badge" style="margin: 0; padding: 2px 8px; font-size: 0.7rem;">Live</span>
                         </div>
-                        <h3 style="font-family: 'Outfit', sans-serif; font-size: 1.4rem; color: #fff; margin: 12px 0 6px 0;">
-                            Big Aggregators vs. Your MicroCRM
-                        </h3>
-                        <p style="color: var(--text-muted); font-size: 0.88rem; line-height: 1.5; margin: 0;">
-                            Aggregators treat local businesses as replaceable suppliers. MicroCRM puts your local brand first.
-                        </p>
+                        <h4 class="client-name">BBC Real Estate</h4>
+                        <div class="client-niche">Aahana Residency • Indore</div>
+                        <p class="client-desc">Interactive canvas plot maps with live availability, sqft price calculators, PDF brochure distribution & WhatsApp site visits.</p>
                     </div>
+                    <a href="https://app.microcrm.site/book/bbc" target="_blank" class="btn btn-primary" style="justify-content: center; font-size: 0.85rem;">
+                        Open Real Estate Portal ↗
+                    </a>
+                </div>
 
-                    <div class="comparison-table">
-                        <div class="comparison-row">
-                            <div class="comp-bad">
-                                <i class="fa-solid fa-xmark"></i>
-                                <span><strong>Big Aggregators:</strong> Charge 20% to 30% heavy commission cut on every single booking or repair.</span>
-                            </div>
-                            <div class="comp-good">
-                                <i class="fa-solid fa-check"></i>
-                                <span><strong>MicroCRM Direct:</strong> 0% Commission forever. You keep 100% of your earnings.</span>
-                            </div>
+                <!-- 2. Rashmi R Makeup -->
+                <div class="client-tile">
+                    <div>
+                        <div class="client-tile-header">
+                            <div class="client-avatar" style="background: rgba(243, 139, 168, 0.15); color: #f472b6;">💄</div>
+                            <span class="pill-badge" style="margin: 0; padding: 2px 8px; font-size: 0.7rem;">Live</span>
                         </div>
-
-                        <div class="comparison-row">
-                            <div class="comp-bad">
-                                <i class="fa-solid fa-xmark"></i>
-                                <span><strong>Big Aggregators:</strong> Hide customer phone numbers. You never own your client relationship.</span>
-                            </div>
-                            <div class="comp-good">
-                                <i class="fa-solid fa-check"></i>
-                                <span><strong>MicroCRM Direct:</strong> 100% Customer Ownership. Client contacts & Khata belong to you.</span>
-                            </div>
-                        </div>
-
-                        <div class="comparison-row">
-                            <div class="comp-bad">
-                                <i class="fa-solid fa-xmark"></i>
-                                <span><strong>Big Aggregators:</strong> Advertise cheaper competitors right underneath your profile.</span>
-                            </div>
-                            <div class="comp-good">
-                                <i class="fa-solid fa-check"></i>
-                                <span><strong>MicroCRM Direct:</strong> Pure branded portal (/book/{slug}) with zero competitor ads.</span>
-                            </div>
-                        </div>
-
-                        <div class="comparison-row">
-                            <div class="comp-bad">
-                                <i class="fa-solid fa-xmark"></i>
-                                <span><strong>Big Aggregators:</strong> Customers must download an external app to view prices.</span>
-                            </div>
-                            <div class="comp-good">
-                                <i class="fa-solid fa-check"></i>
-                                <span><strong>MicroCRM Direct:</strong> Zero app download. 1-tap browser catalog with WhatsApp AI.</span>
-                            </div>
-                        </div>
+                        <h4 class="client-name">Rashmi R Makeup</h4>
+                        <div class="client-niche">Bridal Studio & Salon • Indore</div>
+                        <p class="client-desc">Self-service slot booking, bridal packages, Instagram Reel video proof embedded inside service cards, and WhatsApp confirmations.</p>
                     </div>
+                    <a href="https://app.microcrm.site/book/rashmi-r-makeup" target="_blank" class="btn btn-primary" style="justify-content: center; font-size: 0.85rem;">
+                        Open Salon Portal ↗
+                    </a>
+                </div>
 
-                    <div style="background: rgba(16, 185, 129, 0.08); border: 1px solid rgba(16, 185, 129, 0.25); border-radius: 12px; padding: 12px 16px; display: flex; align-items: center; justify-content: space-between;">
-                        <span style="font-size: 0.85rem; color: #a6e3a1; font-weight: 600;">Empower your local shop today:</span>
-                        <a href="https://wa.me/918770466442?text=Hi%2C%20I%20want%20to%20set%20up%20MicroCRM%20for%20my%20local%20business%20to%20get%20direct%20Google%20orders." target="_blank" class="btn btn-wa" style="padding: 6px 14px; font-size: 0.8rem; border-radius: 20px;">
-                            <i class="fa-brands fa-whatsapp"></i> Chat Onboarding
-                        </a>
+                <!-- 3. Shri Ranawat Infotech -->
+                <div class="client-tile">
+                    <div>
+                        <div class="client-tile-header">
+                            <div class="client-avatar" style="background: rgba(99, 102, 241, 0.15); color: #818cf8;">💻</div>
+                            <span class="pill-badge" style="margin: 0; padding: 2px 8px; font-size: 0.7rem;">Live</span>
+                        </div>
+                        <h4 class="client-name">Shri Ranawat Infotech</h4>
+                        <div class="client-niche">Tech Repairs & Hardware • Indore</div>
+                        <p class="client-desc">Job-card diagnostics tracking, repair slot scheduling, quotation generation, and automated pickup notifications.</p>
                     </div>
+                    <a href="https://app.microcrm.site/book/shri-ranawat-infotech" target="_blank" class="btn btn-primary" style="justify-content: center; font-size: 0.85rem;">
+                        Open Tech Portal ↗
+                    </a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Bento Grid / Features -->
-    <section id="bento" class="bento-section">
+    <!-- Enterprise Security & DPDPA 2023 -->
+    <section style="padding: 70px 0; background: rgba(15, 23, 42, 0.6); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);">
         <div class="container">
-            <h2 class="section-title">Everything you need to <span class="gradient-text">Scale & Automate Your Business.</span></h2>
-            
-            <div class="bento-grid">
-                
-                <!-- WhatsApp AI (Large) -->
-                <div class="bento-card col-span-2 whatsapp-card" id="whatsapp">
-                    <div class="bento-content">
-                        <div class="feature-icon whatsapp-color"><i class="fa-brands fa-whatsapp"></i></div>
-                        <h3>Conversational 24/7 WhatsApp AI Virtual Receptionist</h3>
-                        <p>Say goodbye to rigid "Press 1 for Sales" menus. Our AI understands natural Indian phrasing, handles Indian English expressions (like <em>"Anjali this side"</em>), answers customer questions, dispatches PDF brochures & walkthrough videos, and logs leads directly into your CRM.</p>
-                        <ul class="feature-list">
-                            <li><i class="fa-solid fa-check"></i> <strong>Smart Name Extraction:</strong> Cleanly parses customer names from messages like "Anjali this side".</li>
-                            <li><i class="fa-solid fa-check"></i> <strong>Persistent Question Answering:</strong> Answers buyer questions first, then politely asks for contact details.</li>
-                            <li><i class="fa-solid fa-check"></i> <strong>Multilingual:</strong> Fluent in Hindi, Hinglish, and English.</li>
-                            <li><i class="fa-solid fa-check"></i> <strong>Zero Per-Message Fees:</strong> Direct gateway connection without expensive per-chat API markups.</li>
-                        </ul>
-                    </div>
-                    <div class="bento-visual whatsapp-mockup">
-                        <div class="chat-bubble received">Anjali this side. What is plot price in Aahana Residency?</div>
-                        <div class="chat-bubble sent">Hi Anjali! 😊 Plots in Aahana Residency start at ₹3,750/sqft in Puwarda Junarda, Indore. Would you like me to send you the PDF brochure or schedule a free site visit for you? 🏡</div>
-                    </div>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px;">
+                <div style="background: rgba(255,255,255,0.03); border: 1px solid var(--border); border-radius: 16px; padding: 24px;">
+                    <div style="font-size: 1.8rem; color: #10b981; margin-bottom: 10px;"><i class="fa-solid fa-shield-halved"></i></div>
+                    <h4 style="font-size: 1.15rem; margin-bottom: 6px;">DPDPA 2023 Compliant</h4>
+                    <p style="font-size: 0.88rem; color: var(--text-muted); line-height: 1.5;">Complies with India’s Digital Personal Data Protection Act. Strict consent management and zero unauthorized data harvesting.</p>
                 </div>
-
-                <!-- Call Assistant -->
-                <div class="bento-card">
-                    <div class="bento-content">
-                        <div class="feature-icon ai-color"><i class="fa-solid fa-phone-volume"></i></div>
-                        <h3>AI Voice Telephony</h3>
-                        <p>Deepgram-powered speech recognition automatically handles voice calls, records client requirements, and logs callback requests.</p>
-                    </div>
+                <div style="background: rgba(255,255,255,0.03); border: 1px solid var(--border); border-radius: 16px; padding: 24px;">
+                    <div style="font-size: 1.8rem; color: #6366f1; margin-bottom: 10px;"><i class="fa-solid fa-database"></i></div>
+                    <h4 style="font-size: 1.15rem; margin-bottom: 6px;">100% Tenant Isolation</h4>
+                    <p style="font-size: 0.88rem; color: var(--text-muted); line-height: 1.5;">Strict cryptographic and tenant-level SQL separation. Other businesses can never view or leak your leads or customer Khata.</p>
                 </div>
-
-                <!-- Client Web Portal -->
-                <div class="bento-card" id="portal">
-                    <div class="bento-content">
-                        <div class="feature-icon portal-color"><i class="fa-solid fa-globe"></i></div>
-                        <h3>Branded Client Web Portal</h3>
-                        <p>Give customers a branded URL link (<code style="color: var(--primary);">/book/{your-slug}</code>) to browse property maps, catalogs, amenities, and book appointments 24/7.</p>
-                    </div>
-                </div>
-
-                <!-- Smart POS & Khata -->
-                <div class="bento-card" id="pos-billing">
-                    <div class="bento-content">
-                        <div class="feature-icon" style="color: #a6e3a1; background: rgba(166, 227, 161, 0.1);"><i class="fa-solid fa-cash-register"></i></div>
-                        <h3>Smart POS Billing & Khata</h3>
-                        <p>Fast counter checkout, barcode/SKU scanning, GST/non-GST tax invoices, automated WhatsApp PDF dispatch, and customer credit ledger tracking.</p>
-                    </div>
-                </div>
-
-                <!-- Meta Lead Auto-Sync -->
-                <div class="bento-card" id="lead-engine">
-                    <div class="bento-content">
-                        <div class="feature-icon" style="color: #cba6f7; background: rgba(203, 166, 247, 0.1);"><i class="fa-solid fa-bolt-lightning"></i></div>
-                        <h3>Meta Lead Auto-Sync & Rep Routing</h3>
-                        <p>Facebook & Instagram ad leads sync within 2 minutes. Automated WhatsApp outreach delivers brochures and assigns the lead to a dedicated rep.</p>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-    <!-- Dedicated Industries & Sub-Categories Showcase -->
-    <section id="industries" class="industries-section">
-        <div class="container">
-            <div style="text-align: center; max-width: 840px; margin: 0 auto 10px;">
-                <div class="hero-badge" style="background: rgba(166, 227, 161, 0.15); color: #a6e3a1; border: 1px solid rgba(166, 227, 161, 0.3);">
-                    🏢 Tailored for Every Local Industry
-                </div>
-                <h2 class="section-title" style="margin-top: 15px; margin-bottom: 14px;">
-                    Built for Your Business. <span class="gradient-text">Every Sub-Category Supported.</span>
-                </h2>
-                <p style="color: var(--text-muted); font-size: 1.08rem; line-height: 1.65;">
-                    MicroCRM doesn't force you into a one-size-fits-all box. The platform automatically customizes your online storefront, WhatsApp AI receptionist, booking calendar, and POS billing based on your exact business sub-category:
-                </p>
-            </div>
-
-            <div class="industry-grid">
-                <!-- 1. Beauty, Salon & Aesthetics -->
-                <div class="industry-card">
-                    <div class="industry-card-top">
-                        <div class="industry-header">
-                            <div class="industry-icon-title">
-                                <div class="industry-icon" style="color: #f38ba8; background: rgba(243, 139, 168, 0.12);">
-                                    💄
-                                </div>
-                                <div>
-                                    <h3 class="industry-title">Beauty, Salons & Aesthetics</h3>
-                                </div>
-                            </div>
-                            <a href="https://app.microcrm.site/book/rashmi-r-makeup" target="_blank" class="industry-badge-live">
-                                <span class="pulse-dot"></span> Live Client
-                            </a>
-                        </div>
-                        <div class="industry-subcategories">
-                            <span class="industry-sub-label">Sub-Categories Covered:</span>
-                            <div class="industry-pills">
-                                <span class="industry-pill">Hair Salons</span>
-                                <span class="industry-pill">Bridal Makeup Studios</span>
-                                <span class="industry-pill">Nail Art Bars</span>
-                                <span class="industry-pill">Luxury Day Spas</span>
-                                <span class="industry-pill">Tattoo Parlors</span>
-                                <span class="industry-pill">Skin & Cosmetic Clinics</span>
-                            </div>
-                        </div>
-                        <ul class="industry-features">
-                            <li><i class="fa-solid fa-check"></i> <strong>Stylist Schedules & Booking:</strong> Customers choose their preferred makeup artist or hair stylist with 24/7 self-service slot booking.</li>
-                            <li><i class="fa-solid fa-check"></i> <strong>Instagram Reel Video Proof:</strong> Showcase bridal transformations with embedded Instagram Reels directly on service cards.</li>
-                            <li><i class="fa-solid fa-check"></i> <strong>Zero No-Show Reminders:</strong> Automated WhatsApp reminders sent 24 hours prior to bridal or salon appointments.</li>
-                        </ul>
-                    </div>
-                    <div class="industry-card-footer">
-                        <span style="font-size: 0.8rem; color: #f38ba8; font-weight: 600;">Featured: Rashmi R Makeup</span>
-                        <a href="https://app.microcrm.site/book/rashmi-r-makeup" target="_blank" class="industry-cta-link">
-                            Explore Salon Portal <i class="fa-solid fa-arrow-right"></i>
-                        </a>
-                    </div>
-                </div>
-
-                <!-- 2. Tech Stores & Electronics Repair -->
-                <div class="industry-card">
-                    <div class="industry-card-top">
-                        <div class="industry-header">
-                            <div class="industry-icon-title">
-                                <div class="industry-icon" style="color: #89b4fa; background: rgba(137, 180, 250, 0.12);">
-                                    💻
-                                </div>
-                                <div>
-                                    <h3 class="industry-title">Tech Stores & Computer Repair</h3>
-                                </div>
-                            </div>
-                            <a href="https://app.microcrm.site/book/shri-ranawat-infotech" target="_blank" class="industry-badge-live">
-                                <span class="pulse-dot"></span> Live Client
-                            </a>
-                        </div>
-                        <div class="industry-subcategories">
-                            <span class="industry-sub-label">Sub-Categories Covered:</span>
-                            <div class="industry-pills">
-                                <span class="industry-pill">Laptop & PC Repair</span>
-                                <span class="industry-pill">Mobile Diagnostics</span>
-                                <span class="industry-pill">Computer Hardware Sales</span>
-                                <span class="industry-pill">CCTV & IT Networking</span>
-                                <span class="industry-pill">Refurbished Device Resellers</span>
-                            </div>
-                        </div>
-                        <ul class="industry-features">
-                            <li><i class="fa-solid fa-check"></i> <strong>Job-Card Repair Diagnostics:</strong> Log device models, reported issues, intake status, and estimated repair costs.</li>
-                            <li><i class="fa-solid fa-check"></i> <strong>Automated Pickup Ready Alerts:</strong> Instant WhatsApp notifications when a laptop or phone is repaired and ready for pickup.</li>
-                            <li><i class="fa-solid fa-check"></i> <strong>Spare Parts & Invoicing:</strong> Track component stock levels (RAM, SSD, screens) with GST tax receipt generation.</li>
-                        </ul>
-                    </div>
-                    <div class="industry-card-footer">
-                        <span style="font-size: 0.8rem; color: #89b4fa; font-weight: 600;">Featured: Shri Ranawat Infotech</span>
-                        <a href="https://app.microcrm.site/book/shri-ranawat-infotech" target="_blank" class="industry-cta-link">
-                            Explore Tech Portal <i class="fa-solid fa-arrow-right"></i>
-                        </a>
-                    </div>
-                </div>
-
-                <!-- 3. Real Estate & Builders -->
-                <div class="industry-card">
-                    <div class="industry-card-top">
-                        <div class="industry-header">
-                            <div class="industry-icon-title">
-                                <div class="industry-icon" style="color: #a6e3a1; background: rgba(166, 227, 161, 0.12);">
-                                    🏘️
-                                </div>
-                                <div>
-                                    <h3 class="industry-title">Real Estate, Builders & Townships</h3>
-                                </div>
-                            </div>
-                            <a href="https://app.microcrm.site/book/bbc" target="_blank" class="industry-badge-live">
-                                <span class="pulse-dot"></span> Live Client
-                            </a>
-                        </div>
-                        <div class="industry-subcategories">
-                            <span class="industry-sub-label">Sub-Categories Covered:</span>
-                            <div class="industry-pills">
-                                <span class="industry-pill">Real Estate Developers</span>
-                                <span class="industry-pill">Township Planners</span>
-                                <span class="industry-pill">Property Brokers</span>
-                                <span class="industry-pill">Commercial Leasing</span>
-                                <span class="industry-pill">Plot Schemes & Villas</span>
-                            </div>
-                        </div>
-                        <ul class="industry-features">
-                            <li><i class="fa-solid fa-check"></i> <strong>Interactive Canvas Plot Maps:</strong> Buyers inspect live layouts (e.g. <em>Aahana Residency</em>), tap plots for sqft size, facing, and status.</li>
-                            <li><i class="fa-solid fa-check"></i> <strong>WhatsApp AI Property Agent:</strong> Dispatches PDF brochures, location pins, and schedules site visit tours automatically.</li>
-                            <li><i class="fa-solid fa-check"></i> <strong>Meta Lead Auto-Sync & Rep Attribution:</strong> Instant FB/IG lead ingestion routed directly to assigned sales agents.</li>
-                        </ul>
-                    </div>
-                    <div class="industry-card-footer">
-                        <span style="font-size: 0.8rem; color: #a6e3a1; font-weight: 600;">Featured: BBC Real Estate</span>
-                        <a href="https://app.microcrm.site/book/bbc" target="_blank" class="industry-cta-link">
-                            Explore Plot Portal <i class="fa-solid fa-arrow-right"></i>
-                        </a>
-                    </div>
-                </div>
-
-                <!-- 4. Healthcare, Clinics & Diagnostics -->
-                <div class="industry-card">
-                    <div class="industry-card-top">
-                        <div class="industry-header">
-                            <div class="industry-icon-title">
-                                <div class="industry-icon" style="color: #f9e2af; background: rgba(249, 226, 175, 0.12);">
-                                    🩺
-                                </div>
-                                <div>
-                                    <h3 class="industry-title">Healthcare, Clinics & Diagnostics</h3>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="industry-subcategories">
-                            <span class="industry-sub-label">Sub-Categories Covered:</span>
-                            <div class="industry-pills">
-                                <span class="industry-pill">Dental Clinics</span>
-                                <span class="industry-pill">General Physicians</span>
-                                <span class="industry-pill">Physiotherapy Centers</span>
-                                <span class="industry-pill">Pathology Labs</span>
-                                <span class="industry-pill">Eye Clinics & Optometry</span>
-                                <span class="industry-pill">Veterinary Clinics</span>
-                            </div>
-                        </div>
-                        <ul class="industry-features">
-                            <li><i class="fa-solid fa-check"></i> <strong>Doctor Slot Scheduling:</strong> Patients choose doctor time slots with instant WhatsApp confirmation.</li>
-                            <li><i class="fa-solid fa-check"></i> <strong>Clinic Direction & Navigation Pins:</strong> Automated sharing of clinic Google Map links and operating hours.</li>
-                            <li><i class="fa-solid fa-check"></i> <strong>Patient Visit History:</strong> Secure tracking of past appointments, consultation charges, and digital receipts.</li>
-                        </ul>
-                    </div>
-                    <div class="industry-card-footer">
-                        <span style="font-size: 0.8rem; color: var(--text-muted);">DPDPA 2023 Compliant</span>
-                        <a href="https://wa.me/918770466442?text=Hi%2C%20I%20run%20a%20Clinic%20and%20want%20to%20set%20up%20MicroCRM." target="_blank" class="industry-cta-link">
-                            Setup for Clinic <i class="fa-solid fa-arrow-right"></i>
-                        </a>
-                    </div>
-                </div>
-
-                <!-- 5. Retail Stores, Boutiques & Supermarkets -->
-                <div class="industry-card">
-                    <div class="industry-card-top">
-                        <div class="industry-header">
-                            <div class="industry-icon-title">
-                                <div class="industry-icon" style="color: #cba6f7; background: rgba(203, 166, 247, 0.12);">
-                                    🛍️
-                                </div>
-                                <div>
-                                    <h3 class="industry-title">Retail Stores, Boutiques & Markets</h3>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="industry-subcategories">
-                            <span class="industry-sub-label">Sub-Categories Covered:</span>
-                            <div class="industry-pills">
-                                <span class="industry-pill">Fashion Boutiques</span>
-                                <span class="industry-pill">Footwear Stores</span>
-                                <span class="industry-pill">Eyewear & Optical</span>
-                                <span class="industry-pill">Jewelry Shops</span>
-                                <span class="industry-pill">Hardware & Paint Stores</span>
-                                <span class="industry-pill">Kirana & Supermarkets</span>
-                            </div>
-                        </div>
-                        <ul class="industry-features">
-                            <li><i class="fa-solid fa-check"></i> <strong>Fast Counter POS & Barcode Scanner:</strong> Streamlined billing with barcode search and GST/non-GST receipts.</li>
-                            <li><i class="fa-solid fa-check"></i> <strong>Customer Khata Ledger:</strong> Maintain balance ledgers for credit buyers with 1-click WhatsApp payment links.</li>
-                            <li><i class="fa-solid fa-check"></i> <strong>Low-Stock Alerts:</strong> Automatic warnings before fast-selling SKUs run out of stock.</li>
-                        </ul>
-                    </div>
-                    <div class="industry-card-footer">
-                        <span style="font-size: 0.8rem; color: var(--text-muted);">Barcode & Khata Ready</span>
-                        <a href="https://wa.me/918770466442?text=Hi%2C%20I%20run%20a%20Retail%20Store%20and%20want%20to%20set%20up%20MicroCRM." target="_blank" class="industry-cta-link">
-                            Setup for Retail <i class="fa-solid fa-arrow-right"></i>
-                        </a>
-                    </div>
-                </div>
-
-                <!-- 6. Automobile, Detailing & Garages -->
-                <div class="industry-card">
-                    <div class="industry-card-top">
-                        <div class="industry-header">
-                            <div class="industry-icon-title">
-                                <div class="industry-icon" style="color: #eba0ac; background: rgba(235, 160, 172, 0.12);">
-                                    🚗
-                                </div>
-                                <div>
-                                    <h3 class="industry-title">Automobile, Detailing & Garages</h3>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="industry-subcategories">
-                            <span class="industry-sub-label">Sub-Categories Covered:</span>
-                            <div class="industry-pills">
-                                <span class="industry-pill">Multi-Brand Car Garages</span>
-                                <span class="industry-pill">Two-Wheeler Service Centers</span>
-                                <span class="industry-pill">Car Detailing & PPF Studios</span>
-                                <span class="industry-pill">Tyre & Battery Outlets</span>
-                                <span class="industry-pill">Car Wash & Spa</span>
-                            </div>
-                        </div>
-                        <ul class="industry-features">
-                            <li><i class="fa-solid fa-check"></i> <strong>Vehicle Number Lookup:</strong> Track maintenance history and previous service parts by vehicle registration plate.</li>
-                            <li><i class="fa-solid fa-check"></i> <strong>Automated Service Interval Reminders:</strong> WhatsApp alerts when oil changes or periodic services are due.</li>
-                            <li><i class="fa-solid fa-check"></i> <strong>Job Estimation & Billing:</strong> Clear itemized estimates for labor and spare parts delivered directly on WhatsApp.</li>
-                        </ul>
-                    </div>
-                    <div class="industry-card-footer">
-                        <span style="font-size: 0.8rem; color: var(--text-muted);">Vehicle Reg Lookup</span>
-                        <a href="https://wa.me/918770466442?text=Hi%2C%20I%20run%20an%20Auto%20Garage%20and%20want%20to%20set%20up%20MicroCRM." target="_blank" class="industry-cta-link">
-                            Setup for Auto <i class="fa-solid fa-arrow-right"></i>
-                        </a>
-                    </div>
-                </div>
-
-                <!-- 7. Fitness, Gyms & Sports Academies -->
-                <div class="industry-card">
-                    <div class="industry-card-top">
-                        <div class="industry-header">
-                            <div class="industry-icon-title">
-                                <div class="industry-icon" style="color: #fab387; background: rgba(250, 179, 135, 0.12);">
-                                    🏋️
-                                </div>
-                                <div>
-                                    <h3 class="industry-title">Fitness, Gyms & Sports Academies</h3>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="industry-subcategories">
-                            <span class="industry-sub-label">Sub-Categories Covered:</span>
-                            <div class="industry-pills">
-                                <span class="industry-pill">Fitness Gyms</span>
-                                <span class="industry-pill">Yoga & Pilates Studios</span>
-                                <span class="industry-pill">CrossFit Boxes</span>
-                                <span class="industry-pill">Dance Academies</span>
-                                <span class="industry-pill">Martial Arts & MMA</span>
-                                <span class="industry-pill">Swimming & Badminton Clubs</span>
-                            </div>
-                        </div>
-                        <ul class="industry-features">
-                            <li><i class="fa-solid fa-check"></i> <strong>Membership Expiry Reminders:</strong> Automatically alert members on WhatsApp 3 days before their plan expires.</li>
-                            <li><i class="fa-solid fa-check"></i> <strong>Free Trial Class Booking:</strong> Prospective members book trial passes from Instagram directly into your CRM.</li>
-                            <li><i class="fa-solid fa-check"></i> <strong>Trainer Slot Scheduling:</strong> Manage PT (personal training) slots without double-booking.</li>
-                        </ul>
-                    </div>
-                    <div class="industry-card-footer">
-                        <span style="font-size: 0.8rem; color: var(--text-muted);">Membership Subscriptions</span>
-                        <a href="https://wa.me/918770466442?text=Hi%2C%20I%20run%20a%20Gym/Fitness%20Studio%20and%20want%20to%20set%20up%20MicroCRM." target="_blank" class="industry-cta-link">
-                            Setup for Fitness <i class="fa-solid fa-arrow-right"></i>
-                        </a>
-                    </div>
-                </div>
-
-                <!-- 8. Education, Coaching & Tuition -->
-                <div class="industry-card">
-                    <div class="industry-card-top">
-                        <div class="industry-header">
-                            <div class="industry-icon-title">
-                                <div class="industry-icon" style="color: #89dceb; background: rgba(137, 220, 235, 0.12);">
-                                    📚
-                                </div>
-                                <div>
-                                    <h3 class="industry-title">Education, Coaching & Tuition</h3>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="industry-subcategories">
-                            <span class="industry-sub-label">Sub-Categories Covered:</span>
-                            <div class="industry-pills">
-                                <span class="industry-pill">Test Prep Coaching Centers</span>
-                                <span class="industry-pill">Home Tuition Bureaus</span>
-                                <span class="industry-pill">Computer Training Centers</span>
-                                <span class="industry-pill">Language Classes</span>
-                                <span class="industry-pill">Music & Art Schools</span>
-                            </div>
-                        </div>
-                        <ul class="industry-features">
-                            <li><i class="fa-solid fa-check"></i> <strong>Student Inquiry Lead Ingestion:</strong> Capture inquiries from Google and Facebook ads with instant brochure dispatch.</li>
-                            <li><i class="fa-solid fa-check"></i> <strong>Demo Lecture Booking:</strong> Prospective students schedule demo classes directly from their smartphones.</li>
-                            <li><i class="fa-solid fa-check"></i> <strong>Fee Receipts on WhatsApp:</strong> Automated fee invoice PDF generation and fee renewal notifications.</li>
-                        </ul>
-                    </div>
-                    <div class="industry-card-footer">
-                        <span style="font-size: 0.8rem; color: var(--text-muted);">Batch & Fee Management</span>
-                        <a href="https://wa.me/918770466442?text=Hi%2C%20I%20run%20a%20Coaching%20Institute%20and%20want%20to%20set%20up%20MicroCRM." target="_blank" class="industry-cta-link">
-                            Setup for Education <i class="fa-solid fa-arrow-right"></i>
-                        </a>
-                    </div>
-                </div>
-
-                <!-- 9. Food, Bakeries & Cloud Kitchens -->
-                <div class="industry-card">
-                    <div class="industry-card-top">
-                        <div class="industry-header">
-                            <div class="industry-icon-title">
-                                <div class="industry-icon" style="color: #f5c2e7; background: rgba(245, 194, 231, 0.12);">
-                                    🍽️
-                                </div>
-                                <div>
-                                    <h3 class="industry-title">Cafes, Bakeries & Cloud Kitchens</h3>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="industry-subcategories">
-                            <span class="industry-sub-label">Sub-Categories Covered:</span>
-                            <div class="industry-pills">
-                                <span class="industry-pill">Specialty Cafes</span>
-                                <span class="industry-pill">Custom Cake Bakeries</span>
-                                <span class="industry-pill">Cloud Kitchens</span>
-                                <span class="industry-pill">Event Caterers</span>
-                                <span class="industry-pill">Banquet Halls</span>
-                                <span class="industry-pill">Sweet Shops</span>
-                            </div>
-                        </div>
-                        <ul class="industry-features">
-                            <li><i class="fa-solid fa-check"></i> <strong>QR Code Mobile Menu:</strong> Diners scan a table QR code to browse items with zero app download required.</li>
-                            <li><i class="fa-solid fa-check"></i> <strong>WhatsApp Cart Checkout:</strong> Direct WhatsApp order transmission with delivery address and item notes.</li>
-                            <li><i class="fa-solid fa-check"></i> <strong>Event & Catering Inquiries:</strong> Automated intake of party dates, guest counts, and customized quote requests.</li>
-                        </ul>
-                    </div>
-                    <div class="industry-card-footer">
-                        <span style="font-size: 0.8rem; color: var(--text-muted);">QR Menu & WhatsApp Cart</span>
-                        <a href="https://wa.me/918770466442?text=Hi%2C%20I%20run%20a%20Cafe/Bakery%20and%20want%20to%20set%20up%20MicroCRM." target="_blank" class="industry-cta-link">
-                            Setup for Food <i class="fa-solid fa-arrow-right"></i>
-                        </a>
-                    </div>
-                </div>
-
-                <!-- 10. Professional Services & Consultants -->
-                <div class="industry-card">
-                    <div class="industry-card-top">
-                        <div class="industry-header">
-                            <div class="industry-icon-title">
-                                <div class="industry-icon" style="color: #b4befe; background: rgba(180, 190, 254, 0.12);">
-                                    💼
-                                </div>
-                                <div>
-                                    <h3 class="industry-title">Professional Services & Consultants</h3>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="industry-subcategories">
-                            <span class="industry-sub-label">Sub-Categories Covered:</span>
-                            <div class="industry-pills">
-                                <span class="industry-pill">CA & Tax Consultants</span>
-                                <span class="industry-pill">Legal Advocates</span>
-                                <span class="industry-pill">Interior Designers & Architects</span>
-                                <span class="industry-pill">Visa & Immigration Agents</span>
-                                <span class="industry-pill">Financial Advisors</span>
-                            </div>
-                        </div>
-                        <ul class="industry-features">
-                            <li><i class="fa-solid fa-check"></i> <strong>Client Consultation Slot Booking:</strong> Clients choose meeting times with Google Meet/office location confirmation.</li>
-                            <li><i class="fa-solid fa-check"></i> <strong>GST Quotation & Invoicing:</strong> Generate and dispatch professional tax invoices and retainer bills directly to WhatsApp.</li>
-                            <li><i class="fa-solid fa-check"></i> <strong>Lead Follow-Up Tasks:</strong> Never miss a client deadline with high-density task reminders and rep assignments.</li>
-                        </ul>
-                    </div>
-                    <div class="industry-card-footer">
-                        <span style="font-size: 0.8rem; color: var(--text-muted);">Quotations & Retainers</span>
-                        <a href="https://wa.me/918770466442?text=Hi%2C%20I%20run%20a%20Consulting%20Practice%20and%20want%20to%20set%20up%20MicroCRM." target="_blank" class="industry-cta-link">
-                            Setup for Consulting <i class="fa-solid fa-arrow-right"></i>
-                        </a>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-    <!-- Why Choose Us / Real Estate Lead-to-Site Visit Conversion Engine -->
-    <section id="why-choose-us" style="padding: 70px 0; background: linear-gradient(180deg, var(--bg-main) 0%, var(--bg-secondary) 100%); border-top: 1px solid var(--border);">
-        <div class="container">
-            <div style="text-align: center; max-width: 800px; margin: 0 auto 50px;">
-                <div class="hero-badge" style="background: rgba(137, 180, 250, 0.15); color: var(--primary); border: 1px solid rgba(137, 180, 250, 0.3);">
-                    ⚡ Lead Conversion Engine
-                </div>
-                <h2 class="section-title" style="margin-top: 15px;">Why Real Estate Builders & Top Brokers <span class="gradient-text">Choose MicroCRM Only.</span></h2>
-                <p style="color: var(--text-muted); font-size: 1.05rem;">70% of online Meta leads go cold because traditional software takes hours to respond. MicroCRM turns online clicks into confirmed site visits with 392% higher conversion rates.</p>
-            </div>
-
-            <!-- 3 Core Conversion Pillars -->
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; margin-bottom: 50px;">
-                <div class="spotlight-card" style="border: 1px solid rgba(16, 185, 129, 0.4); background: rgba(16, 185, 129, 0.08); padding: 30px; border-radius: 20px;">
-                    <div style="font-size: 2.2rem; color: #a6e3a1; margin-bottom: 15px;"><i class="fa-solid fa-bolt-lightning"></i></div>
-                    <h3 style="color: var(--text-main); font-size: 1.2rem; font-weight: 700; margin-bottom: 10px;">1. Instant Speed-To-Lead (2 Min WhatsApp Response)</h3>
-                    <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.6;">When a buyer fills out a Meta (FB/IG) Lead Form, MicroCRM automatically triggers an instant WhatsApp chat within 2 minutes—delivering project brochures and answering queries before your competitors even see the lead.</p>
-                </div>
-
-                <div class="spotlight-card" style="border: 1px solid rgba(137, 180, 250, 0.4); background: rgba(137, 180, 250, 0.08); padding: 30px; border-radius: 20px;">
-                    <div style="font-size: 2.2rem; color: var(--primary); margin-bottom: 15px;"><i class="fa-solid fa-map-location-dot"></i></div>
-                    <h3 style="color: var(--text-main); font-size: 1.2rem; font-weight: 700; margin-bottom: 10px;">2. Interactive Canvas Plot Layout Maps</h3>
-                    <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.6;">Ditch confusing static PDFs! Send buyers a live interactive link where they tap plots on their phone to see sqft size, facing, price, and live status (Green = Available, Red = Sold) during site visits.</p>
-                </div>
-
-                <div class="spotlight-card" style="border: 1px solid rgba(203, 166, 247, 0.4); background: rgba(203, 166, 247, 0.08); padding: 30px; border-radius: 20px;">
-                    <div style="font-size: 2.2rem; color: var(--accent); margin-bottom: 15px;"><i class="fa-solid fa-calendar-check"></i></div>
-                    <h3 style="color: var(--text-main); font-size: 1.2rem; font-weight: 700; margin-bottom: 10px;">3. Automated Site Visit & Follow-Up Checklist</h3>
-                    <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.6;">Never lose a lead again. Our high-density task board automatically schedules site visit reminders, assigns sales reps, tracks customer call notes, and alerts managers about overdue tasks.</p>
-                </div>
-            </div>
-
-            <!-- Competitive Comparison Matrix -->
-            <div style="background: var(--bg-tertiary); border: 1px solid var(--border); border-radius: 20px; padding: 35px; overflow-x: auto;">
-                <h3 style="font-family: 'Outfit', sans-serif; font-size: 1.5rem; text-align: center; margin-bottom: 25px; color: var(--text-main);">
-                    MicroCRM vs. Traditional Real Estate & Generic CRMs
-                </h3>
-
-                <table style="width: 100%; border-collapse: collapse; min-width: 650px; font-size: 0.95rem;">
-                    <thead>
-                        <tr style="border-bottom: 2px solid var(--border); background: rgba(255,255,255,0.03);">
-                            <th style="padding: 15px; text-align: left; color: var(--text-muted);">Feature / Capability</th>
-                            <th style="padding: 15px; text-align: center; color: var(--text-muted);">Generic CRMs (HubSpot / Zoho)</th>
-                            <th style="padding: 15px; text-align: center; color: var(--text-muted);">Traditional Real Estate Tools</th>
-                            <th style="padding: 15px; text-align: center; color: #a6e3a1; font-weight: 800;">MicroCRM (Our Platform)</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr style="border-bottom: 1px solid rgba(255,255,255,0.05);">
-                            <td style="padding: 14px 15px; font-weight: 600;">Meta (FB/IG) Lead Form Instant Sync</td>
-                            <td style="padding: 14px 15px; text-align: center;">⚠️ (Requires paid Zapier)</td>
-                            <td style="padding: 14px 15px; text-align: center;">✅ Yes</td>
-                            <td style="padding: 14px 15px; text-align: center; color: #a6e3a1; font-weight: 700;">✅ Instant Auto-Sync</td>
-                        </tr>
-                        <tr style="border-bottom: 1px solid rgba(255,255,255,0.05);">
-                            <td style="padding: 14px 15px; font-weight: 600;">Instant WhatsApp Auto-Response (Speed-to-Lead)</td>
-                            <td style="padding: 14px 15px; text-align: center;">❌ Expensive Add-ons</td>
-                            <td style="padding: 14px 15px; text-align: center;">⚠️ Basic SMS/Text</td>
-                            <td style="padding: 14px 15px; text-align: center; color: #a6e3a1; font-weight: 700;">⚡ 2-Min Live WhatsApp Inbox</td>
-                        </tr>
-                        <tr style="border-bottom: 1px solid rgba(255,255,255,0.05);">
-                            <td style="padding: 14px 15px; font-weight: 600;">Interactive Canvas Plot & Layout Mapper</td>
-                            <td style="padding: 14px 15px; text-align: center;">❌ No</td>
-                            <td style="padding: 14px 15px; text-align: center;">❌ Static PDF Files Only</td>
-                            <td style="padding: 14px 15px; text-align: center; color: #a6e3a1; font-weight: 700;">🗺️ Native Interactive Canvas</td>
-                        </tr>
-                        <tr style="border-bottom: 1px solid rgba(255,255,255,0.05);">
-                            <td style="padding: 14px 15px; font-weight: 600;">Anti-Theft Lead Masking (Sales Rep Protection)</td>
-                            <td style="padding: 14px 15px; text-align: center;">❌ Enterprise Only</td>
-                            <td style="padding: 14px 15px; text-align: center;">⚠️ Paid Extension</td>
-                            <td style="padding: 14px 15px; text-align: center; color: #a6e3a1; font-weight: 700;">🙈 Native Lead Masking</td>
-                        </tr>
-                        <tr>
-                            <td style="padding: 14px 15px; font-weight: 600;">Zero Per-Message WhatsApp Markup Fees</td>
-                            <td style="padding: 14px 15px; text-align: center;">❌ High API Markups</td>
-                            <td style="padding: 14px 15px; text-align: center;">❌ High Per-Message Charges</td>
-                            <td style="padding: 14px 15px; text-align: center; color: #a6e3a1; font-weight: 700;">💰 0% Markup Direct Gateway</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </div>
-    </section>
-
-    <!-- Security, DPDPA 2023 & Data Protection Section -->
-    <section id="security" class="security-section" style="padding: 60px 0; background: rgba(30, 30, 46, 0.4); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);">
-        <div class="container">
-            <div style="text-align: center; max-width: 750px; margin: 0 auto 40px;">
-                <div class="hero-badge" style="background: rgba(166, 227, 161, 0.15); color: #a6e3a1; border: 1px solid rgba(166, 227, 161, 0.3);">
-                    🛡️ Enterprise Privacy & Anti-Theft Security
-                </div>
-                <h2 class="section-title" style="margin-top: 15px;">Built for <span class="gradient-text">Uncompromising Security & Compliance.</span></h2>
-                <p style="color: var(--text-muted); font-size: 1.05rem;">MicroCRM protects your business database with enterprise-grade multi-tenant data isolation, DPDPA 2023 legal compliance, and anti-theft lead masking.</p>
-            </div>
-
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px;">
-                <!-- DPDPA 2023 Card -->
-                <div class="spotlight-card" style="border: 1px solid rgba(166, 227, 161, 0.4); background: rgba(16, 185, 129, 0.08); padding: 28px; border-radius: 20px;">
-                    <div style="font-size: 2.2rem; color: #a6e3a1; margin-bottom: 15px;"><i class="fa-solid fa-shield-halved"></i></div>
-                    <h3 style="color: var(--text-main); font-size: 1.25rem; font-weight: 700; margin-bottom: 10px;">🛡️ DPDPA 2023 Ready</h3>
-                    <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.6;">Complies with India’s <strong>Digital Personal Data Protection Act (DPDPA 2023)</strong>. Ensures customer data privacy, zero unauthorized tracking, and strict consent management for automated communication.</p>
-                </div>
-
-                <!-- 100% Data Isolation Guarantee Card -->
-                <div class="spotlight-card" style="border: 1px solid rgba(137, 180, 250, 0.4); background: rgba(99, 102, 241, 0.08); padding: 28px; border-radius: 20px;">
-                    <div style="font-size: 2.2rem; color: #89b4fa; margin-bottom: 15px;"><i class="fa-solid fa-lock"></i></div>
-                    <h3 style="color: var(--text-main); font-size: 1.25rem; font-weight: 700; margin-bottom: 10px;">🔐 100% Data Isolation Guarantee</h3>
-                    <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.6;">Strict multi-tenant SQL database isolation (<code>WHERE business_id = %s</code>). Competitor businesses can <strong>never view, access, or leak each other's leads</strong> or sales figures.</p>
-                </div>
-
-                <!-- Phone Masking Card -->
-                <div class="spotlight-card" style="border: 1px solid rgba(243, 139, 168, 0.4); background: rgba(243, 139, 168, 0.08); padding: 28px; border-radius: 20px;">
-                    <div style="font-size: 2.2rem; color: #f38ba8; margin-bottom: 15px;"><i class="fa-solid fa-user-ninja"></i></div>
-                    <h3 style="color: var(--text-main); font-size: 1.25rem; font-weight: 700; margin-bottom: 10px;">🙈 Anti-Theft Phone Number Masking</h3>
-                    <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.6;">Prevent sales staff from stealing customer lists! Non-admin sales reps only see masked numbers (<code>+91 62641*****</code>) across CRM tables & WhatsApp Web inboxes.</p>
+                <div style="background: rgba(255,255,255,0.03); border: 1px solid var(--border); border-radius: 16px; padding: 24px;">
+                    <div style="font-size: 1.8rem; color: #f472b6; margin-bottom: 10px;"><i class="fa-solid fa-user-ninja"></i></div>
+                    <h4 style="font-size: 1.15rem; margin-bottom: 6px;">Anti-Theft Lead Masking</h4>
+                    <p style="font-size: 0.88rem; color: var(--text-muted); line-height: 1.5;">Prevent rogue sales reps from copying your buyer list. Non-admin staff only see masked phone numbers across CRM tables.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Consultation & Onboarding Section (Replacing Pricing Table) -->
-    <section id="get-started" class="cta-growth-section">
+    <!-- Final Call to Action -->
+    <section class="footer-cta">
         <div class="container">
-            <div class="cta-growth-box">
-                <div class="hero-badge" style="background: rgba(16, 185, 129, 0.15); color: #a6e3a1; border: 1px solid rgba(16, 185, 129, 0.3); margin-bottom: 20px;">
+            <div class="cta-card">
+                <div class="pill-badge" style="background: rgba(16, 185, 129, 0.15); border-color: rgba(16, 185, 129, 0.3); color: #6ee7b7;">
                     🚀 24-Hour Express Onboarding
                 </div>
-                <h2 style="font-family: 'Outfit', sans-serif; font-size: 2.4rem; color: var(--text-main); margin-bottom: 15px;">
-                    Ready to Turn Your Shop into a <span class="gradient-text">Digital Powerhouse?</span>
+                <h2 style="font-size: 2.8rem; margin-bottom: 1rem;">
+                    Ready to Scale with <span class="gradient-text">Zero Middleman Fees?</span>
                 </h2>
-                <p style="color: var(--text-muted); font-size: 1.1rem; max-width: 650px; margin: 0 auto 35px; line-height: 1.6;">
-                    No complex software setup. We optimize your Google Business Profile, launch your branded mobile web storefront, and connect your WhatsApp AI in less than 24 hours.
+                <p style="color: var(--text-muted); font-size: 1.15rem; max-width: 620px; margin: 0 auto 2.5rem auto;">
+                    We set up your interactive portal, configure your WhatsApp AI receptionist, and optimize your Google profile in under 24 hours.
                 </p>
-
-                <!-- Value Highlights Grid -->
-                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 15px; max-width: 900px; margin: 0 auto 40px; text-align: left;">
-                    <div style="background: rgba(255, 255, 255, 0.04); border: 1px solid var(--border); border-radius: 12px; padding: 18px;">
-                        <div style="color: #a6e3a1; font-weight: 700; margin-bottom: 4px; font-size: 0.95rem;"><i class="fa-solid fa-circle-check"></i> Tailored Setup</div>
-                        <div style="color: var(--text-muted); font-size: 0.85rem;">Customized for salons, tech repairs, retail, healthcare, or real estate.</div>
-                    </div>
-                    <div style="background: rgba(255, 255, 255, 0.04); border: 1px solid var(--border); border-radius: 12px; padding: 18px;">
-                        <div style="color: var(--primary); font-weight: 700; margin-bottom: 4px; font-size: 0.95rem;"><i class="fa-solid fa-circle-check"></i> Zero App Installs</div>
-                        <div style="color: var(--text-muted); font-size: 0.85rem;">Your customers order & book instantly without downloading any app.</div>
-                    </div>
-                    <div style="background: rgba(255, 255, 255, 0.04); border: 1px solid var(--border); border-radius: 12px; padding: 18px;">
-                        <div style="color: var(--accent); font-weight: 700; margin-bottom: 4px; font-size: 0.95rem;"><i class="fa-solid fa-circle-check"></i> 1-on-1 Guidance</div>
-                        <div style="color: var(--text-muted); font-size: 0.85rem;">Dedicated support manager to train your staff and set up printers.</div>
-                    </div>
-                    <div style="background: rgba(255, 255, 255, 0.04); border: 1px solid var(--border); border-radius: 12px; padding: 18px;">
-                        <div style="color: #f9e2af; font-weight: 700; margin-bottom: 4px; font-size: 0.95rem;"><i class="fa-solid fa-circle-check"></i> Zero Per-Message Fees</div>
-                        <div style="color: var(--text-muted); font-size: 0.85rem;">Direct WhatsApp connection without expensive third-party markups.</div>
-                    </div>
-                </div>
-
-                <!-- Action Buttons -->
-                <div style="display: flex; justify-content: center; align-items: center; gap: 15px; flex-wrap: wrap;">
-                    <a href="https://wa.me/918770466442?text=Hi%20MicroCRM%20team%2C%20I%20want%20to%20digitize%20my%20business%20with%20Google%20Profile%2C%20Online%20Storefront%2C%20and%20WhatsApp%20CRM.%20Please%20schedule%20a%20walkthrough." 
-                       target="_blank" 
-                       class="btn btn-wa btn-large"
-                       style="padding: 16px 32px; font-size: 1.05rem;">
-                        <i class="fa-brands fa-whatsapp" style="font-size: 1.3rem;"></i> Chat with Sales (+91 8770466442)
+                <div style="display: flex; justify-content: center; gap: 14px; flex-wrap: wrap;">
+                    <a href="https://wa.me/918770466442?text=Hi%20MicroCRM%20team%2C%20I%20want%20to%20digitize%20my%20business%20with%20Google%20Profile%2C%20Interactive%20Storefront%2C%20and%20WhatsApp%20AI." target="_blank" class="btn btn-wa" style="padding: 14px 28px; font-size: 1rem;">
+                        <i class="fa-brands fa-whatsapp" style="font-size: 1.25rem;"></i> Chat with Sales (+91 8770466442)
                     </a>
-                    <a href="https://wa.me/917222989666?text=Hi" 
-                       target="_blank" 
-                       class="btn btn-secondary btn-large"
-                       style="padding: 16px 28px; font-size: 1.05rem; border: 1px solid var(--border);">
-                        <i class="fa-solid fa-robot"></i> Test 24/7 AI Receptionist (+91 7222989666)
+                    <a href="https://wa.me/917222989666?text=Hi" target="_blank" class="btn btn-secondary" style="padding: 14px 28px; font-size: 1rem;">
+                        <i class="fa-solid fa-robot"></i> Test WhatsApp AI (+91 7222989666)
                     </a>
                 </div>
-
-                <p style="color: var(--text-muted); font-size: 0.85rem; margin-top: 25px;">
-                    ⚡ Typical onboarding time is under 24 hours. Connect with our technical specialists directly on WhatsApp.
-                </p>
             </div>
         </div>
     </section>
 
+    <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <div class="footer-content">
-                <div class="footer-brand">
-                    <div class="logo">
-                        <span class="logo-icon"><img src="logo.png" alt="MicroCRM Logo" style="height: 24px; width: 24px; margin-right: 8px; border-radius: 6px;"></span>
-                        <span class="logo-text">MicroCRM</span>
-                    </div>
-                    <p>Parchhoria Technologies • The AI-powered sales & CRM platform for modern businesses.</p>
-                    <p style="margin-top: 10px; font-size: 0.85rem; color: #a6e3a1;">
-                        <i class="fa-solid fa-headset"></i> Sales: <strong>+91 8770466442</strong> &nbsp;|&nbsp; 
-                        <i class="fa-brands fa-whatsapp"></i> AI Demo: <strong>+91 7222989666</strong>
-                    </p>
+            <div class="footer-flex">
+                <div style="display: flex; align-items: center; gap: 10px;">
+                    <img src="logo.png" alt="MicroCRM" style="width: 24px; height: 24px; border-radius: 6px;">
+                    <span style="font-weight: 700; color: #fff;">MicroCRM</span>
+                    <span style="color: var(--text-muted);">• Parchhoria Technologies</span>
                 </div>
-                <div class="footer-links">
-                    <a href="privacy.html">Privacy Policy</a>
-                    <a href="terms.html">Terms of Service</a>
-                    <a href="docs.html">Documentation</a>
-                    <a href="contact.html">Contact Support</a>
+                <div style="display: flex; gap: 20px;">
+                    <a href="privacy.html" style="color: var(--text-muted); text-decoration: none;">Privacy Policy</a>
+                    <a href="terms.html" style="color: var(--text-muted); text-decoration: none;">Terms of Service</a>
+                    <a href="docs.html" style="color: var(--text-muted); text-decoration: none;">Documentation</a>
+                    <a href="contact.html" style="color: var(--text-muted); text-decoration: none;">Contact Support</a>
                 </div>
             </div>
-            <div class="copyright">
+            <div style="text-align: center; margin-top: 1.5rem; font-size: 0.78rem; color: rgba(255,255,255,0.3);">
                 &copy; 2026 Parchhoria Technologies. All rights reserved.
             </div>
         </div>
