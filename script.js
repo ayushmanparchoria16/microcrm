@@ -1,16 +1,15 @@
 document.addEventListener("DOMContentLoaded", () => {
-    // 1. Scroll effect for Navbar
+    // 1. High-Performance Passive Scroll Effect for Navbar
     const navbar = document.querySelector(".navbar");
     if (navbar) {
+        let isScrolled = false;
         window.addEventListener("scroll", () => {
-            if (window.scrollY > 40) {
-                navbar.style.background = "rgba(9, 13, 22, 0.95)";
-                navbar.style.boxShadow = "0 10px 30px rgba(0,0,0,0.6)";
-            } else {
-                navbar.style.background = "rgba(9, 13, 22, 0.85)";
-                navbar.style.boxShadow = "none";
+            const shouldScroll = window.scrollY > 30;
+            if (shouldScroll !== isScrolled) {
+                isScrolled = shouldScroll;
+                navbar.classList.toggle("scrolled", isScrolled);
             }
-        });
+        }, { passive: true });
     }
 
     // 2. Mobile Nav Toggle
