@@ -152,12 +152,13 @@
                 <li><strong>Admin Visibility Control:</strong> Full unmasked numbers and raw data exports are strictly restricted to verified business owner / administrator roles.</li>
             </ul>
 
-            <h2>5. WhatsApp Business & AI Assistant Privacy</h2>
-            <p>MicroCRM integrates an intelligent conversational AI agent directly with your business WhatsApp number using secure WhatsApp Web session protocols:</p>
+            <h2>5. WhatsApp Business Platform & Conversational AI Privacy</h2>
+            <p>MicroCRM integrates an intelligent conversational AI agent with your business WhatsApp accounts via the <strong>Official Meta Cloud API (WhatsApp Business Platform)</strong> and authorized client gateway bridges:</p>
             <ul>
-                <li><strong>On-Device / Private Gateway Sessions:</strong> WhatsApp session credentials (<code>.wwebjs_auth</code>) are encrypted and isolated within your dedicated tenant container.</li>
-                <li><strong>Operational Automation:</strong> The AI processes messages solely to provide instant business answers (operating hours, service menu, catalog pricing), send automated PDF tax invoices, and schedule calendar appointments.</li>
-                <li><strong>Zero External Data Sharing:</strong> Your customers' personal phone numbers and private chats are never transmitted to third parties, data aggregators, or marketing networks.</li>
+                <li><strong>Official Meta Cloud API Integration:</strong> When connecting via the official Meta Cloud API, messaging events (incoming text messages, customer phone numbers, contact names, and delivery status updates) are received securely via verified Meta Webhooks (<code>https://app.microcrm.site/api/whatsapp/meta-webhook</code>) using Graph API v21.0+ protocols.</li>
+                <li><strong>Purpose Limitation:</strong> All inbound messages and contact information are processed solely to deliver automated business responses (such as real estate project details, official brochures, price quotes, appointment scheduling, and customer support) and are recorded in the business's private CRM inbox.</li>
+                <li><strong>Isolated Multi-Tenant Storage:</strong> WhatsApp chat logs and customer phone numbers are strictly isolated within the merchant's private tenant database. They are protected by encryption at rest and in transit (TLS 1.3).</li>
+                <li><strong>Zero Telemetry or Third-Party Sale:</strong> We never sell, rent, monetize, or harvest customer phone numbers or private messages for third-party advertising, profiling, or training external public foundation models.</li>
             </ul>
 
             <h2>6. Data Security, Transport & Cloud Infrastructure</h2>
@@ -169,14 +170,23 @@
             </ul>
 
             <h2>7. Data Principal Rights (Access, Correction & Deletion)</h2>
-            <p>Under the DPDPA 2023, data principals (both merchants and end-customers) have enforceable rights:</p>
+            <p>Under the DPDPA 2023 and global data protection guidelines, data principals (merchants and end-customers) have enforceable rights:</p>
             <ul>
                 <li><strong>Right of Access & Summary:</strong> You may request an itemized copy of the personal data held within your tenant account.</li>
                 <li><strong>Right to Correction & Erasure:</strong> Customers can request the correction of inaccurate contact details or the complete erasure of their customer record by contacting the merchant or our Data Officer.</li>
-                <li><strong>Right of Grievance Redressal:</strong> We maintain a designated grievance redressal mechanism to respond to data inquiries within the statutory timelines.</li>
+                <li><strong>Right of Grievance Redressal:</strong> We maintain a designated grievance redressal mechanism to respond to data inquiries within statutory timelines.</li>
             </ul>
 
-            <h2>8. Grievance Officer & Contact Information</h2>
+            <h2 id="data-deletion">8. Meta Platform User Data Deletion Instructions</h2>
+            <p>In accordance with Meta Developer Policies and User Data Deletion requirements, any customer or user interacting with a MicroCRM-powered WhatsApp Business account or Meta App can request the complete deletion of their personal data and conversation history at any time through any of the following standard methods:</p>
+            <ul>
+                <li><strong>Method 1: Direct WhatsApp Opt-Out:</strong> Reply <code>STOP</code>, <code>UNSUBSCRIBE</code>, or <code>DELETE MY DATA</code> in the WhatsApp chat. The AI agent will immediately flag the contact and pause automated communications.</li>
+                <li><strong>Method 2: Email Data Erasure Request:</strong> Send an email to <a href="mailto:support@microcrm.site" style="color: var(--primary);">support@microcrm.site</a> or <a href="mailto:ayushman@microcrm.site" style="color: var(--primary);">ayushman@microcrm.site</a> with the subject line <em>"Meta Data Deletion Request"</em> and your registered phone number.</li>
+                <li><strong>Method 3: Merchant Dashboard Purge:</strong> The merchant/business owner can permanently delete customer records and full message logs with one click from their MicroCRM Customer & Lead Management panel.</li>
+            </ul>
+            <p>Upon receipt of a verified deletion request, all associated customer profile records, phone numbers, and chat message history will be permanently deleted from our primary databases and backups within <strong>48 business hours</strong>.</p>
+
+            <h2>9. Grievance Officer & Contact Information</h2>
             <p>For any inquiries, requests under DPDPA 2023, or data privacy concerns, please contact our designated Grievance Officer:</p>
             <div style="background: var(--bg-secondary); border: 1px solid var(--border); border-radius: 14px; padding: 22px; margin-top: 15px;">
                 <p style="margin-bottom: 8px; color: var(--text-main); font-weight: 700; font-size: 1.05rem;"><i class="fa-solid fa-user-shield" style="color: var(--primary); margin-right: 8px;"></i> Ayushman Parchhoria — Grievance & Data Protection Officer</p>
